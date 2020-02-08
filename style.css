@@ -5,7 +5,7 @@ html, body {
 }
 body {
   background-color: #333642;
-  background-image: url(images/logo_t.png);
+  background-image: url(images/logo.png);
   background-repeat: no-repeat;
   font-family: 'Helvetica LT Std', Helvetica, sans-serif;
   font-size: 80%;
@@ -28,7 +28,7 @@ h3 {
 }
 @font-face {
   font-family: ian;
-  src: url(fonts/roadgeek.ttf)
+  src: url(fonts/roadgeek/roadgeek.ttf)
 }
 .title {
   font-family: ian;
