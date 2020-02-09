@@ -5,7 +5,7 @@ html, body {
 }
 body {
   background-color: #333642;
-  background-image: url(images/logo.png);
+  background-image: url(images/ninja.png);
   background-repeat: no-repeat;
   font-family: 'Helvetica LT Std', Helvetica, sans-serif;
   font-size: 80%;
@@ -39,6 +39,15 @@ h3 {
 .menu {
   font-family: ian;
   color: white !important;
+  font-size: 120%;
+  padding-right: 6px;
+  padding-top: 6px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.menuInverted {
+  font-family: ian;
+  color: #333642 !important;
   font-size: 120%;
   padding-right: 6px;
   padding-top: 6px;
@@ -127,6 +136,7 @@ td.ps-col3 {
 }
 img {
   border-width: 0;
+  vertical-align: middle;
 }
 .breadcrumb {
   padding: 5px 15px;
@@ -165,6 +175,20 @@ img {
 .navigation {
   margin-top: 160px;
   text-align: right;
+}
+.gallery > div {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0.5em 0.25em;
+}
+.gallery.shadowedThumbs {
+	padding: 16px;
+}
+.gallery.shadowedThumbs > div img {
+	border-top: 3px solid #323646;
+	border-left: 3px solid #323646;
+	border-bottom: 1px solid #323646;
+	border-right: 1px solid #323646;
 }
 .outlined img,
 img.outlined {

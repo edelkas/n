@@ -1,1 +1,14 @@
-sup
+<div class="gallery shadowedThumbs">
+	<div class="small">
+		<div><a href="spreadsheets.html"><img src="images/spreadsheets.png" width="96" height="96" alt="Thumbnail" /></a></div>
+		<div><a href="spreadsheets.html" class="menuInverted">Spreadsheets</a></div>
+	</div>
+	<div class="small">
+		<div><a href="texts.html"><img src="images/texts.png" width="96" height="96" alt="Thumbnail" /></a></div>
+		<div><a href="texts.html" class="menuInverted">Texts</a></div>
+	</div>
+	<div class="small">
+		<div><a href="maps.html"><img src="images/ninja2.png" width="96" height="96" alt="Thumbnail" /></a></div>
+		<div><a href="maps.html" class="menuInverted">Maps/Runs</a></div>
+	</div>
+</div>
