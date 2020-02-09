@@ -1,0 +1,22 @@
+<p>The N community was born in <b>2004</b>, and has since developed and extensive amount of content, which has often been scattered in the forums and lost to time, much of it is irrecoverable.
+This content includes tools (for highscoring, mapping, fangames, webtools, and others), webpages (forums, chats, wikis, etc), documents (spreadsheets, graphs, mappacks, lists, etc)...</p>
+<p>I'm <b>Eddy</b>, I've been a part of this community since 2007 and I've been accumulating resources ever since. At one point I realized my N folder had grown to be historically significant and contained many lost files. So I set up this page with a triple objective in mind:</p>
+<ul>
+<li>As a one stop to find any resource, even when you already know them.</li>
+<li>For people to find resources they didn't know about.</li>
+<li>For historical preservation.</li>
+</ul>
+To browse all of these resources, please visit the categories in the side menu. A selection of the most relevant ones is provided in the <a href="index.html">Home</a>.
+<h1>Contact</h1>
+<ul>
+  <li> If you want to get in touch with the N community, nowadays we hang in <a href="https://discord.gg/nplusplus"> Discord</a>.</li>
+  <li> Traditionally, we used to hang in the <a href="https://forum.droni.es/">Forums</a>.</li>
+  <li> If you feel like a resource is missing and want to get in touch with me personally, my <b>gmail</b> account is <it>edlucasma</it>.</li>
+  <li> For more possible ways (both current and old) to contact the community, visit the <a href="websites.html">Websites</a> section.</li>
+</ul>
+<h1>Credits</h1>
+<ul>
+  <li> This website and most of its content is brought to you by <b>Eddy</b>.</li>
+  <li> Thanks to <b>atomizer</b> for providing a load of additional N resources.</li>
+  <li> Website style shamelessly adapted from the great videogame mapper <a href="https://ian-albert.com/">Ian Albert</a>.</li>
+</ul>
