@@ -182,7 +182,8 @@ img {
 	margin: 0.5em 0.25em;
 }
 .gallery.shadowedThumbs {
-	padding: 16px;
+	//padding: 16px;
+  text-align: center;
 }
 .gallery.shadowedThumbs > div img {
 	border-top: 3px solid #323646;
