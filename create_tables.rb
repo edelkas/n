@@ -25,8 +25,8 @@ $table = [
   col2 = [
     {href: "", alt: "", title: "", text: "TOOLS", header: true},
     {href: "", alt: "", title: "", text: "Highscoring", header: true},
-    {href: "files/tools/NHighEddy_r2.rar", alt: "", title: "NHigh (2015, by jg9000, last update by Eddy)", text: "NHigh (2015)", header: false},
-    {href: "files/tools/N2High_v3.0.rar", alt: "", title: "N2High 3.0 (2013, by Eddy)", text: "N2High (2013)", header: false},
+    {href: "https://forum.droni.es/viewtopic.php?f=20&t=10267", alt: "", title: "NHigh (2006, by jg9000, last update by Eddy, 2015)", text: "NHigh (2015)", header: false},
+    {href: "https://forum.droni.es/viewtopic.php?f=72&t=9874", alt: "", title: "N2High 3.0 (2013, by Eddy)", text: "N2High (2013)", header: false},
   ],
   col3 = [
     {href: "", alt: "", title: "", text: "DOCUMENTS", header: true},
