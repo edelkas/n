@@ -1,0 +1,1957 @@
+The Legend of N Level Names
+
+Wacky, informative, hilarious, thought-provoking, bizarre and just plain weird level names are a long-standing tradition in the N universe. It began in the early days of 2004, when production on the first N levels was drawing to a close. It started with Mare and Raigan trying to make each other laugh, and just sort of blossomed from there.
+
+Level names are an opportunity to lovingly reference our favourite games, tv shows, movies, people, books, artwork, animals and phrases, and allow us to geek out and really embrace our love of bad puns, nerdy subject matter, helpful gameplay tips, and general personality. That's our gift to you.
+
+For Metanet Software, naming levels in games is also an easy and fun way to keep things interesting. When you're making and repeatedly testing hundreds of levels often under severe time restrictions, you need something to keep yourself sane. Have we succeeded? You be the judge -- the complete list of N and N+ level names to date can be found starting at about the middle of this page. Enjoy! :)
+
+
+Index:
+
+SUBLiME
+Contesque 1
+Contesque 2
+Level Names
+
+\\ ----------------------------------------------------------------------------
+
+SUBLiME
+
+Because we love our fans so much, we decided to hold a contest for N v1.4 in which submitted levels would be considered for inclusion in N. The successful submissions comprise the 80s column in N. This contest was the precursor to N+'s the SUBLiME.
+
+N+ features a ton of fan-made content provided by fans of the original game, N. We held a contest-like event in summer 2007, called SUBLiME, in which fans were invited to submit their best levels which we would then play and include the best of in N+. Fans of N got to try their hand at wacky level naming, too! Read more about SUBLiME here.
+
+\\ ----------------------------------------------------------------------------
+
+Contesque 1
+
+July 23, 2008 saw the release of PDLC0, the first N+ level pack. For 200 points, this pack features 150 easier single player levels and 50 coop multiplayer. Read more about the N+ DLC here.
+
+We held a Contesque to celebrate the launch of the level pack, which you can read more about here. This contesque was all about level names. After explaining which level names would never appear in N+ XBLA PDLC0, we showed a little insight into the etymology of 24 XBLA level names:
+
+Contesque 1: Level Names
+The Fakes are highlighted in Red:
+
+
+01. west enderson
+
+A combination of "west end" and "wes anderson"; west end is a popular end of London, England, and Wes Anderson is a fantastic director of great movies. Also players move through the level from east to west / left to right.
+
+02. tread on my dreams
+
+The tread series of N+ levels includes "I'd rather be tread", among others; the basic idea is to copy or evoke a phrase which uses the word tread, or a word that rhymes with tread. Levels in the tread series visually resemble tire treads.
+
+03. the hammer of not bickering
+
+A quote from the movie "Mystery Men" which we at Metanet find funny. There are a lot of good lines in that movie: http://www.imdb.com/title/tt0132347/quotes
+
+04. blue mineys
+
+A reference to the blue meanies from the Beatles' Yellow Submarine movie (http://en.wikipedia.org/wiki/Blue_Meanies_%28Yellow_Submarine%29), and also refers to the way that, in the level, zap drones (which are blue) are fulfilling the function that mines tend to.
+
+05. the grayzor mountains
+
+A reference to one of Metanet's favourite Penny Arcade comics, featuring Mr. Period: http://www.penny-arcade.com/comic/2004/11/03/. Hilarious! The level also features mountain shapes, and is, of course, gray.
+
+06. out of the blue 3
+
+Preceeded by 'out of the blue 1 and 2', this series features zap drones hidden behind bounceblocks, which appear from out of the blue -- well, sort of. Also, they're blue, so it's sort of like the blue out of something... anyway, it made sense at the time.
+
+07. your ninja is in another castle
+
+A classic phrase referencing one of everyone's favourite games, Super Mario Bros. for the NES.
+
+08. ranks a rot
+
+A possibly-Scooby-Doo-related phrase which has recently grown in popularity but which is pretty dumb, unfunny, and just plain not good enough. It won't get past the quality control filters here at Metanet!
+
+09. I am comin’ to kill ya
+
+A quote from Simpsons episode 9F22, Cape Feare: http://www.twiztv.com/scripts/simpsons/season5/thesimpsons-502.htm "slowly and painfully" -- though for the ninja, it's more like quickly and painfully ;)
+
+10. sudden valley
+
+A reference to Arrested Development, one of both Mare and Raigan's favourite TV series'. "Salad dressing. But I don't really want to eat it." http://www.imdb.com/title/tt0367279/quotes It is also a reference to the level's tileset.
+
+11. supercalifragilisticexpialidoc-N
+
+Though we are fond of emphasizing the N in level names, such as "N-diana Jones", "brain N-eurysm" and "obsessio-N", we don't throw in "N" where it doesn't belong. Plus, this level name would have been preposterously long!
+
+12. the hills are, uh, live
+
+A reference to "The Sound of Music", mainly based on the commonly-known phrase "The Hills Are Alive", rather than a fondness for the source. The level features electric gates placed on top of the level's tiles, which are arranged so as to evoke hills. Hence, they're "live" in an electrical sense.
+
+13. 88 gates
+
+A reference to Queasy Game "Gate 88", which is awesome. This level features a whole bunch of electric gates.
+
+14. billesque
+
+Newsradio (a great TV series) reference: http://evilzero.com/NewsRadio/dave.htm. One of a series also including "billilicious" and "billbastic".
+
+15. N-KOTB
+
+Metanet doesn't like NKOTB, not now, and not when either party was in grade 5 or whenever the group debuted. Of course, if you didn't magically know that, you were pretty well screwed with this one as there are no other hints.
+
+16. ninja’s first suicidal lust for gold
+
+A level in a series of "ninja's firsts" which includes "walljump", "descent" and "set of safety pits". These levels tend to introduce a concept to the player.
+
+17. superliminal monument
+
+The superliminal series is long standing, extending to the very first versions of N. The tiles in this series reference N, N+ and the Metanet logo very obviously, hence "super-"liminal rather than "sub-".
+
+18. what are we doing to pigs?
+
+A one-off from "The Daily Show", a TV show we at Metanet enjoy a good deal. This segment had a completely amazing, very memorable themesong. This level features an approximation of a pig's silhouette from the logo for the McPork, which we saw in Japan at TGS last year. So funny.
+
+19. subliminal 2
+
+There is a series of the "super-"liminial, but never "sub-". We're just not that subtle here at Metanet ;)
+
+20. little lost robot
+
+a reference to an Isaac Asimov short story. His work is fondly re-read every few years around here. This level features a tileset illustrating a robotic face.
+
+21. level in the shape of male reproductive organs
+
+Too controversial, would never pass the censors. Funny thing is, we did name a level this, just for fun, but thought the better of it before officially submitting. That level is now called "anatomy of a level".
+
+22. ninja: impossible
+
+One of two suggested "better" titles for N+ by a player on the Xbox forums. The other was "ninja school". We thought they deserved mention :)
+
+23. Droids ‘B’ Us
+
+A reference to the classic game Space Quest 1. Such a good game, although we hated the frequent, instant deaths -- is that irony?
+
+24. the new star wars trilogy is AWESOME
+
+No, it's not.
+
+25. ocho!
+
+A popular catchphrase around Metanet's office, for no real reason. Or many. It's hard to tell sometimes.
+
+26. "going next door"
+
+A reference to "Spaced", a British TV series we thought was great fun, and very well written. http://en.wikiquote.org/wiki/Spaced In the series, it is a euphemism for death, which is of course very appropriate for N+.
+
+27. his name is N
+
+A popular misconception. No, it's not. The ninja is without gender, and N refers to "the way of the ninja", not to the ninja.
+
+28. gauss darn it
+
+A "hilarious" pun ("gosh" darn it). This level features a gauss turret, hence the name. We like puns!
+
+29. Level 5, Detention Block AA-23
+
+A "Star Wars" reference, but not to one of those new prequel crap-fests -- a reference to the classic, original series, or as it is also known, the only series that really exists.
+
+30. the grass is always grayer on the other side
+
+Wordplay based on the common phrase "the grass is always greener on the other side" -- we replace colours in common phrases with "gray" a lot, as in "somewhere over the graynbow", "all the leaves are gray, and the sky is gray", and many more.
+
+31. life support, for real this time
+
+Life Support is a level from the N+ original Co-Op levels we intended to be a lot harder than it is -- clever players found shortcuts. We challenge you to find them in this one!
+
+32. electric jellyfish
+
+A level from the built-in levels in N+. So this was sort of a trick -- it won't appear in N+ PDLC0 because it has already been used. Gotcha!
+
+\\ ----------------------------------------------------------------------------
+
+Contesque 2
+
+September 10, 2008 saw the release of PDLC1, the second N+ level pack. For 200 points, this pack features 150 harder single player levels, 50 race multiplayer and 25 survival multiplayer levels. Read more about the N+ DLC here.
+
+We held a Contesque to celebrate the launch of this level pack as well, which you can read more about here. This contesque was all about the references in level names, or really about the references which are not in level names found in Level Pack #2. These contesques are quite silly, but provide a little insight into how we at Metanet spend our time when we're not working. Here are the level names we did and did not reference:
+
+Contesque 2: Level Name References
+
+Level names are listed below each correct reference.
+The Fakes are highlighted in Red:
+
+
+01. 30 Rock
+werewolf barmitzvah
+
+02. Arrested Development
+a series of escalating dares
+hop-ons
+
+03. Barkley, Shut up and Jam: Gaiden
+post-cyberpocalypse
+
+04. Batman
+
+05. Blade Runner
+tyrell 2
+
+06. Cromartie High School
+mechazawa
+
+07. Futurama
+wangle a new dangle on life
+
+08. Ghost in the Shell
+motoko
+
+09. Halo
+
+10. Metal Slug
+rocket lawn chairs
+
+11. Monty Python's Flying Circus
+crelm toothpaste
+the larch
+
+12. Mystery Men
+i knew you'd know i'd know you knew
+
+13. News Radio
+I WILL BURY YOU!!!
+bill-bastic
+fonebone's follies
+me no like
+
+14. Nintendo Wii
+please securely fasten the controller wrist strap
+
+15. Peggle
+
+16. Quake
+ziggurat vertigo
+
+17. Robocop
+
+18. Saturday Night Live
+the pen is mightier
+
+19. Star Wars: A New Hope
+don't get cocky
+if gold is all that you love, then that's what you'll receive
+you needn't worry about your reward
+no reward is worth this
+attacking that battle station ain't my idea of courage
+
+20. Star Wars: Episode I
+
+21. Strange Adventures in Infinite Space
+strange adventures in finite patience
+
+22. Terminator 2
+skynet chip prototype
+
+23. The Hills
+
+24. The Hitchhiker's Guide to the Galaxy
+the total perspective vortex
+
+25. The Mighty Boosh
+the mighty boosh
+
+26. The Princess Bride
+to blave
+
+27. Turbo-grafix 16
+
+28. Wolfenstein 3D
+mein lieben!
+
+\\ ----------------------------------------------------------------------------
+
+And now, the main event, the great lists of level names.
+
+Index:
+
+N levels
+N+ XBLA built-in levels
+N+ XBLA PDLC 0 levels
+N+ XBLA PDLC 1 levels
+N+ XBLA PDLC 2 levels
+
+\\ ----------------------------------------------------------------------------
+
+The great list of N Level Names
+
+the motherlode
+cloud city
+all about thwumps
+"the box, the box!"
+lockness
+cavern
+like happy little puppies
+little dipper
+slides
+steps
+square stairs
+shaft..s
+who's sick of thwumps?
+chasm
+(don't) go for the gold
+burgertime
+platformpuzzle
+rise over run
+deosil
+blast doors
+room full of gold
+factory
+wall jump frenzy
+the long way
+curvaceous
+trench run
+bamboo forest
+filthy tramps
+pac ninja
+castle/basement
+artifact 2
+industrial zone
+space battle
+pagoda-ish
+the gauntlet
+vertworld
+step lightly
+hunted
+mainframe
+rocket arena
+attractor
+plan plan plan
+artifact
+cloud city 2
+gauss arena
+launch pad arena
+complex
+dodgem
+industrial zone 2
+keep on tryin'
+long jump
+hold it
+don't look down
+ditched
+balcon
+frogger
+cityscape 2
+strata
+mod
+superliminal
+simpleton
+les islots A
+pyramined
+you'll die if you try
+lowrise
+acrophobe
+cloud city 3
+cliffhanger
+crosshairs
+leap of faith 2
+revolute
+bunker
+fool's gold
+the two towers
+industrial zone 3
+artifact 3
+hunted 2
+crypt
+picturesque
+mined over madder
+shaftastic
+hallowed
+stimpack
+judgement call
+ndiana jones
+armoury
+timing
+cache
+longest yard
+hanger
+change the channel marge
+lucy in the sky
+pit of dispair
+bgarth
+la matrice
+superliminal 2
+les islots B
+highest height
+the shaft
+quad damage
+get down
+nexus
+deku
+descent
+surf
+bulbous
+alien skate park
+greedo
+evac
+I love gold
+tunnels
+spelunking
+sumo
+faces
+pathmatics
+unsuperimpossible
+npunzel
+lab
+choose your own
+sarlac
+pity
+hide and seek
+viaduct
+bare-hunting
+pitcher plant
+deep freeze
+aux terminal
+leap of faith
+rocket run
+slippery slope
+haste
+claustro
+stick the landing
+constructive
+industrial zone 4
+isthmus
+outpost
+flightpath
+suicide mission
+agonizing
+domestic disturbance
+covered
+plummet
+death star
+bespin
+crossfire
+hounds
+skating the edge
+bomb shelter
+patrol
+delicate
+barba
+breathing room
+blockhead
+jag
+deco
+choisir
+permission to die
+rashomon
+n-tropy
+hunted redux
+upc
+mimetic
+mazemerizing
+multipath
+perpendiculous
+suspended
+stratego
+veenamos snikes
+soar
+cushy job
+globular dynamics
+go for self
+system core
+fugitive
+crag
+piece of the cake
+research facility
+superliminal 3
+monument
+neural net
+data base
+np complete
+planding makes plerfect
+gun dream
+scud
+fallout
+shell game
+cubish
+exploit
+interdictor
+alone and easy target
+assembly line
+ternary
+stress test 1
+prismatic bezel
+deliverator
+crabbed and claw-like
+tower of long mistakes ext.
+tower of long mistakes int.
+brinks
+blepharitis
+orbital station
+mine-ox
+tensor
+plateau
+sawtooth
+dicey
+station
+grudge match
+tri again
+electric avenue
+gothic
+ctf_death
+blame yourself
+eruptive
+evolve
+caterpie
+evac 2
+rob n hood
+phospholipid bilayer
+reticle
+easier than pie
+your wit is a hindrance
+superliminal 4
+blern!
+inca
+tooth skin
+manimal lust
+skeksis
+glutny
+adrenachrome
+desolated
+shootist
+scramble
+flubitis
+cacti
+said skills
+insurmountable
+daunting
+dance
+daredevil
+stasis
+control
+rage-ohol
+value system
+sanctum
+deceptive
+cagey
+fury
+a space oddessy
+blue ridge corporate center
+cave-man jimmy
+sands of time
+spite
+strive
+DNAw yeah!
+it's a trap
+stalag might
+the lowest highest point
+citydefender
+shark's in the water.. our shark.
+pillory
+think different
+patience
+black black
+ender
+zalem
+disembark
+ruined
+chevron belt
+chomplor
+it's not pharaoh
+iron clad _what_ of steel?!
+kessel
+the ringer
+highdive
+deathtrap
+knifedge
+for the love of gold
+gattaca
+escapades
+docking mechanism
+mantissa
+rorschach
+secondary relay
+superliminal 5
+heuristic algorithmic
+stronghold
+scaffold
+hooligan status
+dilated
+misstep
+stress test 2
+hazardous
+wtf?!
+scrumtrulescent
+the enrage-o-tron
+stalag tight
+n-ervous breakdown
+boo-urns
+shark sandwich
+the spoon doesn't even exist
+zappa
+platitude
+strugs
+chickeny
+dendrite
+diagony 1
+oldschool like aztecs but new in other aspects
+mount nermal
+chambre
+sufficient conditions
+squared
+whomping
+gas balls
+sphere of existence
+comms
+scamper
+diagony 2
+lax A
+chunnel
+shelled
+phase III
+carbonite
+n-trapment
+pride cometh
+nautilus
+a clockwork lemon
+son of pit of despair
+avalon
+phase II
+system shock
+graduated kill-inder
+conniption fit
+lax B
+phase IV
+smismar
+flying circus
+sibilant s
+skelly
+cognition
+junction
+crampon
+paroxysm
+tricksy
+necessary conditions
+apoplexy
+frisk
+slippery trip hazard
+hampered
+w00tTeen74
+constellation
+clung
+phase I
+mux
+pop quiz, hotshot
+mick jagged
+primary reactor
+solaar
+escarpment
+twitch city
+telemetry
+glynis
+groglinated
+around the world in 80 ways
+frantic
+chamber of sneakrets
+pokeyman
+persnickety
+the incredible lightness of being frustrated
+concealed
+rush
+acrimony
+zenith
+rational
+babel
+waydowntown
+serenity now
+bifurcation
+skipper
+peaked
+splickens
+the many
+the clamps
+spitfire
+enclave
+workshop
+study
+therapists
+momentous
+craterrific
+fodder
+breen district
+slitherin
+tantalizing
+piqued
+surprise
+systematic
+beach head
+Jumping up the Valley ( Eli )
+Prisoner ( rrrobyp )
+Inhabitate ( gabby_drummer )
+Full Circle ( Brickman )
+Pipes ( Lancer0 )
+I aint paying no landing fee ( Ninja )
+Errored screen ( Edziu_Kosiara )
+Ramshackle Shelves ( Echarin )
+8-pack ( nnnnoah )
+sky = Limit ( HeartView )
+Leap of Faith ( Castaway )
+hive jinks ( newt )
+Longest ( LouDog004 )
+Lysis ( stepself )
+Hieroglyphics ( holy_trinity / Lartsa )
+Gold'N Waffle ( AlliedEnvy )
+Genie in a bottle ( Crono )
+Up Down ( maximo )
+Bricklayer ( xRyuenjinZeroEX )
+Between a Rock and a Hard Place ( Maniak )
+opposing forces ( coldcut )
+Coalition ( LittleViking001 )
+The Mooney Suzuki ( chimneysweep )
+Angular ( maximo )
+Simplistic Confusion ( makron )
+NoEnemies02 ( MacrossDreams )
+pegboard ( foxhunter )
+jagged ( Musicwumusic )
+Dodging Bullets ( SquidgY )
+Claustrophobia3 ( holy_trinity / Ande )
+Bouncy Blast ( Snarker )
+n ultra 64 ( Daddaluma )
+Simplistic ( Kablizzy )
+Pressed for Time ( Lucidium )
+Platformula ( Sendy )
+Trap ( Tonito )
+Differences ( Rahl )
+Mitosis ( Sharpie-Love )
+remedy ( Atramentis / nine )
+High Tech ( Lancer0 )
+Counterweight ( maximo )
+Twisted ( Killisk )
+Platforms ( HeartView )
+Allegiance ( Nambio )
+Mother Thumping Impossible ( blue_tetris )
+something ( extremedave )
+golden touch ( prodigal_cowboy )
+chainlink ( stepself )
+Entice ( tktktk )
+Mount Doom ( maximo )
+self-inflicted
+zeb rah
+subterranean homesick golds
+chicken bock
+extremely cross
+quicky
+unfinished business
+shine on, you crazy diamond
+jinx malloy
+blastphemy
+below the root
+dead ringer
+baldercrap
+slurmy slonka
+righty tighty, lefty loosey
+the death aquatic
+fifth column
+crazappy
+the pit and the n-dulum
+elementary nguin
+ingress
+stem
+pylon
+lest is more
+rough around the edges
+bang
+grand prix
+options
+the blurst of times
+professor bojangles, esquire
+plus mine-s
+you know where you stand in a hellhole
+allsorts
+gazizza my dilsnoofus
+back and forth
+the long and winding road that leads to your death
+n-key kong
+beware of the leopard
+things that go thwump in the night
+superliminal 6
+grind
+mo' mentum
+unsafe at any speed
+it is a most elusive fish
+quantum n-tanglement
+elevator to heck
+explosivo
+slurms mackenzie
+the jaws of death
+thwump you very much
+
+\\ ----------------------------------------------------------------------------
+
+N+ XBLA carries on the great N tradition of hilarious and intriguing level names. Here's the complete list for your enjoyment! How many references can you name?
+
+The great list of N+ XBLA (built-in) Level Names
+
+-- SP --
+who dat ninja
+baby steps
+MCs you suck
+bunker down
+things that make you go boom
+learning to fly
+ninja's first walljump
+under the sea
+sabot-n-der
+stop all the downloadin
+jump at the gold: momentum building
+walljump around
+the jackpot
+the jeezly
+do it yourself
+jump at the gold 2: slope to wall
+comlink
+moses supposes
+heck sick
+over the hills, over the dell, over the fireline
+wait for it..
+broke n hearted
+trench warfare
+the thing that only eats ninjas
+downtown rush hour
+urban sherpa
+a little patience
+choose your own misadventure
+vertical theory
+timing 101
+one jump to rule them all
+what the deuce?!
+heap sort
+xenopool
+mincome arcology
+slick
+all the leaves are grey, and the sky is grey
+the old run n' jump
+Lucys in a Pie with Spices (by Red Reamer [Kashkin])
+bullish on gold
+bounceblocks can launch you
+a neural net processor
+avro lancaster
+corridor
+deep grey sea
+pontifex
+quite quietly quaint, in a quaintly quiet, sort of quietly quaint way
+run really fast!
+Triangle Launch (by Jeremy Welch)
+medical wing
+stimulant
+all-terrain flow
+Ninja In The City (by Anthony Avvento)
+take the easy way out
+daring do
+fleet feet
+superstructured
+lick
+Circles (by -GC-Phoenix)
+reverse claymore
+tumble
+superliminal X
+starscreams
+stippled hallway
+step on a crack, break your ninja's back
+funjtables
+tenacious Ts
+sudden death
+boundish
+bluffs
+slice of life
+quantic
+mortal pong
+electric jellyfish
+master control
+leapy
+one of those days
+pure gold
+PRESS START (by Triple T)
+suspended animation
+pale grey sky
+solitaire
+rotor
+goldaholics anonymous
+upstream
+effervescence
+feeding time
+snaggy cleft
+interior node
+QBk (by TornadoTK)
+beta rate
+out of the blue 2
+building up
+repetitive stress injury
+shasta
+softly
+elegant
+gapper
+I'd rather be tread
+Mines (by lord_day)
+unstable
+plus sizes
+particulate
+hatcher
+over the sand, over the plan, over the empire
+cyclone A
+abandoned facility
+router
+THROWN (by Dylan)
+mugen
+get well soon lappy!
+back to school
+rippled
+mr. softener
+Arco Arena (by Nexx) (changed to: Our Co-Arena)
+MCP
+fear is the mind-killer (changed to: fear is the mined killer)
+ode to a small lump of green putty
+chakra
+Trapped! (by Dustin (Sgt. Poptarts))
+there's no i in teamocil..
+hustle
+a symmetry
+Forsaken (by Nexx)
+paper thin walls
+vitamin yay
+quoil
+superliminal++
+short round
+fields, endless fields..
+superliminal+
+moot
+salazar
+the sum of all numbers
+sun is shining (by Triple T)
+maw
+cyclone B
+box-shaped heart
+the boxer
+don't fear the reaper (changed to: do not fear the reaper)
+high water line
+evanescence
+spossible
+Assimilation (by Mike DeAngelis (martyr))
+hulk slogan
+don't pull a boner (changed to: don't pull a [censored])
+system core
+consumer
+monster faces (by jph wacheski)
+you can't take it with you
+somewhere over the greynbow
+postmod
+glutney
+pipe dream
+up and over
+illusory
+rhetorical device
+out of the blue
+escalator to hell
+manimal lust 2: return of the franchise
+babied steps
+that's why they call it gold
+majestic
+a deadly game of chess
+cutting in
+leaps and bounds
+Grilled Eel Guts (by jph wacheski)
+wiggle
+contra
+thank the glord
+dashed hopes
+the office
+In Soviet Russia, N Plays You (by Eeyore)
+strive
+stuck in traffic
+subsidiary reactor
+neuroscan
+it's not a race. oh wait, it is.
+super buck jazz (by Aju)
+like the circles that you find in the windmills of your mind
+hunted micro
+trekker
+wavering
+memories of kobe
+Plue (by maximo)
+you might be on B squad
+quixotic
+alignment
+you better stay away, or you're gonna pay. listen to what i say.
+sideway elevators (by Zawatsky)
+fracas
+A Hail Of Gunfire (by deathAbat7X)
+concentric
+exit strategy
+thwart hog
+onomatopaella
+crawling walls
+rooftop
+unadulterated A
+Advanced Robotics (by tktktk)
+chipset
+industrial zone X
+propellorhead
+Eclectic (by Kablizzy)
+coming down is the hardest thing
+take several pills
+the crucible
+the machine
+i am a rhombus, i plod around like dough
+a daring daylight raid
+aitch
+death by misadventure
+the valley of the shadow
+lickety quick
+hexactly
+like a phox
+spring training
+cyclic redundancy
+the name of the rose
+We're all voyeurs. Let them watch. (by Echarin)
+insectifuge
+twice round
+old western (by frogs)
+twinkle twinkle little gold
+natty flow
+sucks to your asmar
+ever upward
+Retribution (by Infernus)
+boom
+requiem for a ninja
+the child out of wedlock
+killswitch
+trench run 2
+exposed faces
+Assault on the Great Fork Wall (by maximo)
+there for the taking
+pain lane
+the abyss
+trance gate
+the return of forever
+amortized
+the hidden fortress
+easy doesn't do it
+don't lose it now
+pinched
+accelera
+who knew drones moved with such agonizing sloth?
+access tunnel
+a maze zing race
+the ultimate
+
+
+-- SP UNLOCKABLE --
+gotta cacciatore 'em all
+funnely
+trope
+rush job
+downtime
+laccolith
+straylight axis
+b-cakes
+underground agent
+zapatista (changed to: zap happy)
+misunderestimated
+pear-shaped
+totally skewed
+the slip up
+the tester
+inch by inch
+deathtrap
+stantastic
+by will alone
+ziggurat vertigo
+recurring nightmare
+a perfectly cromulent word
+solar power
+victory lap
+damned if you do
+the mumps
+stratagem
+wall to wall
+subterfuge
+praise the lorg
+a steadily decreasing chance of survival
+unhealthy deathstyle
+superliminal fortress
+obsessio-n
+traction
+trick question
+the last straw
+the classic
+starfire
+watch your step
+defunct
+metaphysical
+asterisking your asterisk
+force majeure X
+central processing
+brain slugs
+unadulterated B
+brain n-eurysm
+pattern recognition
+robot heaven
+
+
+-- CO-OP --
+acrobatic
+do not taunt happy fun ball
+decoy
+everyone loves a cave
+scention
+pee-pee soaked heck-hole (changed to: yet another level name removed by corporate censors)
+gangster boogie
+dig it
+the blue-gray whale
+central processing unit
+981
+perfect cane weather
+fangface
+extra credit
+pressurizer
+diagon ally
+oh you mean this gate key
+laser tag
+spinning class
+the waiting game
+there goes my hero
+entice
+cooperation, working together (dig it)
+slaughterhouse 4
+skill-testing question
+sandworms
+get the thwump outta here!
+anglene
+challengeru benderu
+baited breath
+artist's statement
+dana skilly
+rectilinear
+hurry jodie get there
+ringu
+parallel universe
+part-ay!
+citadel
+rien ne va plus
+life support
+clog in the torso chute
+descent into madness
+the buddy system
+co-ordinateur
+intertwined
+sweet ride
+take it in turns
+spectacular failure
+bleed in your own light
+desperate
+
+
+-- RACE --
+up to the future
+polka, dot?
+don't look up
+sage vs. badger
+nice climbers
+risk vs reward
+honey tree
+anglers
+the big not-so-easy
+downhill stroll
+the persistence of viscera
+launch window
+sdrawkcab
+double grey diamond
+drone surfing
+hanging gardens
+dr. doom vs. megatron
+mortal coil
+bitten
+take the last train to thwumpville
+retribution
+hobbes vs. minou
+blue screens of death
+split-second decision
+the big V
+jumpettes
+nermal vs. bean
+scrappy
+speedrunner
+the thing that only eats losers
+downhill slalom
+sisu
+rounders
+gaps
+pits of despair
+down to the future
+de vermis mysteriis
+hypnotoad
+DOA
+chaos practice
+overtake
+coprocessor
+apres you
+jidai geki
+strugs
+daunting
+postcarious
+chomplor
+skyfires
+against the flow
+
+
+-- SURVIVAL --
+death by puppy
+Outferno
+slipgate complex
+brownian motion
+drop-in
+a midsummernight's terror
+snuff box A
+caseless
+headspace
+spinal bonkers
+Knee-Deep in the Bread
+burning chrome
+blue-grey cross
+platforming
+disrecognized space
+cinema studies
+minish
+lockout 1
+fundulating walls
+release the hounds!
+cakeholes
+one who raids tombs
+movin on up
+how do they prevent against thieves?
+assisted suicide
+hypnotic
+interference pattern
+1.21 gigawatts?!
+connected components
+shoot the moon
+Stores of Hell
+banburismus technique
+slotted ice-breaker
+lemming run
+snuff box B
+Thy Flesh Costumed
+superfly
+matrices
+stumbleine
+the lorg taketh away
+panic chamber
+splash and grab
+the reason you broke your controller
+death by murder
+DO NOT WANT
+hungry, hungry ninjas
+lunch time
+strongbox
+say when
+fast tracker
+
+\\ ----------------------------------------------------------------------------
+
+The great list of N+ XBLA Level Pack 1 Level Names
+
+-- SP --
+to all those stuck on "Master Control"
+also: to avoid losing progress, exit to main menu after playing.. sry!!
+p.s: if you get stuck, just move to a different column!
+tube-it hack
+8-bit canyon
+a taste of things to come
+fault lines
+games are art
+i can has goldz?
+even my grandmother can beat this level
+flavanoids
+mechanically separated ninja meat
+block party
+ninja's first descent
+ineffective patrol scheme
+on the back of the great ninjasaurus
+classic mac gaming days
+just press and hold A repeatedly.. build that momentum!
+hot tip: avoid the mines
+outrun
+pulse width 1
+little lost robot
+I hope that someone gets my ninja in a bottle
+obstacle cores
+pre-frontal brobe
+tri tri again
+level in the shape of male reproductive organs (changed to: anatomy of a level)
+ninja: impossible
+ninja's first set of safety pits
+in the depths of the Slor
+think of it as a challenge
+let's hope the giant bees are on vacation
+ninja's first temptation
+billesque
+Droids 'B' Us
+ninja's first loop
+the harlots of my perils
+madeleino
+modus pwnens
+ninja school
+NO JUMPING!
+ninja's first balancing act
+ninja's first race
+just keep moving
+ninja's first challenge
+ninja's first thwumping
+ninja's first digital waveform
+ethanography
+west enderson
+it's more scared of you than you are of it
+pulse width 2
+shadow cabinet
+ninja's first whatever the hell that is
+red rings of death
+ninja's first tight squeeze
+ninja's first suicidal lust for gold
+slot it
+radio shock box
+four giant leaps
+slow nerve action
+im in ur level stealin ur goldz
+jumpin jiminy jilikers!
+slice of death
+bill-a-licious
+out of the blue 3
+unstable
+blue mineys
+pillule
+serpico
+blocked
+shake that eye's hand
+a precipice for disaster
+superliminal monument
+smartbomb
+hairpin turns
+old-school like a sysop in high-tops
+all that glitters
+interstellar job
+jumping the sharks
+raiders of the lost yark
+the grayzor mountains
+what are we doing to pigs?
+the old runny-jumpy
+slick interment
+chuffed?
+tri tri again, again
+dizzy spell
+ocho!
+ninja's first chimney climb
+ninja's first conveyor belt
+intruder alert
+o gymru
+up and around
+stung
+the duuutch
+remain calm
+gold to the last drop
+laying in wait
+pokey pit
+fort cut
+didactic ascent
+underground storage facility
+aziraphale
+scarless
+figure ocho
+self-serve
+"going next door"
+Keen Attacks Fribbulus Xax
+precariarity
+minute adjustments
+zap branagan
+sneak theif
+Hootie McNoob
+flight plan
+fort awesome
+dr. spaceman
+ziggy
+darting
+the pie is also a lie
+out of the blue 4
+..and yet so far.
+there goes the neighborhood
+tread on my dreams
+FLICK
+grindhouse
+round and round
+squarez
+sudden valley
+knot funny
+dances with rockets
+ninja's first control problem
+union jackson
+unsafe passage
+asterisky
+death by misadventure
+ramen brother
+the hills are, uh, live
+density
+gauss darn it
+shut it down
+a swift ascent
+preschool of hard knocks
+thumb-twister
+your ninja is in another castle
+Please Sir, can I not have another?
+splash damage
+Level 5, Detention Block AA-23
+a sinister undercurrent
+honeydripper
+all your base are belong to their respective owners
+
+-- CO-OP --
+meat helmets
+my hero
+low overhead
+business as usual
+help
+the hammer of not bickering
+forage whitaker
+equality
+squirrel nut zappers
+peril.. 'elo? blam!!
+my iron lungs
+ninja popcorn
+which Friends alum starred in films with Bruce Willis?
+epic squigglies
+the grass is always grayer on the other side
+spiral arms
+stay awesome
+pity the fool
+climbing buddy
+heroics
+army of two to four
+88 gates
+drawing fire
+mirror image
+life support, for real this time
+until we meet again
+conduit
+a tale of two ninjas
+don't even kid yourself
+who let the drones out?
+tunnel rats
+hermano
+target lock
+teamsters
+the blame game
+synchroninjas
+flip and multiplay
+mazy mazerino
+bottled lightning
+n it together
+togetherness
+as fast as you can
+double dipping
+I am comin' to kill ya
+the friendship tester
+bring a friend
+khaaaaaaaan!
+save the best for last
+two ninjas are better than one
+death march
+
+\\ ----------------------------------------------------------------------------
+
+The great list of N+ XBLA Level Pack 2 Level Names
+
+-- SP --
+duty cycle 1
+a bit gold-fashioned
+they're not so bad
+dipsy doodle
+I WILL BURY YOU!!!
+werewolf barmitzvah
+ninja's first rush job
+twice removed
+mechazawa
+superliminal futura
+stay the course
+moving target
+modus tallens
+asymptote
+tip of the hat
+the fundamentals
+glutton for punishment
+walking the cake
+don't get cocky
+escape velocity
+scary
+checkmate
+rocket lawn chairs
+take it or grieve it
+heavy aliasing
+gold-timey platforming
+tailigater
+fear of flying
+to blave
+spinning class
+digital distortion
+underwhelmed, if that's a word
+security grid
+lucky wander boy
+tantalizingly irresistible
+crossfader
+wangle a new dangle on life
+gold rushed
+bill-bastic
+smoked
+the art of negotiation
+rather cross
+prescience
+spot the differences
+blockworks
+remedial jumping
+return trip
+windswept
+hop-ons
+rotary club
+stepping out
+integument
+post-cyberpocalypse
+Carmack's reverse (patented by Creative Labs)
+the other matrix
+a warped mind
+hits from the bang
+if gold is all that you love, then that's what you'll receive
+improv
+hard sync
+skew this!
+tyrell 2
+the pen is mightier
+the minerals
+the tenderizer
+simplicity itself
+the kibosh
+fetch quest
+the upward spiral
+And now, young ninja, you _will_ die.
+vestibule
+breath control
+serrated
+adjust launch vector
+glord have mercy
+broken-back mountain
+sproing!
+front page of the n00bspaper
+perp
+the mighty boosh
+duty cycle 2
+decoder ring
+strange adventures in finite patience
+crunch time
+the almighty lorg
+efficacy
+control freak
+able to leap tall robots in a single bound
+the seven gates of heck
+face your fears
+crelm toothpaste
+iller than the iliad
+two trick pony
+life after deaths
+return trap
+the reach
+near-death experiences
+interlocking
+please securely fasten the controller wrist strap
+practice makes pluperfect
+trick shot
+buzzbomb
+don't just stand there
+101 damnations
+legends of the fall
+critical path
+pinacle
+hidey holes
+shenaniganism
+deathophobia
+how high
+way she goes
+you needn't worry about your reward
+harried
+dip down
+shave + haircut
+hurtls
+the punisher
+great expectorations
+cyberspaced
+where ninjas fear to tread
+runoff
+floating fortress
+ziggurat vertigo
+no reward is worth this
+two for flinching
+courriel
+based on a true story
+jumping through hoops
+the widowmaker
+smattering
+fonebone's follies
+one heck of a ride
+intimidation
+pussyfooting
+attacking that battle station ain't my idea of courage
+brain n-bolism
+recurrence relation
+your second-worst nightmare
+the lorg knows
+the wave
+a false sense of security
+leap before you look
+the mangler int.
+the larch
+balancing act
+i knew you'd know i'd know you knew
+me no like
+jumping someone else's train
+lull fortress
+
+
+-- RACE --
+chasey pt 1
+mech worms
+skip to my queue
+mine field
+the cutoff
+alarmingly thwumpy
+clambering
+who remembers the jumping tutorial?
+your n00b is showing
+expendable
+optical delusion
+biphase
+don't fall in
+a series of escalating dares
+the total perspective vortex
+like a circle in a spiral
+gotcha
+dipper
+eyes on the prize
+deep breaths
+rhombosis
+race to the top
+over the top
+river run
+treadmills
+saturation
+swarm weather
+grinder
+eye beam
+mein lieben!
+chasey pt 2
+mizzen master
+racearoni
+triple threat
+apres you
+escalating risk
+grad duel
+coated
+pillory
+moving sidewalk.. of death!
+vicious cycles
+incomplete was your training
+motoko
+strive
+straight to the top
+subosc
+robot dance party
+lithium-ionized
+cracked
+stop and go traffic
+
+
+-- SURVIVAL --	
+bamboo battle
+honeycomb
+softshoe
+skynet chip prototype
+rock it
+hdot ttat
+foray
+tension
+bounds
+hallway to hell
+major threat
+skill-testing question X
+confy
+close encounters
+attrition
+(weeping goes on continuously)
+emergent patterns
+spin-a-rama
+pure evil
+val-n-tine
+cramped
+fancypants
+the guidelines
+die trying
+exhilaration
+
+\\ ----------------------------------------------------------------------------
+
+The great list of N+ XBLA Level Pack 3 Level Names
+NOTE: Original N episode and level numbers appear in parenthesis following the level name.
+
+-- SP --
+get down (20-0)
+the long way (4-3)
+unfinished business (91-1)
+superliminal (11-4)
+delicate (30-0)
+all about thwumps (0-2)
+boo-urns (60-0)
+you'll die if you try (12-3)
+the incredible lightness of being frustrated (74-0)
+evac (21-3)
+hold it (10-1)
+n-tropy (31-4)
+picturesque (15-3)
+rocket arena (7-4)
+the long and winding road that leads to your death (97-0)
+mux (71-0)
+oldschool like aztecs but new in other aspects (61-4)
+pokeyman (73-3)
+step lightly (7-1)
+cave-man jimmy (50-2)
+whomping (62-4)
+sphere of existence (63-1)
+serenity now (75-3)
+blastphemy (91-4)
+trench run (5-0)
+longjump (10-0)
+dicey (41-2)
+strugs (61-0)
+bang (95-0)
+pylon (94-2)
+think different (52-3)
+subterranean homesick golds (90-2)
+breathing room (30-2)
+dilated (58-1)
+solaar (71-4)
+sands of time (50-3)
+constellation (70-2)
+gattaca (56-0)
+misstep (58-2)
+lucy in the sky (18-1)
+self-inflicted (90-0)
+electric avenue (42-1)
+lax A (64-0)
+extremely cross (90-4)
+squared (62-3)
+leap of faith (25-2)
+telemetry (72-2)
+zappa (60-3)
+the lowest highest point (51-4)
+grand prix (95-1)
+room full of gold (4-0)
+fifth column (93-1)
+hampered (70-0)
+fool's gold (14-2)
+sumo (22-2)
+who's sick of thwumps? (2-2)
+mount nermal (62-0)
+nautilus (65-2)
+gazizza my dilsnoofus (96-3)
+hunted redux (32-0)
+the spoon doesn't even exist (60-2)
+pop quiz, hotshot (71-1)
+evolve (43-1)
+factory (4-1)
+concealed (74-1)
+superliminal 5 (57-1)
+crypt (15-2)
+workshop (77-2)
+chambre (62-1)
+bifurcation (75-4)
+jinx malloy (91-3)
+docking mechanism (56-2)
+easier than pie (44-2)
+shelled (64-2)
+back and forth (96-4)
+zeb rah (90-1)
+deku (20-2)
+lax B (67-0)
+artifact 2 (6-0)
+system shock (66-2)
+acrophobe (13-0)
+spite (50-4)
+righty tighty, lefty loosey (92-4)
+cognition (68-1)
+flying circus (67-3)
+tooth skin (45-2)
+hunted (7-2)
+grudge match (41-4)
+scamper (63-3)
+explosivo (99-1)
+cavern (1-0)
+ender (53-1)
+assembly line (38-2)
+crampon (68-3)
+it is a most elusive fish (98-3)
+ingress (94-0)
+platitude (60-4)
+rough around the edges (94-4)
+longest yard (17-3)
+cubish (37-3)
+n-trapment (65-0)
+descent (20-3)
+tricksy (69-0)
+below the root (92-0)
+isthmus (27-0)
+eruptive (43-0)
+the pit and the n-dulum (93-3)
+enclave (77-1)
+phase IV (67-1)
+hanger (17-4)
+smismar (67-2)
+mo' mentum (98-1)
+rage-ohol (48-4)
+professor bojangles, esquire (95-4)
+for the love of gold (55-4)
+rob n hood (43-4)
+junction (68-2)
+dance (48-0)
+slurmy slonka (92-3)
+quad damage (19-4)
+phase II (6-1)
+elementary nguin (93-4)
+mazemerizing (32-3)
+elevator to heck (99-0)
+daredevil (48-1)
+comms (63-2)
+unsuperimpossible (23-0)
+superliminal 4 (44-4)
+fugitive (34-4)
+ruined (53-4)
+breen district (78-3)
+sawtooth (41-1)
+artifact (8-2)
+highdive (55-1)
+the ringer (55-0)
+escarpment (72-0)
+curvaceous (4-4)
+dodgem (9-2)
+piqued (79-1)
+planding makes plerfect (36-3)
+the clamps (76-4)
+therapists (77-4)
+slitherin (78-4)
+cagey (49-3)
+lab (23-2)
+deathtrap (55-2)
+agonizing (27-4)
+pit of despair (18-2)
+scrumtrulescent (59-1)
+fury (49-4)
+
+-- CO-OP --
+wtf?! (59-0)
+tunnels (22-0)
+cache (17-2)
+superliminal 2 (19-0)
+artifact 3 (15-0)
+chickeny (61-1)
+said skills (47-2)
+desolated (46-2)
+pathmatics (22-4)
+blern! (45-0)
+cushy job (34-0)
+your wit is a hindrance (44-3)
+systematic (79-3)
+skeksis (45-4)
+manimal lust (45-3)
+blame yourself (42-4)
+beach head (79-4)
+stalag might (51-3)
+pac-ninja (5-3)
+claustro (26-1)
+the many (76-3)
+disembark (53-3)
+hounds (29-1)
+daunting (47-4)
+fallout (37-1)
+balcon (10-4)
+interdictor (38-0)
+plus mine-s (96-0)
+chamber of sneakrets (73-2)
+chomplor (54-1)
+data base (36-1)
+deliverator (39-1)
+sanctum (49-1)
+kessel (54-4)
+mainframe (07-3)
+prismatic bezel (39-0)
+iron clad _what_ of steel?! (54-3)
+zenith (74-4)
+aux terminal (25-1)
+hazardous (58-4)
+stem (94-1)
+crabbed and claw-like (39-2)
+carbonite (64-4)
+veenamos snikes (33-3)
+scaffold (57-4)
+stratego (33-2)
+crag (35-0)
+primary reactor (71-3)
+reticle (44-1)
+bomb shelter (29-3)
+
+-- RACE --
+square stairs (02-0)
+the gauntlet (06-4)
+vertworld (07-0)
+don't look down (10-2)
+jag (30-4)
+pride cometh (65-1)
+choose your own (23-3)
+rocket run (25-3)
+cliffhanger (13-2)
+viaduct (24-2)
+bamboo forest (5-1)
+twitch city (72-1)
+frisk (69-3)
+frogger (11-0)
+revolute (14-0)
+stress test 2 (58-3)
+craterrrific (78-1)
+conniption fit (66-4)
+n-key kong (97-1)
+superliminal 6 (97-4)
+stress test 1
+mine-ox (40-3)
+acrimony (74-3)
+pillory (52-2)
+sibilant S (67-4)
+go for self (34-2)
+superliminal 3 (35-3)
+neural net (36-0)
+secondary relay (57-0)
+plateau (41-0)
+multipath (32-4)
+np complete (36-2)
+ternary (38-3)
+stronghold (57-3)
+thwump you very much (99-4)
+the enrage-o-tron (59-2)
+around the world in 80 ways (73-0)
+paroxysm (68-4)
+the two towers (14-3)
+the jaws of death (99-3)
+spitfire (77-0)
+fodder (78-2)
+persnickety (73-4)
+quantum n-tanglement (98-4)
+n-ervous breakdown (59-4)
+unsafe at any speed (98-2)
+the death aquatic (93-0)
+baldercrud (92-2)
+lest is more (94-3)
+slippery trip hazard (69-4)
+

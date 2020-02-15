@@ -1,0 +1,90 @@
+N Version History
+
+2.0 ::: 17 May 2013
+
+- rewrote entire codebase in AS3 (from AS1)
+- improved anti-cheat technology
+- improved Ned: GUI, online and text-based saving, etc etc etc
+- added 100 new levels (20 new episodes)
+- added 100 legacy levels from each of N, N+ XBLA, N+ DS and N+ PSP
+- added 100 new user-made levels (20 new episodes)
+- added 2-player local co-op
+- added level sharing integration in N
+- added Account system to manage user-made levels, game progress
+- added Arcade Mode FUN-lockable
+- added new UI (thanks to Golden Gear Games)
+- added new main menu replays
+
+1.4 ::: 15 May 2005
+
+- fixed highscore submission system
+- fixed personal best submission system
+- fixed previous version progress import system
+- fixed laggy sliders in Configure menu
+- improved "shuffled" mainmenu replays
+- improved highscore replay system
+- improved Ned: gridlines, N graphics, trigger indicators, etc
+- added 150 new levels (30 new episodes)
+- added 50 new user-made levels (10 new episodes)
+- added user levels mode: levels playable in N game mode
+- added user levels personal best system
+- added practice mode (level skip cheat)
+- added unlockable ninja flavours
+- added new unlockable secret
+- added new victory animations
+- modified highscores and timetrial pages (merge)
+- modified password field (hidden with asterisks)
+
+Download v 1.4 for PC (deprecated): http://www.thewayoftheninja.org/n_v1pc.zip
+
+1.3c ::: 02 July 2004
+
+- fixed blurry text
+- improved post-death ragdoll collision
+- improved enemy AI refresh rate
+- added "shuffled" mainmenu replays
+- added online highscores
+- added internal personal best system
+- added practice mode (no time limit)
+- added unlockable secret mode
+- added deathlog
+- added "boss mode" (lowers cpu usage)
+- added visual quality selection
+- added sound volume control
+- added 150 new levels (30 new episodes)
+- added numpad 0 or Insert accesses object editing in Ned
+- added new episode completion images
+- added new credits page art
+- modified save player progress
+
+1.2 ::: 25 April 2004
+
+- fixed embedded font
+- fixed editor cursor instructions
+- added 100 new levels (20 new episodes)
+- added key config section
+- added save player progress
+- added | accesses debug menu
+- added credits page
+
+1.05 ::: 28 March 2004
+
+- fixed editor demo (lower) text box
+- fixed editor delete object bug
+- added editor_manual.txt
+- added esc pauses game
+
+1.03 ::: 17 March 2004
+
+- fixed typos in help section
+- added edit/debug mode
+- added editor_manual.doc
+
+1.01 ::: 5 March 2004
+
+- fixed game GUI during main menu
+- fixed pausing game resets lifespan
+
+1.00 ::: 1 March 2004
+
+- N release version 

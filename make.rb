@@ -7,7 +7,12 @@
 # Eddy, Feb 2020.
 
 if ARGV.length == 0
-  files = Dir.entries("plain").reject{ |f| f == "." || f == ".." }.map{ |f| f[0..-5].downcase }
+  entries = Dir.entries("plain")
+  puts entries
+  files = entries.select{ |f| File.file?("plain/" + f) }.map{ |f| f[0..-5].downcase }
+  #folders = entries.select{ |f| File.directory?(f) }.reject{ |f| f == "." || f == ".." }
+  #subfiles = folders.map{ |f| [f, Dir.entries(f).select{ |f| File.file?(f) }.map{ |f| f[0..-5].downcase }] }.to_h
+  #puts subfiles
 else
   files = ARGV.map(&:downcase)
 end
