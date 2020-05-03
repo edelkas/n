@@ -1,0 +1,6 @@
+<table class="resources">
+<tr>
+<th>Name</th><th>Description</th><th>Author</th><th>Date</th><th>Original download</th></tr>
+<tr>
+<td>N v1.4</td><td>The latest version of the original game</td><td>Metanet Software</td><td>2005, May 15</td><td>http://www.thewayoftheninja.org/n_v1pc.zip</td></tr>
+</table>

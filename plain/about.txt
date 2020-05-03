@@ -17,6 +17,6 @@ To browse all of these resources, please visit the categories in the side menu. 
 <h1>Credits</h1>
 <ul>
   <li> This website and most of its content is brought to you by <b>Eddy</b>.</li>
-  <li> Thanks to <b>Paradog Dragon</b> for providing a load of additional N resources.</li>
+  <li> Thanks to <b>Paradox Dragon</b> for providing a load of additional N resources.</li>
   <li> Website style shamelessly adapted from the great videogame mapper <a href="https://ian-albert.com/">Ian Albert</a>.</li>
 </ul>
