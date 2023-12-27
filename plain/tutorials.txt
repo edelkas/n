@@ -484,6 +484,9 @@
           <font size="1">
         </p>
         <p> <a name="section6">SECTION 6</a>: Conclusion / Source Code</p>
+        <object align="left" type="application/x-shockwave-flash" width="420" height="500"><embed align="left"
+          type="application/x-shockwave-flash" width="400" height="500"
+          src="files/tut/tutA_demo05.swf"></embed></object>
         <p> Hopefully this has given you some ideas about how to implement collision detection and response in 2D.<br />
           We&#8217;re sure that our method isn&#8217;t the fastest or most elegant solution, but it&#8217;s the one we
           used and it ended up working fairly well. </p>
@@ -496,8 +499,7 @@
           easily computed. </p>
         <p> <strong>&#8211;= source code =&#8211;</strong></p>
         <p> Here is a demo application containing the N source code relating to this tutorial:</p>
-        <p> <a href="files/tut/tutA_demo.html">view</a> &nbsp; | &nbsp; <a
-            href="files/tut/N_tutorialAsrc.zip">download</a> </p>
+        <p> <a href="files/tut/N_tutorialAsrc.zip">download</a> </p>
         <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for commercial
           use; a link to our site would also be appreciated. </p>
         <p> <strong>&#8211;= contacting us =&#8211;</strong></p>
