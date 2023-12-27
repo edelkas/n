@@ -208,3 +208,10 @@ img.outlined {
   margin-left: auto;
   margin-right: auto;
 }
+.tuto, .tuto td {
+  border-collapse: separate;
+  border-spacing: 5px 1rem;
+}
+tr.noBorder td {
+  border-style: hidden;
+}
