@@ -182,7 +182,7 @@ img {
 	margin: 0.5em 0.25em;
 }
 .gallery.shadowedThumbs {
-	//padding: 16px;
+	/* padding: 16px; */
   text-align: center;
 }
 .gallery.shadowedThumbs > div img {
@@ -197,4 +197,10 @@ img.outlined {
   border-left: 3px solid #323646;
   border-bottom: 1px solid #323646;
   border-right: 1px solid #323646;
+}
+.center {
+  display: block;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
 }
