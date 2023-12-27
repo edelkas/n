@@ -208,10 +208,33 @@ img.outlined {
   margin-left: auto;
   margin-right: auto;
 }
-.tuto, .tuto td {
+.tuto {
   border-collapse: separate;
   border-spacing: 5px 1rem;
 }
+table.tuto {
+  border: none;
+}
 tr.noBorder td {
   border-style: hidden;
+}
+pre {
+  background-color: #33364220;
+  border: 1px solid #333642;
+  border-left: 3px solid #333642;
+  page-break-inside: avoid;
+  font-family: monospace;
+  margin-bottom: 0em;
+  max-width: 30%;
+  overflow: auto;
+  padding: 2px;
+  display: block;
+  word-wrap: break-word;
+  margin: 0px;
+  white-space: pre-line;
+}
+code {
+  background-color: #33364220;
+  margin: 0px;
+  padding: 1px;
 }

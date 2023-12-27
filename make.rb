@@ -10,43 +10,65 @@
 #
 # Note: Something like ERB could be used for this purpose more efficiently.
 #
-# Eddy, Feb 2020.
+# Created: Feb 2020.
+# Updated: Dec 2023.
 
-if ARGV.length == 0
-  entries = Dir.entries("plain")
-  files = entries.select{ |f| File.file?("plain/" + f) && !f[/_/] }.map{ |f| f[0..-5].downcase }
-  subfiles = files.map{ |f|
-    [
-      f,
-      entries.select{ |sf| File.file?("plain/" + sf) && !!sf[/_/] && sf.split("_")[0] == f }.map{ |sf| sf[0..-5].downcase }
-    ]
-  }.to_h
-else
-  files = ARGV.map(&:downcase)
-end
+documents = {
+  'name'     => 'Documents',
+  'filename' => 'docs',
+  'files'    => [
+    { 'name' => 'Tutorial A', 'filename' => 'tutoA' },
+    { 'name' => 'Tutorial B', 'filename' => 'tutoB' },
+    { 'name' => 'Tutorial C', 'filename' => 'tutoC' },
+  ]
+}
 
-def update_file(file, superfile = "")
-  if !File.exist?("plain/" + file + ".txt")
-    puts "File " + file + ".txt not found."
+images   = { 'name' => 'Images',   'filename' => 'images'   }
+tools    = { 'name' => 'Tools',    'filename' => 'tools'    }
+websites = { 'name' => 'Websites', 'filename' => 'websites' }
+about    = { 'name' => 'About',    'filename' => 'about'    }
+
+
+root = {
+  'name'     => 'Home',
+  'filename' => 'index',
+  'files'    => [
+    documents,
+    images,
+    tools,
+    websites,
+    about
+  ]
+}
+
+ROOT      = Dir.pwd
+IN_FILES  = 'plain'
+OUT_FILES = ''
+HOST      = "http://edelkas.github.io"
+
+def update_file(file, path = '')
+  # Read plain TXT file
+  fn = File.join(ROOT, IN_FILES, path, "#{file['filename']}.txt")
+  if !File.file?(fn)
+    puts "File #{fn} not found."
     return
   end
+  content = File.read(fn)
+  
+  # Inject content inside our wrapper
+  full = File.read("bare.html")
+             .gsub("ruby_content", content)
+             .gsub("ruby_link",    path.split("/").map{ |f| "<a href=\"#{HOST}\">#{file['name']}</a>" }.join(' > '))
+             .gsub("ruby_title",   file['name'])
+             .gsub("ruby_date",    Time.now.strftime("%Y-%m-%d"))
+  
+  # Write resulting HTML file
+  out = File.join(ROOT, OUT_FILES, path)
+  Dir.mkdir(out) unless Dir.exist?(out)
+  File.write(File.join(out, file['filename'] + '.html'), full)
 
-  # Use titleize (Rails) to capitalize all initial letters
-  bare = File.read("bare.html")
-  content = File.read("plain/" + file + ".txt")
-  link = file != "index" ? "> <a href=\"http://edelkas.github.io/#{!superfile.empty? ? superfile : file}\">#{(!superfile.empty? ? superfile : file).capitalize}</a>" : ""
-  sublink = !superfile.empty? ? "> <a href=\"http://edelkas.github.io/#{file}\">#{file.capitalize}</a>" : ""
-  full = bare.gsub("ruby_content", content)
-              .gsub("ruby_link", link)
-              .gsub("ruby_sublink", sublink)
-              .gsub("ruby_title", (file == "index" ? "home" : file).capitalize)
-              .gsub("ruby_date", Time.now.strftime("%Y-%m-%d"))
-  File.write(file + ".html", full)
+  # Parse sub-files, if any
+  file['files'].each{ |f| update_file(f, File.join(path, file['filename'])) } if file.key?('files')
 end
 
-files.each{ |f|
-  update_file(f)
-  subfiles[f].each{ |sf|
-    update_file(sf, f)
-  }
-}
+update_file(root)
