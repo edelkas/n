@@ -1,3 +1,7 @@
+:root {
+  --splash-screen-background: url(images/paper.png) repeat;
+  --logo-display: none;
+}
 html, body {
   margin: 0;
   padding: 0;
