@@ -56,11 +56,15 @@ def update_file(file, path = '')
   content = File.read(fn)
   
   # Inject content inside our wrapper
+  byebug if file['filename'] == 'index'
+  links = "#{path}/#{file['filename']}".split("/")[1..-1]
+  links = links.inject(['']) { |acc, x| acc << acc.last + '/' + x }[1..-1]
+  links = links.map.with_index{ |link, i| "<a href=\"#{link}.html\">#{link[/.*\/(.+)/, 1]}</a>" }.join(' > ')
   full = File.read("bare.html")
-             .gsub("ruby_content", content)
-             .gsub("ruby_link",    path.split("/").map{ |f| "<a href=\"#{HOST}\">#{file['name']}</a>" }.join(' > '))
-             .gsub("ruby_title",   file['name'])
-             .gsub("ruby_date",    Time.now.strftime("%Y-%m-%d"))
+             .gsub("ruby_content",     content)
+             .gsub("ruby_breadcrumbs", links)
+             .gsub("ruby_title",       file['name'])
+             .gsub("ruby_date",        Time.now.strftime("%Y-%m-%d"))
   
   # Write resulting HTML file
   out = File.join(ROOT, OUT_FILES, path)
