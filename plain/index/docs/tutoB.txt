@@ -1,0 +1,472 @@
+<a href="https://www.metanetsoftware.com/2016/n-tutorial-b-broad-phase-collision">Original</a> by Metanet Software circa 2004.
+Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.html">here</a>
+(<a href="https://web.archive.org/web/20131106132016/https://www.metanetsoftware.com/technique/tutorialBbak.html">archived</a>).
+<br><br>
+<table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" align="center" class="tuto">
+  <tr>
+    <td align="center">
+      <div align="left">
+        <font size="1">N Tutorial B &#8211; Broad-Phase Collision</p>
+          <p> <a name="toc"> table of contents</a> </p>
+          <p> <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br />
+            <a href="#section1">SECTION &nbsp; 1</a>: Basic Tile Grid<br />
+            <a href="#section2">SECTION &nbsp; 2</a>: Advanced Tile Grid<br />
+            <a href="#section3">SECTION &nbsp; 3</a>: Object Grid<br />
+            <a href="#section4">SECTION &nbsp; 4</a>: Raycasting<br />
+            <a href="#section5">SECTION &nbsp; 5</a>: Conclusion / Source Code<br />
+            <a href="#cites">WORKS CITED &nbsp;</a>
+          </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="section0">SECTION 0</a>: General Introduction </p>
+          <p> The previous tutorial examined how &#8220;narrow-phase&#8221; collision detection works in N; given two
+            shapes (a dynamic AABB or circle, and a static tile), we learned how to project the dynamic object out of
+            the tile. </p>
+          <p> This tutorial deals with &#8220;broad-phase&#8221; collision detection: given a dynamic object in a world
+            full of tiles, how do we know which objects and tiles it should be tested with during the narrow phase? The
+            solution used in N was to split the world into a uniform grid of square &#8220;cells&#8221;; instead of
+            testing the dynamic object against all the tiles in the world, we only need to test against the tiles
+            contained in the cells which are touching the dynamic object. </p>
+          <p> The one problem with our approach is that all dynamic objects must be smaller than a grid cell; while this
+            limitation can be circumvented (for instance, by representing a single large object as multiple smaller
+            objects), in actionscript, it really helps keep things running fast. Thus, it was a self-imposed design
+            constraint. </p>
+          <p> Grids tend to work best when all game objects are of roughly the same size and the game world is
+            relatively small; an NxN grid requires <strong>N^2</strong> cells, so for larger worlds the memory
+            requirements might be prohibitive. More complex structures which are used to partition game worlds, such as
+            quadtrees or multi-resolution grids, save memory and/or make it easier to support objects of vastly
+            different size. </p>
+          <p>
+            <a href="#toc">[ back to table of contents ]</a>
+          </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="section1">SECTION 1</a>: Basic Tile Grid </p>
+          <p> The first use of the grid was to store the tilemap data which defines the &#8220;solid&#8221; parts of the
+            world; since tile-based games use a grid of tiles, a grid seemed like a good fit ;)<br />
+            <br />
+            The grid itself is simply a 2D array; each entry in the array is a cell object. In N, each cell is occupied
+            by a single tile-shape.
+          </p>
+          <p> The first thing we&#8217;d like to be able to do is to determine, given a position, which cell contains
+            this position. This is easily done: </p>
+          <p>
+            <pre>
+              grid_column = Math.floor(pos.x / cell_width);
+              grid_row = Math.floor(pos.y / cell_height);
+            </pre>
+          </p>
+          <p> Now we can easily determine which cell contains our dynamic object&#8217;s center; we call this cell the
+            <strong>current cell</strong> of the object. Since we&#8217;ve restricted the object&#8217;s size to less
+            than the size of a cell, we know that the object can only overlap at most 4 cells. </p>
+          <p><object align="left" type="application/x-shockwave-flash" width="256" height="256"><embed align="left"
+              type="application/x-shockwave-flash" width="256" height="256"
+              src="/files/tut/B0_cells_touched.swf"></embed></object></p>
+          <div align="right">
+            <p> <strong>instructions:</strong></p>
+            <p> drag the <font color="#222288">blue</font> box to move it within its current cell.</p>
+            <p>
+              <strong>comments:</strong>
+            </p>
+            <p> the grid cells touched by the box are highlighted in <font color="#882222">red</font>.</p>
+            <p>note that if the object overlaps the current cell&#8217;s right neighbor,<br />
+              it can&#8217;t possibly overlap the left neighbor;<br />
+              likewise for the up/down neighbors.
+          </div>
+          <p> <br clear="all"><br />
+            Figure 0. The Cells Touched by an Object</p>
+          <p> We can safely assume that the object will, at most, be overlapping the current cell,</p>
+          <p>a horizontal neighbor of the current cell, a vertical neighbor of the current cell,<br />
+            and a diagonal neighbor of the current cell; the diagonal neighbor is also a neighbor of the horiz/vert.
+            neighbors.</p>
+          <p> Determining which cells an object overlaps can be done is various ways: </p>
+          <ul>
+            . you can simply use 4 position-lookups (one for each of the object&#8217;s corners)</p>
+            <p>. you can use one position lookup (with the object&#8217;s center) to determine the current cell&#8217;s
+              index in the 2D grid, and then use offsets from this index based on the object&#8217;s position relative
+              to the current cell&#8217;s position (i.e. if the object&#8217;s center is left and below the current
+              cell&#8217;s center, and the current cell&#8217;s index is [i][j], we know we have to look at the left,
+              down, and left-down neighbors, or [i-1][j], [i][j+1], [i-1][j+1].
+          </ul>
+          <p>
+            We can run into problems if part of the object is outside of the boundary of the grid; this results in the
+            above methods generating cell indices which don&#8217;t exist. </p>
+          <p> This can be avoided by using min/max to keep the indices within the limits of the grid, or by using modulo
+            to &#8220;wrap&#8221; the indices to the other side of the grid. </p>
+          <p> A much simpler solution is to pad the outside edges of the grid with &#8220;border&#8221; cells, which
+            can&#8217;t be occupied by an object; this prevents objects from leaving the boundary of the grid.</p>
+          <p> <strong>&#8211;= collision vs. a tilemap using the grid =&#8211;</strong> </p>
+          <p> Now that we know the 4 cells touched by our dynamic object, we need to collide the object against the
+            tiles contained in those cells. The actual collision process is described in the first tutorial. </p>
+          <p> Each cell in the grid stores tile information describing the tile contained in that cell. this includes a
+            flag indicating the shape of the tile, as well as any tile-specific properties needed by the collision
+            routines (i.e. x-width, center position, surface normal). </p>
+          <p> To implement this, you can define a set of tile objects; each tile is responsible for generating collision
+            results between itself and a dynamic object: </p>
+          <p>
+            <pre>
+              tile.Collide_Circle(myCircle)
+            </pre>
+          </p>
+          <p> Or, you can use a simpler c-like approach where both the tile and the object are simply containers of
+            data, and collision functions are stored in a 2D hash-list of collision functions; the shape-flags of the
+            objects being collided are used as hash keys to select the appropriate function: </p>
+          <p>
+            <pre>
+              Collide[tile.shape][myObj.shape](tile, myObj)
+            </pre>
+          </p>
+          <p> <a href="#toc">[ back to table of contents ]</a> </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="section2">SECTION 2</a>: Advanced Tile Grid </p>
+          <p> <strong>&#8211;= grid improvements =&#8211;</strong> </p>
+          <p> Now that we have a simple grid in place for use with object-vs.-tilemap collision, there are certain
+            things we could do to make it more efficient. </p>
+          <p> The first thing is to store, in each cell, direct references to that cell&#8217;s 4 neighbors. This way,
+            once we&#8217;ve determined an object&#8217;s current cell, we can access the neighboring cells using a
+            single property lookup; this results in a smaller number of calculations when accessing neighboring cells
+            but causes each cell to occupy more memory. Since the<br />
+            cost of calculating cell indices is likely to be negligible in many programming environments, this trade-off
+            might not always be worthwhile. </p>
+          <p> In N we implemented these neighbor &#8220;pointers&#8221; separately: </p>
+          <p>
+            <pre>
+              cell.nR //right, left, up, down neighbors
+              cell.nL
+              cell.nU
+              cell.nD
+            </pre>
+          </p>
+          <p> <strong>&#8211;= edge info =&#8211;</strong> </p>
+          <p> One major enhancement we made to our grid is to store information, not only about each cell, but about
+            each of the cell&#8217;s 4 edges. This idea was borrowed from an article in Game Programming Gems 3 <a
+              href="#forsyth">[Forsyth]</a> which mentioned that the game <i>X-Com</i> used a similar structure. </p>
+          <p> The edge data we stored was very minimal; a single flag which indicates the state of the edge: </p>
+          <ul>
+            <strong>. empty:</strong> neither of the cells which share this edge contains a solid tile shape<br />
+            <strong>. solid:</strong> each tile shape has at least one edge which matches a grid edge perfectly; these
+            edges were labeled solid.<br />
+            <strong>. interesting:</strong> edges which were adjacent to a cell containing a solid tile shape, but which
+            didn&#8217;t match the shape perfectly were labeled &#8220;interesting&#8221;, indicating that we needed to
+            perform further collision tests. For instance, the two edges on the outside of a triangle&#8217;s hypotenuse
+            are &#8220;interesting&#8221;.
+          </ul>
+          <p> Once each tile has been assigned a set of edge states, we then need to compare the edge states of
+            neighboring tiles; any edge at which both tiles have <strong>solid</strong> edge states should be considered
+            <strong>empty</strong>, as such a configuration only exists below the surface of the world. Such a change
+            will have no impact on the correctness of the collision results, since objects should only collide with the
+            world&#8217;s surface.</p>
+          <p> <img decoding="async" class="center" src="/files/tut/B1_edgestates.gif"><br />
+            Figure 1. The 9 Tile Shapes Used in N, and their Corresponding Edge States<br />
+            <br />
+            <strong>Solid</strong> edges are highlighted in <font color="#882222">red</font> and
+            <strong>interesting</strong> edges in <font color="#808080">grey</font>.
+          </p>
+          <p> Having this edge info let us skip a lot of tile-specific collision routines; if an object overlaps a solid
+            edge (which is very common in tile-based games), we simply project it out of that edge instead of having to
+            resort to a more complex object-vs.-tile collision test. Since the only edges which were labeled
+            &#8220;solid&#8221; are those which perfectly match the shape of a tile, the result is the same as if we had
+            used an object-vs.-tile test, but it&#8217;s much simpler to compute. The only time we have to resort to
+            tile-specific collision routines is when an object touches an &#8220;interesting&#8221; edge. </p>
+          <p> This edge information can be considered a coarse approximation of the surface of the world described by
+            the tilemap; this is sometimes useful since a normal tilemap doesn&#8217;t contain any explicit surface
+            information, and knowing the surface of the world is often useful &#8212; for instance to allow enemies to
+            move along the world&#8217;s surface. </p>
+          <p> <img decoding="async" class="center" src="/files/tut/B2_edgesurface.gif"><br />
+            Figure 2. An Example Tile Map Containing Chunks of Contiguous Tiles and their Edge States<br />
+            <br />
+            <strong>Solid</strong> edges are highlighted in <font color="#882222">red</font> and
+            <strong>interesting</strong> edges in <font color="#808080">grey</font>. <br />
+            Note that the non-empty edges form a perimeter around each chunk which approximates the chunk&#8217;s
+            surface.
+          </p>
+          <p> Having this extra edge info for each cell may or may not be useful in your game. </p>
+          <p> In N, doors were easily implemented as objects which changed the value of a cell&#8217;s edge states. This
+            was a pleasant side-effect of using edges. Additionally, the enemy AI uses edge states for pathfinding; this
+            lets enemies respond to doors, and follow the (approximate) surface of the world. Our ray-queries were also
+            sped up by using this edge info. </p>
+          <p> Unfortunately, the state of each edge is determined by the state of the two cells adjacent to it; the
+            logic we implemented to correctly setup the edges was complex and quite prone to bugs, since we had to
+            consider each possible combination of cell states. A simpler method to setup/define edge states probably
+            exists; please let us know if you come up with anything. </p>
+          <p> <a href="#toc">[ back to table of contents ]</a> </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="section3">SECTION 3</a>: Object Grid </p>
+          <p> The grid structure described above can also double as a <a href="#simpson">spatial database</a> used to
+            manage dynamic objects. </p>
+          <p> Just as each cell contains information about the tile located in that cell, it can also contain
+            information about each dynamic object currently located in the cell. Each cell contains a list of dynamic
+            objects; as an object moves through the grid, we insert/remove it from each cell&#8217;s list as
+            appropriate. </p>
+          <p> There are two approaches that can be taken when using a grid with dynamic objects: </p>
+          <p> <strong>&#8220;normal&#8221; grid:</strong> each object is associated with all of the cells it touches. In
+            our case, this would be from 1 to 4 cells. Every time the object moves, it&#8217;s removed from the cells
+            which it used to touch, and inserted into the cells which it now touches. When we collide an object, we only
+            need to test it against the contents of any cell it touches. </p>
+          <ul>
+            . <strong>pros: </strong>each object needs to look in at most 4 cells to find other objects it might collide
+            with<br />
+            . <strong>cons:</strong> each object needs to be inserted/removed from up to 4 cells every time it moves;
+            also, additional logic needs to be added to the collision code to deal with a case where, for instance, two
+            objects touch the same two cells. Since we only want to test that pair of objects once, we&#8217;d have to
+            add a &#8220;tested&#8221; flag or similar code to deal with this.
+          </ul>
+          <p> <strong>&#8220;loose&#8221; grid:</strong> each object is placed in a single cell: that which contains its
+            centre. When an object moves, it&#8217;s removed from that (single) cell and inserted into the cell which
+            contains its new position. When testing for collision, we have to check not only the current cell, but the 8
+            cells neighboring the current cell. The idea of a &#8220;loose&#8221; grid can be a bit confusing until it
+            clicks, at which point everything will make perfect sense. You can find more details here: <a
+              href="#ulrich">[Ulrich]</a></p>
+          <ul>
+            . <strong>pros:</strong> each object needs to be inserted/removed from only 1 cell when it moves.<br />
+            . <strong>cons: </strong>each object always needs to look in 9 cells to find other objects it might collide
+            with
+          </ul>
+          <p> We chose to use a loose grid in N because it simplified handling moving objects; however, most of the
+            ideas mentioned in this tutorial apply to any kind of grid. </p>
+          <p>
+            Each cell in our grid stores a double-linked-list of references to objects; the objects in a cell&#8217;s
+            list are those whose centers are contained in the cell. (If you&#8217;re not familiar with linked-lists,
+            googling &#8220;linked list&#8221; is probably a good way to learn about them.) </p>
+          <p> In our implementation, each cell has: </p>
+          <ul>
+            <strong>.next </strong>&nbsp;&nbsp;//the head of the linked list<br />
+            <strong>.prev</strong> &nbsp;&nbsp;//always equal to null since .next is the first list entry
+          </ul>
+          <p> and each object has: </p>
+          <ul>
+            <strong>.cell </strong>&nbsp;&nbsp;&nbsp;//reference to the cell in which it&#8217;s contained<br />
+            <strong>.prev </strong>&nbsp;&nbsp;//reference to the object before this object in .cell&#8217;s linked
+            list<br />
+            <strong>.next</strong> &nbsp;&nbsp;//reference to the object after this object in .cell&#8217;s linked list
+          </ul>
+          <p> Whenever an object moves, its position in the grid is updated and changes to the linked lists are made as
+            appropriate. </p>
+          <p> <strong>&#8211;= more details =&#8211;</strong></p>
+          <p> There are two ways to approach broad-phase collision. One is to let each object query the world to find
+            other objects it might be colliding with. Another is for a manager to find all possible collisions, and
+            notify the objects involved. </p>
+          <p> In N, we used the first method because it allowed a very simple design: only the ninja queries for
+            collision, and the other objects are notified if the ninja&#8217;s query results in a collision event. While
+            this is good from the point of view of execution speed, it also limits possible designs. For instance,
+            enemies can&#8217;t react to each other (as in <em>Super Mario Bros.</em>, where goombas which walk into
+            each other change direction). </p>
+          <p> So, each frame the ninja tests its current cell and the 8 neighboring cells for objects; it tests for
+            collision against any objects found. </p>
+          <p> A more general, elegant system, which is useful in simulation-type environments where all objects must
+            collide with each other, is to iterate over all moving objects, and test them against: </p>
+          <p>. any objects after them in the current cell&#8217;s list<br />
+            . any objects in the lists of 4 cells which neighbor the current cell. You can use any contiguous set of 4
+            cells, for instance, [right, right-down, down, left-down], [up, up-left, left, left-down], etc. </p>
+          <p> It might seem like this technique will miss some collisions, but if you work it out on paper you&#8217;ll
+            see that every possible collision between objects is found. This lets us reduce the number of per-object
+            cell-list tests to 5 (from 9), without resorting to flags or any other awkward solution. </p>
+          <p> Collision detection in any game is very specific to the game&#8217;s design; usually you can achieve
+            significant increases in efficiency by simply choosing good rules for your game world. For instance, in a
+            game such as <a href="https://www.soldat.pl" target="_blank">Soldat</a> where there are many moving objects,
+            most of which are bullets, a very good idea is to decide that bullets should not collide against other
+            bullets. </p>
+          <p> This means that bullets don&#8217;t have to be moved in the grid every time they change positions &#8212;
+            instead of being <strong>in</strong> the grid, they simply read <strong>from</strong> the grid to determine
+            which objects they might collide with. This saves the cost of numerous linked-list insertion/removals; the
+            tradeoff is that you can&#8217;t stop your opponent&#8217;s bullets with your own.</p>
+          <p> <a href="#toc">[ back to table of contents ]</a> </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="section4">SECTION 4</a>: Raycasting </p>
+          <p> Aside from projection/collision queries, games often also need other types of queries; objects can invoke
+            these queries when they need to know something about the world. </p>
+          <p> A good example of such a query is a <strong>raycast</strong>; a ray is simply a line with only one
+            endpoint. Rays can be used to determine if two objects can &#8220;see&#8221; each other, or can model a
+            fast-moving projectile &#8212; for instance, in <em>Quake</em>, many weapons (such as the railgun) are
+            modeled as rays. </p>
+          <p> We might want to know the first thing that the ray intersects (by <strong>first</strong> we mean the
+            intersection point closest to the ray&#8217;s origin); or, given two points we might want to know if the
+            line which connects those two points intersects anything. </p>
+          <p> In N, we use raycasts to determine AI visibility, as well as for some of the weapons.<br />
+            Colliding the ray against the world requires the two (hopefully now familiar) steps: </p>
+          <p>. <strong>broad phase:</strong> determine which things (tiles and objects) the ray might collide with<br />
+            .<strong> narrow phase:</strong> test the ray against each thing to determine collision information, such as
+            the point of intersection</p>
+          <p> <strong>&#8211;= broad phase =&#8211;</strong> </p>
+          <p> In our grid-based system, the broad phase amounts to determining which cells the ray touches; anything not
+            contained in this set of cells can&#8217;t possibly touch the ray. (<strong>NOTE:</strong> since we use a
+            loose grid for our objects, this isn&#8217;t strictly true; see below for more details) </p>
+          <p> A naive approach to determining which cells the ray touches might be to calculate the AABB containing the
+            ray, and consider all cells touching this AABB as touching the ray. While this works well for short rays, or
+            rays which are almost vertical or horizontal, it requires testing up to n^2 cells, which will get very slow
+            very fast. </p>
+          <p> A better solution would be to determine EXACTLY which cells the ray touches; a great (and quite simple)
+            algorithm to do this is described in <a href="#amanatides">[Amanatides]</a> and <a
+              href="#bikker">[Bikker]</a>; basically, it lets us step along the ray, visiting each cell the ray touches
+            in the order it is touched by the ray. </p>
+          <p> For N, we simply implemented this algorithm; at each cell we test the ray against the cell contents, using
+            our narrow-phase routines. </p>
+          <p> <strong>&#8211;= narrow phase: vs. tiles =&#8211;</strong> </p>
+          <p> Not only does the above ray-traversal algorithm tell us which cells the ray touches, it also allows us to
+            efficiently calculate the points at which the ray enters and exists each cell &#8212; i.e. the points at
+            which the ray crosses the edges of the grid. This is very useful because, since our grid stores edge info,
+            we can stop as soon as the ray crosses over a <strong>solid</strong> edge &#8212; we know that this is an
+            intersection without having to perform any special ray-vs.-tile intersection test. </p>
+          <p> If the ray crosses an <strong>interesting</strong> edge, we need to test the ray against the cell&#8217;s
+            tile shape using a tile shape-specific test. Most of the tests we used were implemented as ray-vs.-line or
+            ray-vs.-line-segment tests, based on the following sources: <a
+              href="https://www.geometryalgorithms.com/algorithms.htm" target="_blank">Geometry Algorithms</a> and <a
+              href="#orourke">[O&#8217;Rourke]</a>. For the circular shapes, we adapted a swept-circle test <a
+              href="#gomez">[Gomez]</a>. </p>
+          <p> <strong>&#8211;= narrow phase: vs. objects =&#8211;</strong> </p>
+          <p> One major problem with using a loose grid is that objects which aren&#8217;t contained in the cells
+            touched by a ray might still touch the ray. </p>
+          <p>
+            <img decoding="async" class="center" src="/files/tut/B3_raymiss.png"><br />
+            Figure 4. The Cells Touched by a Ray<br />
+            <br />
+            Note that even though an object isn&#8217;t contained in a cell touched by the ray, it may still intersect
+            the ray.
+          </p>
+          <p>
+            In N, this was a problem we could ignore &#8212; since the ninja was the only object which rays needed to be
+            tested against, we simply performed a ray-vs.-tiles test to find the point at which the ray hits the tiles,
+            and then we performed a ray-vs.-circle test against the ninja to see if the ray hit the ninja before hitting
+            the tiles. </p>
+          <p>If intersecting rays with dynamic objects is an important feature of your game, you might be better off
+            using a regular / non-loose grid, which doesn&#8217;t suffer from this problem.</p>
+          <p> <a href="#toc">[ back to table of contents ]</a> </p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <p>
+          <font size="1">
+        </p>
+        <p> <a name="section5">SECTION 5</a>: Conclusion / Source Code</p>
+        <object align="left" type="application/x-shockwave-flash" width="420" height="500"><embed align="left"
+          type="application/x-shockwave-flash" width="400" height="500"
+          src="/files/tut/tutB_demo04.swf"></embed></object>
+        <p> As we mentioned before, the one main limitation of our grid-based approach is that all objects must fit
+          inside a grid cell (i.e. can be no larger than a grid cell). This isn&#8217;t really a limitation imposed by
+          the use of a grid; it&#8217;s a self-imposed limitation designed to increase the simplicity and speed of this
+          approach. </p>
+        <p> To use a grid-based approach with any size of object, all that&#8217;s necessary is to be able to (hopefully
+          quickly) determine which cell(s) an object touches, so that it can be inserted/deleted from those cells&#8217;
+          linked lists. With objects smaller than a cell, this is very fast; as the size of an object grows, the number
+          of cells it touches increases, and the cost of the linkws-list insertions and deletions will become
+          prohibitive.</p>
+        <p> The <strong>best</strong> grid resolution to use is game-specific. </p>
+        <p> Another thing to note is that you don&#8217;t need to have a tile-based world to use a grid; using the
+          previous tutorial&#8217;s collision routines and a grid-based system, you could develop an engine which
+          supports a world composed of arbitrarily placed and sized shapes; this way your world wouldn&#8217;t have to
+          be constrained to tile-sized blocks. All you need to be able to do is, given a shape, determine all of the
+          tiles it overlaps. If you insert each static object into the grid this way, you can then use the grid as you
+          would with tiles &#8212; to find all the static objects to test a dynamic object against. </p>
+        <p> Anyway, hopefully you&#8217;ve learnt that a simple grid can often be an effective data structure to use as
+          a spatial database in your game, and also how to go about using it. </p>
+        <p> <strong>&#8211;= source code =&#8211;</strong></p>
+        <p> Here is a demo application containing the N source code relating to this tutorial:</p>
+        <p> <a href="/files/tut/N_tutorialBsrc.zip">download</a> </p>
+        <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for commercial
+          use; a link to our site would also be appreciated. </p>
+        <p> <strong>&#8211;= contacting us =&#8211;</strong></p>
+        <p> Please let us know if you have any corrections, comments, or suggestions about this tutorial. <br />
+          <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> &#8212; be sure to reference the
+          tutorial you&#8217;re writing about.
+        </p>
+        <p> <strong>PLEASE</strong> don&#8217;t contact us with questions about the source, you&#8217;ll just have to
+          figure it out on your own. </p>
+        <p> <a href="#toc">[ back to table of contents ]</a> </p>
+        <p>
+          </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1">
+          </p>
+          <p> <a name="cites">WORKS CITED</a> </p>
+          <p> Amanatides, John. <a name="amanatides" href="https://www.cs.yorku.ca/~amana/research/grid.pdf"
+              target="_blank">A Fast Voxel Traversal Algorithm for Ray Tracing</a></p>
+          <p> Bikker, Jacco. <a name="bikker" href="https://www.flipcode.com/articles/article_raytrace04.shtml"
+              target="_blank">Raytracing Topics &#038; Techniques &#8211; Part 4: Spatial Subdivision</a></p>
+          <p> Forsyth, Tom. <a name="forsyth" href="https://www.charlesriver.com/titles/gamegems3.html"
+              target="_blank">Cellular Automata for Physical Modelling</a></p>
+          <p> Gomez, Miguel. <a name="gomez" href="https://www.gamasutra.com/features/19991018/Gomez_1.htm"
+              target="_blank">Simple Intersection Tests for Games</a>.</p>
+          <p> O&#8217;Rourke, Joseph. <a name="orourke" href="https://cs.smith.edu/~orourke/books/compgeom.html"
+              target="_blank">Computational Geometry in C</a></p>
+          <p> Simpson, Zachary. <a name="simpson" href="https://www.mine-control.com/zack/patterns/gamepatterns.html"
+              target="_blank">Design Patterns for Computer Games</a></p>
+          <p> Ulrich, Thatcher. <a name="ulrich" href="https://www.tulrich.com/geekstuff/partitioning.html"
+              target="_blank">Spatial Partitioning with Loose Octrees</a></p>
+          <p>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr class="noBorder">
+    <td>
+      <font size="1">
+        (c) Metanet Software Inc. 2004
+      </font>
+    </td>
+</tr>
+</table>
+
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = {
+      "quality":         "high",
+      "backgroundColor": "#d4d9e9",
+      "wmode":           "transparent",
+      "autoplay":        "on",
+      "unmuteOverlay":   "hidden"
+  };
+</script>
+<script src="/ruffle/ruffle.js"></script>

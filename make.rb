@@ -56,7 +56,6 @@ def update_file(file, path = '')
   content = File.read(fn)
   
   # Inject content inside our wrapper
-  byebug if file['filename'] == 'index'
   links = "#{path}/#{file['filename']}".split("/")[1..-1]
   links = links.inject(['']) { |acc, x| acc << acc.last + '/' + x }[1..-1]
   links = links.map.with_index{ |link, i| "<a href=\"#{link}.html\">#{link[/.*\/(.+)/, 1]}</a>" }.join(' > ')
