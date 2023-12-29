@@ -20,6 +20,7 @@ documents = {
     { 'name' => 'Tutorial A', 'filename' => 'tutoA' },
     { 'name' => 'Tutorial B', 'filename' => 'tutoB' },
     { 'name' => 'Tutorial C', 'filename' => 'tutoC' },
+    { 'name' => 'Tutorials Introduction', 'filename' => 'tutoIntro' },
   ]
 }
 

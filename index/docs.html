@@ -39,17 +39,50 @@
 				</div>
 				<div class="content">
 
-<div class="gallery shadowedThumbs">
-	<div class="small">
-		<div><a href="docs/tutoA.html"><img src="/n/images/tutoA.png" width="96" height="96" alt="Thumbnail" /></a></div>
-		<div><a href="docs/tutoA.html" class="menuInverted">Tutorial A</a></div>
-	</div>
-	<div class="small">
-		<div><a href="docs/tutoB.html"><img src="/n/images/tutoB2.png" width="96" height="96" alt="Thumbnail" /></a></div>
-		<div><a href="docs/tutoB.html" class="menuInverted">Tutorial B</a></div>
-	</div>
-</div>
+<h1>Metanet tutorials</h1>
 
+The following are restorations of Metanet's classic tutorials on N's physical collision system (as well as other related topics).
+The main purposes were to re-add now missing material, fix several aspects (notably, the Flash elements), and improve
+the presentation by recovering the original formatting of the tutorials.
+
+The main additions are:
+<ul>
+	<li>Fixed all Flash simulations natively, no extension required.</li>
+	<li>Recovered third, incomplete tutorial about related topics.</li>
+	<li>Recovered tutorial <a href="docs/tutoIntro.html">presentation page</a>.</li>
+	<li>Added supplementary Flash animations not previously present in Tutorial A.</li>
+	<li>Added FITC05 talk slides and script (great stuff!)</li>
+</ul>
+The main cosmetic changes are:
+<ul>
+	<li>Recovered old tutorial formatting, before the blog migrated to the uglier WordPress.</li>
+	<li>Slight improvements to the figures (transparent background, centering...).</li>
+	<li>Code block for verbatim texts.</li>
+</ul>
+<table class="invisible" style="margin-left: 20%; margin-right: 20%;">
+	<tr>
+		<td><a href="docs/tutoA.html"><img src="/n/images/tutoA.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder"/></a></td>
+		<td><a href="docs/tutoA.html" class="menuInverted">Tutorial A – Collision Detection and Response</a><br>
+		Examines the basics of collision detection in games, including some mathematical (geometric notions, set projections, Voronoi regions...)
+		and physical (forces, bounce, friction...) tools. Delves into the Separating Axis Theorem and applies it to multiple shapes. The final
+		goal is to design a fast method to, given two convex shapes, figure out whether they are colliding and, if so, how to depenetrate them.
+		Accompanied by images, 10 Flash simulations, and a full collision demo with original N source code.</td>
+	</tr>
+	<tr>
+		<td><a href="docs/tutoB.html"><img src="/n/images/tutoB.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
+		<td><a href="docs/tutoB.html" class="menuInverted">Tutorial B – Broad-Phase Collision</a><br>
+		Deals with the first phase of the collision algorithm, namely, the selection of the tiles/objects for which actual collision tests must be performed
+		(by the method explained in the first tutorial). This problem is solved by dividing the map into a grid of square cells, thus only requiring
+		to test against objects contained in neighbouring cells. Delves into the notion of raycasting. Accompanied by images, Flash simulations and a very
+		complete N collision demo.</td>
+	</tr>
+	<tr>
+		<td><a href="docs/tutoC.html"><img src="/n/images/tutoC.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
+		<td><a href="docs/tutoC.html" class="menuInverted">Tutorial C – Other aspects</a><br>
+		This unfortunately <strong>unfinished</strong> third tutorial was supposed to explain several additional systems in N, such as: The game's internal logic,
+		enemy AI and movement, drawing and rendering concerns, in-depth details about the ragdolling physics, replay format, pseudo-randomness in the game...</td>
+	</tr>
+</table>
 
 					</div>
 				</td>

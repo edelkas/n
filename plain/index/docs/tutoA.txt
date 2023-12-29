@@ -1,6 +1,5 @@
-<a href="https://www.metanetsoftware.com/2016/n-tutorial-a-collision-detection-and-response">Original</a> by Metanet Software circa 2004.
-Restored from <a href="https://www.metanetsoftware.com/technique/tutorialAbak.html">here</a>
-(<a href="https://web.archive.org/web/20131109020156/https://www.metanetsoftware.com/technique/tutorialAbak.html">archived</a>).
+Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/2016/n-tutorial-a-collision-detection-and-response">current</a> version,
+<a href="https://web.archive.org/web/20040701104235/http://www.harveycartel.org/metanet/tutorials/tutorialA.html">archived</a> version).
 <br><br>
 <table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" align="center" class="tuto">
   <tr>

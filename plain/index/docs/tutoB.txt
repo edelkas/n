@@ -1,6 +1,5 @@
-<a href="https://www.metanetsoftware.com/2016/n-tutorial-b-broad-phase-collision">Original</a> by Metanet Software circa 2004.
-Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.html">here</a>
-(<a href="https://web.archive.org/web/20131106132016/https://www.metanetsoftware.com/technique/tutorialBbak.html">archived</a>).
+Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/2016/n-tutorial-b-broad-phase-collision">current</a> version,
+<a href="https://web.archive.org/web/20041112102646/http://www.harveycartel.org/metanet/tutorials/tutorialB.html">archived</a> version).
 <br><br>
 <table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" align="center" class="tuto">
   <tr>
@@ -77,7 +76,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
             than the size of a cell, we know that the object can only overlap at most 4 cells. </p>
           <p><object align="left" type="application/x-shockwave-flash" width="256" height="256"><embed align="left"
               type="application/x-shockwave-flash" width="256" height="256"
-              src="/files/tut/B0_cells_touched.swf"></embed></object></p>
+              src="/n/files/tut/B0_cells_touched.swf"></embed></object></p>
           <div align="right">
             <p> <strong>instructions:</strong></p>
             <p> drag the <font color="#222288">blue</font> box to move it within its current cell.</p>
@@ -181,7 +180,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
             <strong>empty</strong>, as such a configuration only exists below the surface of the world. Such a change
             will have no impact on the correctness of the collision results, since objects should only collide with the
             world&#8217;s surface.</p>
-          <p> <img decoding="async" class="center" src="/files/tut/B1_edgestates.gif"><br />
+          <p> <img decoding="async" class="center" src="/n/files/tut/B1_edgestates.gif"><br />
             Figure 1. The 9 Tile Shapes Used in N, and their Corresponding Edge States<br />
             <br />
             <strong>Solid</strong> edges are highlighted in <font color="#882222">red</font> and
@@ -197,7 +196,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
             the tilemap; this is sometimes useful since a normal tilemap doesn&#8217;t contain any explicit surface
             information, and knowing the surface of the world is often useful &#8212; for instance to allow enemies to
             move along the world&#8217;s surface. </p>
-          <p> <img decoding="async" class="center" src="/files/tut/B2_edgesurface.gif"><br />
+          <p> <img decoding="async" class="center" src="/n/files/tut/B2_edgesurface.gif"><br />
             Figure 2. An Example Tile Map Containing Chunks of Contiguous Tiles and their Edge States<br />
             <br />
             <strong>Solid</strong> edges are highlighted in <font color="#882222">red</font> and
@@ -360,7 +359,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
           <p> One major problem with using a loose grid is that objects which aren&#8217;t contained in the cells
             touched by a ray might still touch the ray. </p>
           <p>
-            <img decoding="async" class="center" src="/files/tut/B3_raymiss.png"><br />
+            <img decoding="async" class="center" src="/n/files/tut/B3_raymiss.png"><br />
             Figure 4. The Cells Touched by a Ray<br />
             <br />
             Note that even though an object isn&#8217;t contained in a cell touched by the ray, it may still intersect
@@ -388,7 +387,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
         <p> <a name="section5">SECTION 5</a>: Conclusion / Source Code</p>
         <object align="left" type="application/x-shockwave-flash" width="420" height="500"><embed align="left"
           type="application/x-shockwave-flash" width="400" height="500"
-          src="/files/tut/tutB_demo04.swf"></embed></object>
+          src="/n/files/tut/tutB_demo04.swf"></embed></object>
         <p> As we mentioned before, the one main limitation of our grid-based approach is that all objects must fit
           inside a grid cell (i.e. can be no larger than a grid cell). This isn&#8217;t really a limitation imposed by
           the use of a grid; it&#8217;s a self-imposed limitation designed to increase the simplicity and speed of this
@@ -409,7 +408,7 @@ Restored from <a href="https://www.metanetsoftware.com/technique/tutorialBbak.ht
           a spatial database in your game, and also how to go about using it. </p>
         <p> <strong>&#8211;= source code =&#8211;</strong></p>
         <p> Here is a demo application containing the N source code relating to this tutorial:</p>
-        <p> <a href="/files/tut/N_tutorialBsrc.zip">download</a> </p>
+        <p> <a href="/n/files/tut/N_tutorialBsrc.zip">download</a> </p>
         <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for commercial
           use; a link to our site would also be appreciated. </p>
         <p> <strong>&#8211;= contacting us =&#8211;</strong></p>
