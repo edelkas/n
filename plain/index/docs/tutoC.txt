@@ -1,0 +1,358 @@
+Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/20090131075043/http://www.harveycartel.org/metanet/tutorials/tutorialC.html">archived</a> version).
+<br><br>
+<table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" CLASS="tuto" align="center">
+  <tr>
+    <td align="center">
+      <div align="left">
+        <font size="1"><br>
+          <a name="toc"> table of contents</a> <br>
+          <br>
+          <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br>
+          <a href="#section1">SECTION &nbsp; 1</a>: AI/Object system<br>
+          <a href="#section2">SECTION &nbsp; 2</a>: Character Physics and Rendering<br>
+          <a href="#section3">SECTION &nbsp; 3</a>: Simulation System<br>
+          <a href="#section4">SECTION &nbsp; 4</a>: Conclusion / Source Code<br>
+          <a href="#footnotes">FOOTNOTES &nbsp;</a><br>
+          <a href="#appendixA">APPENDIX &nbsp; A</a>: Whatever<br>
+          <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="section0">SECTION 0</a>: General Introduction <br>
+          <br>
+          The previous tutorials dealt with the collision system used in N; while this is by far the largest and most
+          complex part of the game's code, there are various other little systems that some people have asked about, so
+          in this tutorial we'll try to briefly explain some of these other parts.<br>
+          <br>
+          <br>
+          <strong>--= for future reference -- embedded swf code =--</strong> <br>
+          <br>
+          <br>
+          <a href="#toc">[ back to table of contents ]</a> <br>
+          <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="section1">SECTION 1</a>: AI/Object system <br>
+          <br>
+          <strong>--= Topics to Cover =--</strong> <br>
+          <br>
+          --<br>
+          -"event" model: <br>
+          &nbsp;&nbsp;-TestVsPlayer <br>
+          &nbsp;&nbsp;-think/update system (i.e. object sleeping) <br>
+          -- <br>
+          <br>
+          Each game object (enemies and other objects) was implemented separately; they were implemented as FSMs <font
+            color="#990000">++TODO: refer to the ai depot FSM/quake tutorial</font>. Most objects were 150-300 lines of
+          code. <br>
+          <br>
+          The objects were essentially a collection of functions which were called whenever a particular event occurred.
+          For instance, obj.Update() was called whenever the simulation was ticked. <br>
+          <br>
+          Objects registered themselves for event notification with the object-manager, which notified them whenever
+          needed. <br>
+          <br>
+          The AI/object system used in N is fairly simple; each object in N can support several "interfaces" (they
+          aren't explicit interfaces in the AS2.0/java sense, however they were treated as such) <br>
+          <br>
+          There were four main tasks/event-types the object-manager took care of: <br>
+          <br>
+          <strong>(A) collision/spatial database</strong><br>
+          <ul>
+            As described in the previous tutorial, we used a loose grid as a spatial database. <br>
+            Any objects which wanted to be notified of collision:<br>
+            <ul>
+              . must call objectmanager.AddToGrid() and .RemoveFromGrid(); this is equivalent to registering as a
+              listener for a "collision" event<br>
+              . must have a .pos<br>
+              . must call objectmanager.Moved() whenever the position changes; this lets the objectmanager update the
+              loose grid if necessary<br>
+              . must provide .TestVsPlayer(), which returns true if the player is colliding with the object, and false
+              otherwise.
+            </ul>
+          </ul>
+          <strong>(B) object updating/sleeping</strong><br>
+          <ul>
+            Some objects need to be updated each time we tick the simulation; examples are objects which are moving
+            (they need to change their position each tick) or doing anything else constantly (such as targeting the
+            player, or searching for the player). objects can call objectmanager.StartUpdate() and .EndUpdate() to alert
+            the object manager that they should/shouldn't be notified when a simulation tick happens. <br>
+            <br>
+            This mechanism was the way in which object logic was implemented in the FSM; to change "states", the object
+            simply plugged the appropriate state-specific update function into its generic ".Update" slot. for instance:
+            <br> <br>
+            <font face="Courier New, Courier, mono">
+              <ul><pre>
+                //----- constructor -----
+                function Mover()
+                {
+                &nbsp;&nbsp;&nbsp;&nbsp;this.Update = null;
+                &nbsp;&nbsp;&nbsp;&nbsp;this.MoveLeft();
+                }
+                
+                //----- state-changing events -----
+                Mover.prototype.MoveLeft()
+                {
+                &nbsp;&nbsp;&nbsp;&nbsp;this.Update = this.Update_MoveLeft;
+                }
+                
+                //----- state-changing events -----
+                Mover.prototype.MoveRight()
+                {
+                &nbsp;&nbsp;&nbsp;&nbsp;this.Update = this.Update_MoveRight;
+                }
+                
+                //----- object states -----
+                Mover.prototype.Update_MoveLeft
+                {
+                &nbsp;&nbsp;&nbsp;&nbsp;//move to the left
+                }
+                
+                Mover.prototype.Update_MoveRight
+                {
+                &nbsp;&nbsp;&nbsp;&nbsp;//move to the right
+                }
+              </pre></ul>
+            </font> <br>
+            The article cited above provides many ideas about how to improve and extend this simple implementation;
+            also, many of the "game programming gems" books contain articles on FSMs. <br>
+            <br>
+            Since updating objects takes time, it's advantageous to only update those objects which need to be updated.
+            For instance, some objects (such as doors) only need to be updated while the player is near them; most of
+            the time they're inert, and don't require updating. using the StartUpdate/EndUpdate mechanism, objects were
+            able to "sleep" in between periods of activity by simply unplugging themselves from the update event when
+            they were done "doing stuff".
+          </ul>
+          <strong>(C) drawing</strong> <br>
+          <ul>
+            Since the simulation is run at a constant 40Hz, but the rendering is done at a different rate (depending on
+            the client's machine), by uncoupling Update() from Draw(), we can save some time -- objects only need to
+            update their graphical information (i.e. the ._x and ._y position of their gfx MC, etc.) when the Draw event
+            occurs. similar to Update, in this way objects which don't move don't need to keep touching their MCs, which
+            saves time.
+          </ul>
+          <strong>(D) visibility queries/AI updates</strong><br>
+          <ul>
+            Casting rays through the world is a fairly costly process. in order to maintain a fast framerate, we
+            implemented "staggered" AI updates; any object which requires costly updates (such as raycasts for
+            visibility) can subscribe to the Think event. Each time the simulation is ticked, SOME of the objects are
+            allowed to Think(); this way, the cost of the raycasts/etc. is spread over several frames. The tradeoff is
+            that objects don't respond instantly; there are a few frames between a change in visibility (i.e. the ninja
+            becoming visible to an enemy) and the corresponding change in logic (the enemy being aware of the change in
+            visibility). However, since the game is ticked at 40hz, a delay of even 10 ticks is short enough to not make
+            a substantial difference.
+          </ul>
+          <a href="#toc">[ back to table of contents ]</a> <br>
+          <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="section2">SECTION 2</a>: Character Physics and Rendering <br>
+          <br>
+          <strong>--= Topics to Cover =--</strong> <br>
+          <br>
+          --- <br>
+          -non-ragdoll control: normal-averaging, near-wall queries, etc.<br>
+          -jakobsen paper<br>
+          -character modeled as 6 points<br>
+          -angular DOF of limbs converted into linear DOF<br>
+          -collision using multisampled AABBs<br>
+          -- <br>
+          <br>
+          The player/ninja object is a game object like any other enemy or item, however the logic controlling the
+          player is far more complex. instead of a single FSM, the player's logic is implemented as two FSMs; one
+          controls the player's high-level state (i.e. "alive" or "dead"); the other controls the player's low-level
+          state (i.e. running, jumping, etc.). <br>
+          <br>
+          The method of implementation of the player's FSM is relatively crude; instead of explicitly creating an FSM
+          system by defining FSM_State objects, etc., we simply use a loose collection of the "insides" of those states.
+          <br>
+          <br>
+          Instead of a hash table defining state transitions (i.e. given the current state and an event type, the hash
+          table would return the next state the player should be in), we used hardcoded logic in a series of nested
+          conditional branches. <br>
+          <br>
+          This approach was taken not for performance reasons, but because work on a previous game taught us that
+          over-engineering the player logic, while perhaps beneficial in more complex games (for instance fighting
+          games, where character behaviours are very complex and should be modular to allow vast changes), just makes
+          the task of implementing the player logic more complex, time-consuming, and bug-prone when the range of player
+          behaviours is relatively small and simple. <br>
+          <br>
+          The two main states of the player are "alive" and "dead". while alive, the player is controlled by an FSM
+          which contains all of the player's behaviour states, such as: <br>
+          <ul>
+            . standing<br>
+            . falling<br>
+            . jumping<br>
+            . wallsliding
+          </ul>
+          This FSM takes as input various events; user input (keypresses), collision input, etc. <br>
+          <br>
+          Instead of implementing such events explicitly, they're mostly implemented as a set of flags indicating
+          various things about the player's status; for instance, if the player is near a wall, or on the ground. The
+          player's logic can look at these flags and respond accordingly. <br>
+          <br>
+          The player is modeled as a circle for collision vs. the world; the direction of the projection vector returned
+          by our collision system lets us infer the angle of the surface the player is currently on, and rotate the
+          player's graphics accordingly. <br>
+          <br>
+          While "dead", the player is controlled by a physics simulation which is a straightforward implementation of
+          this paper: <font color="#990000">++TODO: refer to jakobsen</font> <br>
+          <br>
+          The ragdoll model used is 6 particles (shoulders, pelvis, hand x2, foot x2) connected by 5 "stick" constraints
+          (torso, arms, legs). Instead of having a single length, the sticks have minimum and maximum lengths; if their
+          current length falls outside of this range, it is forced into the allowed range (as explained in Jakobsen's
+          paper). <br>
+          <br>
+          The way that the ragdoll is rendered is very flash-specific, so we won't describe it in detail (look at the
+          provided source, it's fairly simple). However, the general idea (which can be applied in any rendering
+          environment) is that the position of the "midpoints" of each limb (elbows, knees, etc.) are implicitly defined
+          by: <br>
+          <ul>
+            . the position of the limb endpoints <br>
+            . the distance between the limb endpoints
+          </ul>
+          <font color="#990000">++TODO: animated diagram of a single limb, with triangle-relationship depicted</font>
+          <br>
+          <br>
+          The limb is a triangle abc, where a is the root of the limb (for instance, the shoulder), b is the midpoint
+          (for instance, the elbow), and c is the end of the limb (for instance, the hand). We know the position of a
+          and c, and can calculate the length of a->c. We also know the length of a->b and b->c since these never
+          change. <br>
+          <br>
+          We collide this ragdoll model by colliding 6 small AABBs, located at the same positions as the ragdoll
+          particles. because these AABBs are so small, and can move rather fast, we use multisampling to reduce the
+          error of the collision results. We also use some bounce and friction to make the ragdoll behave in a somewhat
+          cartoonish manner during collision. <br>
+          <br>
+          <a href="#toc">[ back to table of contents ]</a> <br>
+          <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="section3">SECTION 3</a>: Simulation System <br>
+          <br>
+          <strong>--= Topics to Cover =--</strong> <br>
+          <br>
+          -- &nbsp;&nbsp;-constant rate simulation (explanation and example code) &nbsp;&nbsp;&nbsp;&nbsp;-deterministic
+          replays: store key states at each tick &nbsp;&nbsp;&nbsp;&nbsp;-clients query keystates -refer to online
+          material (gdalgorithms, but there's another source too..) -- <br>
+          <br>
+          NOTE: we might want to start with this section (i.e. it should maybe be section 1) <br>
+          <br>
+          The main game "loop" in N updates the simulation at a constant rate, and then draws the current state of the
+          world. The decision to use a constant-rate system was made because our chosen method of physics simulation
+          couldn't easily be adapted to deal with variable-rate updates. <br>
+          <br>
+          However, the constant-rate update allowed us to create a perfectly deterministic simulation, which is much
+          harder (or perhaps not possible) using a "delta-time"-type update. this determinism allowed us to easily
+          implement "replays". <br>
+          <br>
+          Each time we update the simulation, we store the current state of the keys. (in N, 3 keys were used: "left",
+          "right", and "jump"). The game logic doesn't refer directly to the key states, but instead queries an
+          input-handler for the keystates; this means that we can simply use an input-handler which uses prerecorded
+          keystates (instead of the current keyboard data) in order to implement a replay system. <br>
+          <br>
+          <font color="#990000">++TODO: refer to gamasutra replay article and any other articles</font> <br>
+          <br>
+          None of the game code other than the input-handler cares at all whether the current simulation is driven by
+          real-time or prerecorded keyboard input. <br>
+          <br>
+          The main problem with this system is that we can't use the built-in quasi-random number generator
+          Math.random(), because (for some unknown and probably silly reason) we don't have access to the "seed" value
+          used, and thus can't reproduce the values deterministically. For purely aesthetic things, which have no effect
+          on the simulation at all (for instance, particle effects) we use the built-in random function. For everything
+          else, we use a very simple method: we query the current game time, and % it with the range of values we want.
+          <br>
+          <br>
+          For instance, (gameTime % 10) will give us a deterministic value between 0 and 9, which will seem random to
+          the user. <br>
+          <br>
+          Of course, this type of "randomness" is in fact not random at all; we found that it was sufficient for our
+          needs, and certainly much cheaper to calculate than any other method we could find. If you really need
+          reproducible randomness, you could implement a proper quasi-random number generator. <br>
+          <br>
+          <font color="#990000">++TODO: refer to http://statistik.wu-wien.ac.at/prng/ and
+            http://flashexperiments.insh-allah.com/#Mersenne_Twister_ported_to_ActionScript </font> <br>
+          <br>
+          <a href="#toc">[ back to table of contents ]</a> <br>
+          <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+          <font size="1"> <br>
+            <a name="section4">SECTION 4</a>: Conclusion / Source Code<br>
+            <br>
+            That concludes the series of tutorials on various systems in N. Look for more tutorials as we release new
+            games! <br>
+            <br>
+            <strong>--= source code =--</strong><br>
+            <br>
+            Source code inclusion for this one?<br>
+            <br>
+            You are free to use this code however you'd like, provided you notify us if it's for commercial use; a link
+            to our site would also be appreciated. <br>
+            <br>
+            <strong>--= contacting us =--</strong><br>
+            <br>
+            Please let us know if you have any corrections, comments, or suggestions about this tutorial. <br>
+            <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> -- be sure to
+            reference the tutorial you're writing about. <br>
+            <br>
+            <strong>PLEASE</strong> don't contact us with questions about the source, you'll just have to figure it out
+            on your own. <br>
+            <br>
+            There is a section on our <a href="http://metanet.forumer.com" target="_blank">forum</a> where
+            you can post questions. <br>
+            <br>
+            <a href="#toc">[ back to table of contents ]</a> <br> <br>
+          </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="footnotes">FOOTNOTES</a> <br>
+          <br>
+          Jakobsen, Thomas. <a name="jakobsen"
+            href="http://www.ioi.dk/Homepages/thomasj/publications/gdc2001.htm" target="_blank">Advanced Character
+            Physics</a> <br> <br>
+        </font>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+        <font size="1"> <br>
+          <a name="appendixA">APPENDIX A</a>: Whatever <br> <br>
+    </td>
+  </tr>
+</table>
