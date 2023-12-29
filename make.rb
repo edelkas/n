@@ -41,10 +41,10 @@ root = {
   ]
 }
 
+PREFIX    = '/n'
 ROOT      = Dir.pwd
 IN_FILES  = 'plain'
 OUT_FILES = ''
-HOST      = "http://edelkas.github.io"
 
 def update_file(file, path = '')
   # Read plain TXT file
@@ -58,7 +58,7 @@ def update_file(file, path = '')
   # Inject content inside our wrapper
   links = "#{path}/#{file['filename']}".split("/")[1..-1]
   links = links.inject(['']) { |acc, x| acc << acc.last + '/' + x }[1..-1]
-  links = links.map.with_index{ |link, i| "<a href=\"#{link}.html\">#{link[/.*\/(.+)/, 1]}</a>" }.join(' > ')
+  links = links.map.with_index{ |link, i| "<a href=\"#{PREFIX}#{link}.html\">#{link[/.*\/(.+)/, 1]}</a>" }.join(' > ')
   full = File.read("bare.html")
              .gsub("ruby_content",     content)
              .gsub("ruby_breadcrumbs", links)

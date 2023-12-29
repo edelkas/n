@@ -6,13 +6,13 @@ This content includes tools (for highscoring, mapping, fangames, webtools, and o
 <li>For people to find resources they didn't know about.</li>
 <li>For historical preservation.</li>
 </ul>
-To browse all of these resources, please visit the categories in the side menu. A selection of the most relevant ones is provided in the <a href="index.html">Home</a> table.
+To browse all of these resources, please visit the categories in the side menu. A selection of the most relevant ones is provided in the <a href="/n/index.html">Home</a> table.
 <h1>Contact</h1>
 <ul>
   <li> If you want to get in touch with the N community, nowadays we hang in <a href="https://discord.gg/nplusplus"> Discord</a>.</li>
   <li> Traditionally, we used to hang in the <a href="https://forum.droni.es/">Forums</a>.</li>
   <li> If you feel like a resource is missing and want to get in touch with me personally, my <b>gmail</b> account is <it>edlucasma</it>.</li>
-  <li> For more possible ways (both current and old) to contact the community, visit the <a href="websites.html">Websites</a> section.</li>
+  <li> For more possible ways (both current and old) to contact the community, visit the <a href="/n/index/websites.html">Websites</a> section.</li>
 </ul>
 <h1>Credits</h1>
 <ul>
