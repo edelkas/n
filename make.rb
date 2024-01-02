@@ -1,14 +1,12 @@
 # Ruby script to produce the final HTML files by inserting the desired content
 # stored in the plain txt files inside the bare HTML file that contains
-# the common structure of all pages of the site. The title of the section
-# has to be specified as a parameter.
+# the common structure of all pages of the site.
 #
-# The naming of the plain text files is important. If it doesn't contain an
-# underscore, it will be assumed to be a main section, and if it does,
-# it will be assumed to be a subsection. The name of the file will be used
-# to name the HTML files, the sections, etc.
+# The resulting HTML files maintain the same folder structure as the plain txt
+# files. The whole tree of files to compile is specified recursively in the
+# "root" hash below.
 #
-# Note: Something like ERB could be used for this purpose more efficiently.
+# Note: Something like ERB could be used for this purpose more efficiently?
 #
 # Created: Feb 2020.
 # Updated: Dec 2023.
@@ -20,7 +18,8 @@ documents = {
     { 'name' => 'Tutorial A', 'filename' => 'tutoA' },
     { 'name' => 'Tutorial B', 'filename' => 'tutoB' },
     { 'name' => 'Tutorial C', 'filename' => 'tutoC' },
-    { 'name' => 'Tutorials Introduction', 'filename' => 'tutoIntro' },
+    { 'name' => 'Tutorials Introduction', 'filename' => 'tutoIntro'  },
+    { 'name' => 'Collision detection in Flash slides', 'filename' => 'tutoSlides' }
   ]
 }
 

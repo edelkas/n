@@ -1,3 +1,5 @@
+Add navigation arrows (up, left, right) to the top bar of each article, so that we can move to the parent node, or to the prev/next siblings (e.g. from tutoA to tutoB or back to docs)
+
 * Add "modding" section. For N++, we have:
 ** Custom palettes.
 ** Custom sound packs.
