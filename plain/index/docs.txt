@@ -1,23 +1,16 @@
 <h1>Metanet tutorials</h1>
 
 The following are restorations of Metanet's classic tutorials on N's physical collision system (as well as other related topics).
-The main purposes of this restoration were to re-add now missing material, fix several aspects (notably, the Flash elements), improve
-the presentation by recovering the original formatting of the tutorials, update deprecated HTML, and of course, for preservation and archival.
+The main purposes of this restoration were to re-add now missing material (see below), fix several aspects (notably, the Flash elements), improve
+the presentation (recovering the original formatting, transparent figure backgrounds...), update deprecated HTML, and of course, for preservation and archival.
 
 The main additions are:
 <ul>
 	<li>Fixed all Flash simulations natively, no extension required.</li>
-	<li>Recovered third, incomplete tutorial about related topics.</li>
-	<li>Added FITC05 talk slides and script (great stuff!)</li>
+	<li>Recovered <a href="docs/tutoC.html">third</a>, incomplete tutorial about related topics.</li>
+	<li>Added <a href="docs/fitc05.html">FITC05</a> talk slides and script (great stuff!)</li>
 	<li>Recovered original tutorial <a href="docs/tutoIntro.html">presentation page</a>.</li>
-	<li>Added supplementary Flash animations not previously present in the tutorials.</li>
-</ul>
-The main cosmetic changes are:
-<ul>
-	<li>Recovered old tutorial formatting, before the blog migrated to the uglier WordPress (font size, margins, alignment...).</li>
-	<li>Slight improvements to the figures (transparent background, centering...).</li>
-	<li>Verbatim environment for code samples and math.</li>
-	<li>Updated deprecated HTML tags.</li>
+	<li>Added supplementary <a href="docs/fitc05/figs.html">Flash animations</a> not previously present in the tutorials.</li>
 </ul>
 <table class="invisible">
 	<tr>
