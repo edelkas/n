@@ -95,19 +95,16 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
         </p>
         <p> The first thing we&#8217;d like to be able to do is to determine, given a position, which cell contains
           this position. This is easily done: </p>
-        <p>
-          <pre>
-            grid_column = Math.floor(pos.x / cell_width);
-            grid_row = Math.floor(pos.y / cell_height);
-          </pre>
-        </p>
+        <pre>
+          grid_column = Math.floor(pos.x / cell_width);
+          grid_row = Math.floor(pos.y / cell_height);
+        </pre>
         <p> Now we can easily determine which cell contains our dynamic object&#8217;s center; we call this cell the
           <strong>current cell</strong> of the object. Since we&#8217;ve restricted the object&#8217;s size to less
           than the size of a cell, we know that the object can only overlap at most 4 cells. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/B0_cells_touched.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -151,19 +148,15 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           routines (i.e. x-width, center position, surface normal). </p>
         <p> To implement this, you can define a set of tile objects; each tile is responsible for generating collision
           results between itself and a dynamic object: </p>
-        <p>
-          <pre>
-            tile.Collide_Circle(myCircle)
-          </pre>
-        </p>
+        <pre>
+          tile.Collide_Circle(myCircle)
+        </pre>
         <p> Or, you can use a simpler c-like approach where both the tile and the object are simply containers of
           data, and collision functions are stored in a 2D hash-list of collision functions; the shape-flags of the
           objects being collided are used as hash keys to select the appropriate function: </p>
-        <p>
-          <pre>
-            Collide[tile.shape][myObj.shape](tile, myObj)
-          </pre>
-        </p>
+        <pre>
+          Collide[tile.shape][myObj.shape](tile, myObj)
+        </pre>
         <p> <a href="#toc">[ back to table of contents ]</a> </p>
       </div>
     </td>
@@ -182,14 +175,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           cost of calculating cell indices is likely to be negligible in many programming environments, this trade-off
           might not always be worthwhile. </p>
         <p> In N we implemented these neighbor &#8220;pointers&#8221; separately: </p>
-        <p>
-          <pre>
-            cell.nR //right, left, up, down neighbors
-            cell.nL
-            cell.nU
-            cell.nD
-          </pre>
-        </p>
+        <pre>
+          cell.nR //right, left, up, down neighbors
+          cell.nL
+          cell.nU
+          cell.nD
+        </pre>
         <p> <strong>&#8211;= edge info =&#8211;</strong> </p>
         <p> One major enhancement we made to our grid is to store information, not only about each cell, but about
           each of the cell&#8217;s 4 edges. This idea was borrowed from an article in Game Programming Gems 3 <a
@@ -404,7 +395,6 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
         <div style="display: flex;">
           <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420" height="500">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500" src="/n/files/tut/tutB_demo04.swf">
-            </embed>
           </object>
           <div style="text-align: left;">
             As we mentioned before, the one main limitation of our grid-based approach is that all objects must fit

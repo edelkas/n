@@ -241,6 +241,8 @@ pre {
 }
 code {
   background-color: #33364220;
+  font-family:       monospace;
+  font-size:         120%;
   margin: 0px;
   padding: 1px;
 }

@@ -127,7 +127,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A-1_particle_collision.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -178,7 +177,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/Ax_aabb_projection.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -216,7 +214,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A1_aabb-aabb_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -271,7 +268,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-tri_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -306,7 +302,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-convex_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -325,7 +320,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-concave_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -369,7 +363,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_circleAABB_naive_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -401,7 +394,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_polygonVR.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -428,7 +420,6 @@ version).
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_circleAABB_VR_sepaxis.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -527,7 +518,6 @@ version).
         <div style="display: flex;">
           <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420" height="500">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500" src="/n/files/tut/tutA_demo05.swf">
-            </embed>
           </object>
           <div style="text-align: left;">
             Hopefully this has given you some ideas about how to implement collision detection and response in 2D.<br />
@@ -597,23 +587,19 @@ version).
         <p> To normalize the vector <strong>v</strong>, we simply divide each of its components by the length of
           <strong>v</strong>:
         </p>
-        <p>
         <pre>
-              len_v = Math.sqrt(v.x*v.x + v.y*v.y);
-              v.x /= len_v;
-              v.y /= len_v;
-            </pre>
-        </p>
+          len_v = Math.sqrt(v.x*v.x + v.y*v.y);
+          v.x /= len_v;
+          v.y /= len_v;
+        </pre>
         <p> Note that unless you can <strong>guarantee</strong> that <strong>v</strong> isn&#8217;t a null (0-length)
           vector, you might want to add tests which detect this case, or the dreaded <strong>division-by-0</strong>
           will occur. </p>
         <p> <strong>&#8211;= dot product =&#8211;</strong> </p>
         <p> the dot product of two vectors <strong>a</strong> and <strong>b</strong> is given by: </p>
-        <p>
         <pre>
-              dp = a.x*b.x + a.y*b.y;
-            </pre>
-        </p>
+          dp = a.x*b.x + a.y*b.y;
+        </pre>
         <p> Note that the result is a scalar value (a single number). <br />
           You can think of it as describing the relative orientation of <strong>a</strong></strong> and
           <strong>b</strong>; a negative dot product means that <strong>a</strong> and <strong>b</strong> point away
@@ -626,26 +612,22 @@ version).
         <p> <strong>&#8211;= projection =&#8211;</strong> </p>
         <p> The formula for projecting vector <strong>a</strong> onto vector <strong>b</strong> is: <br />
         <pre>
-              proj.x = ( dp / (b.x*b.x + b.y*b.y) ) * b.x;
-              proj.y = ( dp / (b.x*b.x + b.y*b.y) ) * b.y;
-            </pre>
-        </p>
+          proj.x = ( dp / (b.x*b.x + b.y*b.y) ) * b.x;
+          proj.y = ( dp / (b.x*b.x + b.y*b.y) ) * b.y;
+        </pre>
         <p> where dp is the dotprod of <strong>a</strong> and <strong>b</strong>: <code>dp = (a.x*b.x + a.y*b.y)</code>
         </p>
         <p> Note that the result is a vector; also, <code>(b.x*b.x + b.y*b.y)</code>
           is simply the length of <strong>b</strong> squared. </p>
         <p> If <strong>b</strong> is a unit vector, <code>(b.x*b.x + b.y*b.y) = 1
           </code>, and thus <strong>a</strong> projected onto <strong>b</strong> reduces to: </p>
-        <p>
         <pre>
-              proj.x = dp*b.x;
-              proj.y = dp*b.y;
-            </pre>
-        </p>
+          proj.x = dp*b.x;
+          proj.y = dp*b.y;
+        </pre>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
             <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A0_vector_projection.swf">
-            </embed>
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong> </p>
@@ -653,7 +635,7 @@ version).
             <p> <strong>comments:</strong> </p>
             <p>
               <span class="green">the green vector</span> is the result of the projection of <span class="blue">the
-                vector p1->p0</span> onto <span class="red">the line containing p1 and p2</span>.
+                vector p1->p0</span> onto <span class="red">the line containing p1 and p2</span>.</p>
           </div>
         </div>
         <p> <br clear="all"><br />
@@ -667,19 +649,15 @@ version).
           normal. As you might expect, the right hand normal points to the <strong>right</strong> of the vector, and
           the left hand normal points to the <strong>left</strong>. </p>
         <p> Given a vector <strong>a</strong>, the right hand normal of <strong>a</strong> is simply: </p>
-        <p>
         <pre>
-              rn.x = -a.y;
-              rn.y = a.x;
-            </pre>
-        </p>
+          rn.x = -a.y;
+          rn.y = a.x;
+        </pre>
         <p> and the left hand normal is: </p>
-        <p>
         <pre>
-              ln.x = a.y;
-              ln.y = -a.x;
-            </pre>
-        </p>
+          ln.x = a.y;
+          ln.y = -a.x;
+        </pre>
         <p> Note that <strong>ln</strong> = &#8211;<strong>rn</strong>. </p>
         <p> The perproduct of two vectors <strong>a</strong> and <strong>b</strong> is simply the dot product of
           <strong>a</strong> and the right hand normal of <strong>b</strong>.
