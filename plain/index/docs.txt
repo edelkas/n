@@ -43,8 +43,8 @@ The main cosmetic changes are:
 		enemy AI and movement, drawing and rendering concerns, in-depth details about the ragdolling physics, replay format, pseudo-randomness in the game...</td>
 	</tr>
 	<tr>
-		<td><a href="docs/tutoSlides.html"><img src="/n/images/tutoSlides.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
-		<td><a href="docs/tutoSlides.html" class="menuInverted">Flash slides – Beyond hitTest(): Proper collision detection in ActionScript</a><br>
+		<td><a href="docs/fitc05.html"><img src="/n/images/fitc05.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
+		<td><a href="docs/fitc05.html" class="menuInverted">Flash slides – Beyond hitTest(): Proper collision detection in ActionScript</a><br>
 		Beautiful Flash slides from raigan's talk at FITC '05, almost 100 slides going in-depth into the background and techniques used in N to achieve a robust
 		and fast physics engine in Flash. It focuses on collision detection and response, both the narrow phase and the broad phase (i.e., it covers the contents of
 		Tutorials A and B, but with new explanations and figures). Script and additional figures are included.</td>

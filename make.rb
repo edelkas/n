@@ -11,6 +11,14 @@
 # Created: Feb 2020.
 # Updated: Dec 2023.
 
+fitc05 = {
+  'name'     => 'FITC05 slides: Collision detection in Flash',
+  'filename' => 'fitc05',
+  'files'    => [
+    { 'name' => 'FITC05 Flash figures', 'filename' => 'figs' }
+  ]
+}
+
 documents = {
   'name'     => 'Documents',
   'filename' => 'docs',
@@ -19,7 +27,7 @@ documents = {
     { 'name' => 'Tutorial B', 'filename' => 'tutoB' },
     { 'name' => 'Tutorial C', 'filename' => 'tutoC' },
     { 'name' => 'Tutorials Introduction', 'filename' => 'tutoIntro'  },
-    { 'name' => 'Collision detection in Flash slides', 'filename' => 'tutoSlides' }
+    fitc05
   ]
 }
 
