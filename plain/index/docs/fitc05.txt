@@ -732,8 +732,9 @@ PART 3: misc/conclusion
 <script>
   window.RufflePlayer = window.RufflePlayer || {};
   window.RufflePlayer.config = {
-      "quality":         "high",
-      "backgroundColor": "#eeeeee",
+	  	"quality":         "high",
+      "backgroundColor": "#d4d9e9",
+      "wmode":           "transparent",
       "autoplay":        "on",
       "unmuteOverlay":   "hidden"
   };

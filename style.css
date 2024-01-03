@@ -1,5 +1,5 @@
 :root {
-  --splash-screen-background: url(images/paper.png) repeat;
+  --splash-screen-background: url(/n/images/paper.png) repeat;
   --logo-display: none;
 }
 html, body {
@@ -9,7 +9,7 @@ html, body {
 }
 body {
   background-color: #333642;
-  background-image: url(images/ninja.png);
+  background-image: url(/n/images/ninja.png);
   background-repeat: no-repeat;
   font-family: 'Helvetica LT Std', Helvetica, sans-serif;
   font-size: 80%;
@@ -32,7 +32,7 @@ h3 {
 }
 @font-face {
   font-family: ian;
-  src: url(fonts/roadgeek/roadgeek.ttf)
+  src: url(/n/fonts/roadgeek/roadgeek.ttf)
 }
 .title {
   font-family: ian;
@@ -125,7 +125,7 @@ tr.ps-row1 > td {
   border: none;
   vertical-align: top;
   background-color: #d3d8e8;
-  background-image: url(images/paper.png);
+  background-image: url(/n/images/paper.png);
   margin-right: 16px;
 }
 tr.ps-row3 > td {
