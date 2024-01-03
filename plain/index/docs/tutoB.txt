@@ -468,4 +468,4 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
       "unmuteOverlay":   "hidden"
   };
 </script>
-<script src="/ruffle/ruffle.js"></script>
+<script src="/n/ruffle/ruffle.js"></script>

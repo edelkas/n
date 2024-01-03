@@ -10,7 +10,7 @@ The main additions are:
 	<li>Recovered third, incomplete tutorial about related topics.</li>
 	<li>Added FITC05 talk slides and script (great stuff!)</li>
 	<li>Recovered original tutorial <a href="docs/tutoIntro.html">presentation page</a>.</li>
-	<li>Added supplementary Flash animations not previously present in Tutorial A.</li>
+	<li>Added supplementary Flash animations not previously present in the tutorials.</li>
 </ul>
 The main cosmetic changes are:
 <ul>

@@ -1,0 +1,66 @@
+This page contains all the Flash figures discussed in raigan's FITC '05 <a href="../fitc05.html">slides</a>
+(<a href="/n/files/tut/fitc05.zip">download</a>).
+Some of them are present in <a href="../tutoA.html">Tutorial A</a>, but many others are new.<br>
+
+<div style="display: flex;flex-wrap: wrap;">
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vector.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitvector.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Unit vector</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectorprojection.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector projection</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectornormals.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector normals</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/rawdotprod.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Raw dot product</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitdotprod.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Unit dot product</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/projdotprod.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Projection dot product</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/frictionbounce.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Friction and bounce</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxcells.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box cells</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxprojection.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box projection</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxbox_projection.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box-box projection</div>
+  </div>
+  <div style="display: grid;">
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/circlebox.swf"></embed></object>
+    <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Circle-box</div>
+  </div>
+</div>
+
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = {
+      "quality":         "high",
+      "backgroundColor": "#d4d9e9",
+      "wmode":           "transparent",
+      "autoplay":        "on",
+      "unmuteOverlay":   "hidden"
+  };
+</script>
+<script src="/n/ruffle/ruffle.js"></script>
