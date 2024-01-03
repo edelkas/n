@@ -3,27 +3,23 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
 <br><br>
 <table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" align="center" class="tuto">
   <tr>
-    <td align="center">
-      <div align="left">
-        <font size="1">N Tutorial B &#8211; Broad-Phase Collision</p>
-          <p> <a name="toc"> table of contents</a> </p>
-          <p> <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br />
-            <a href="#section1">SECTION &nbsp; 1</a>: Basic Tile Grid<br />
-            <a href="#section2">SECTION &nbsp; 2</a>: Advanced Tile Grid<br />
-            <a href="#section3">SECTION &nbsp; 3</a>: Object Grid<br />
-            <a href="#section4">SECTION &nbsp; 4</a>: Raycasting<br />
-            <a href="#section5">SECTION &nbsp; 5</a>: Conclusion / Source Code<br />
-            <a href="#cites">WORKS CITED &nbsp;</a>
-          </p>
-          <p>
-        </font>
+    <td style="display:flex;justify-content: center;width: 25%;">
+      <div style="font-size:80%;text-align:left;">
+        N Tutorial B &#8211; Broad-Phase Collision
+        <p> <a name="toc"> table of contents</a> </p>
+        <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br />
+        <a href="#section1">SECTION &nbsp; 1</a>: Basic Tile Grid<br />
+        <a href="#section2">SECTION &nbsp; 2</a>: Advanced Tile Grid<br />
+        <a href="#section3">SECTION &nbsp; 3</a>: Object Grid<br />
+        <a href="#section4">SECTION &nbsp; 4</a>: Raycasting<br />
+        <a href="#section5">SECTION &nbsp; 5</a>: Conclusion / Source Code<br />
+        <a href="#cites">WORKS CITED &nbsp;</a>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="section0">SECTION 0</a>: General Introduction </p>
           <p> The previous tutorial examined how &#8220;narrow-phase&#8221; collision detection works in N; given two
@@ -47,14 +43,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
             <a href="#toc">[ back to table of contents ]</a>
           </p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="section1">SECTION 1</a>: Basic Tile Grid </p>
           <p> The first use of the grid was to store the tilemap data which defines the &#8220;solid&#8221; parts of the
@@ -133,14 +127,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           </p>
           <p> <a href="#toc">[ back to table of contents ]</a> </p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="section2">SECTION 2</a>: Advanced Tile Grid </p>
           <p> <strong>&#8211;= grid improvements =&#8211;</strong> </p>
@@ -215,14 +207,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
             exists; please let us know if you come up with anything. </p>
           <p> <a href="#toc">[ back to table of contents ]</a> </p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="section3">SECTION 3</a>: Object Grid </p>
           <p> The grid structure described above can also double as a <a href="#simpson">spatial database</a> used to
@@ -305,14 +295,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
             tradeoff is that you can&#8217;t stop your opponent&#8217;s bullets with your own.</p>
           <p> <a href="#toc">[ back to table of contents ]</a> </p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="section4">SECTION 4</a>: Raycasting </p>
           <p> Aside from projection/collision queries, games often also need other types of queries; objects can invoke
@@ -374,15 +362,13 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
             using a regular / non-loose grid, which doesn&#8217;t suffer from this problem.</p>
           <p> <a href="#toc">[ back to table of contents ]</a> </p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
+      <div style="font-size: 80%;">
         <p>
-          <font size="1">
         </p>
         <p> <a name="section5">SECTION 5</a>: Conclusion / Source Code</p>
         <object align="left" type="application/x-shockwave-flash" width="420" height="500"><embed align="left"
@@ -420,14 +406,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           figure it out on your own. </p>
         <p> <a href="#toc">[ back to table of contents ]</a> </p>
         <p>
-          </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1">
+      <div style="font-size: 80%;">
           </p>
           <p> <a name="cites">WORKS CITED</a> </p>
           <p> Amanatides, John. <a name="amanatides" href="https://www.cs.yorku.ca/~amana/research/grid.pdf"
@@ -445,17 +429,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           <p> Ulrich, Thatcher. <a name="ulrich" href="https://www.tulrich.com/geekstuff/partitioning.html"
               target="_blank">Spatial Partitioning with Loose Octrees</a></p>
           <p>
-        </font>
       </div>
     </td>
   </tr>
   <tr class="noBorder">
-    <td>
-      <font size="1">
-        (c) Metanet Software Inc. 2004
-      </font>
-    </td>
-</tr>
+    <td style="text-align:left;padding:0px;margin-bottom:0px;">(c) Metanet Software Inc. 2004</td>
+  </tr>
 </table>
 
 <script>

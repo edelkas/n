@@ -214,6 +214,9 @@ img.outlined {
   border-spacing: 5px 1rem;
   /* border: none; */
 }
+.tuto td {
+  padding: 5px;
+}
 table.invisible, table.invisible td {
   border: none;
 }
@@ -226,6 +229,7 @@ pre {
   border-left:       3px solid #333642;
   page-break-inside: avoid;
   font-family:       monospace;
+  font-size:         120%;
   margin-bottom:     0em;
   max-width:         30%;
   overflow:          auto;
@@ -240,3 +244,17 @@ code {
   margin: 0px;
   padding: 1px;
 }
+.red {
+  color: #882222;
+}
+.green  { color: #228822; }
+.blue   { color: #222288; }
+.purple { color: #882288; }
+.teal   { color: #228888; }
+.yellow { color: #888822; }
+.white  { color: #ffffff; }
+.gray1  { color: #C0C0C0; }
+.gray2  { color: #808080; }
+.gray   { color: #808080; }
+.gray3  { color: #404040; }
+.black  { color: #000000; }

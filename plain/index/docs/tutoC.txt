@@ -1,28 +1,23 @@
 Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/20090131075043/http://www.harveycartel.org/metanet/tutorials/tutorialC.html">archived</a> version).
 <br><br>
-<table WIDTH="1000" BORDER="0" CELLPADDING="5" CELLSPACING="30" CLASS="tuto" align="center">
+<table width="1000" class="tuto center">
   <tr>
-    <td align="center">
-      <div align="left">
-        <font size="1"><br>
-          <a name="toc"> table of contents</a> <br>
-          <br>
-          <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br>
-          <a href="#section1">SECTION &nbsp; 1</a>: AI/Object system<br>
-          <a href="#section2">SECTION &nbsp; 2</a>: Character Physics and Rendering<br>
-          <a href="#section3">SECTION &nbsp; 3</a>: Simulation System<br>
-          <a href="#section4">SECTION &nbsp; 4</a>: Conclusion / Source Code<br>
-          <a href="#footnotes">FOOTNOTES &nbsp;</a><br>
-          <a href="#appendixA">APPENDIX &nbsp; A</a>: Whatever<br>
-          <br>
-        </font>
+    <td style="display:flex;justify-content: center;width: 25%;">
+      <div style="font-size:80%;text-align:left;">
+        <a name="toc"> table of contents</a><br><br>
+        <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br>
+        <a href="#section1">SECTION &nbsp; 1</a>: AI/Object system<br>
+        <a href="#section2">SECTION &nbsp; 2</a>: Character Physics and Rendering<br>
+        <a href="#section3">SECTION &nbsp; 3</a>: Simulation System<br>
+        <a href="#section4">SECTION &nbsp; 4</a>: Conclusion / Source Code<br>
+        <a href="#footnotes">FOOTNOTES &nbsp;</a><br>
+        <a href="#appendixA">APPENDIX &nbsp; A</a>: Whatever
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
           <a name="section0">SECTION 0</a>: General Introduction <br>
           <br>
           The previous tutorials dealt with the collision system used in N; while this is by far the largest and most
@@ -35,14 +30,12 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           <br>
           <a href="#toc">[ back to table of contents ]</a> <br>
           <br>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
           <a name="section1">SECTION 1</a>: AI/Object system <br>
           <br>
           <strong>--= Topics to Cover =--</strong> <br>
@@ -53,8 +46,8 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           &nbsp;&nbsp;-think/update system (i.e. object sleeping) <br>
           -- <br>
           <br>
-          Each game object (enemies and other objects) was implemented separately; they were implemented as FSMs <font
-            color="#990000">++TODO: refer to the ai depot FSM/quake tutorial</font>. Most objects were 150-300 lines of
+          Each game object (enemies and other objects) was implemented separately; they were implemented as FSMs <span
+            class="red">++TODO: refer to the ai depot FSM/quake tutorial</span>. Most objects were 150-300 lines of
           code. <br>
           <br>
           The objects were essentially a collection of functions which were called whenever a particular event occurred.
@@ -92,7 +85,6 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
             This mechanism was the way in which object logic was implemented in the FSM; to change "states", the object
             simply plugged the appropriate state-specific update function into its generic ".Update" slot. for instance:
             <br> <br>
-            <font face="Courier New, Courier, mono">
               <ul><pre>
                 //----- constructor -----
                 function Mover()
@@ -124,7 +116,7 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
                 &nbsp;&nbsp;&nbsp;&nbsp;//move to the right
                 }
               </pre></ul>
-            </font> <br>
+            <br>
             The article cited above provides many ideas about how to improve and extend this simple implementation;
             also, many of the "game programming gems" books contain articles on FSMs. <br>
             <br>
@@ -155,14 +147,12 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           </ul>
           <a href="#toc">[ back to table of contents ]</a> <br>
           <br>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
           <a name="section2">SECTION 2</a>: Character Physics and Rendering <br>
           <br>
           <strong>--= Topics to Cover =--</strong> <br>
@@ -213,7 +203,7 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           player's graphics accordingly. <br>
           <br>
           While "dead", the player is controlled by a physics simulation which is a straightforward implementation of
-          this paper: <font color="#990000">++TODO: refer to jakobsen</font> <br>
+          this paper: <span class="red">++TODO: refer to jakobsen</span> <br>
           <br>
           The ragdoll model used is 6 particles (shoulders, pelvis, hand x2, foot x2) connected by 5 "stick" constraints
           (torso, arms, legs). Instead of having a single length, the sticks have minimum and maximum lengths; if their
@@ -228,7 +218,7 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
             . the position of the limb endpoints <br>
             . the distance between the limb endpoints
           </ul>
-          <font color="#990000">++TODO: animated diagram of a single limb, with triangle-relationship depicted</font>
+          <span class="red">++TODO: animated diagram of a single limb, with triangle-relationship depicted</span>
           <br>
           <br>
           The limb is a triangle abc, where a is the root of the limb (for instance, the shoulder), b is the midpoint
@@ -243,14 +233,12 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           <br>
           <a href="#toc">[ back to table of contents ]</a> <br>
           <br>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
           <a name="section3">SECTION 3</a>: Simulation System <br>
           <br>
           <strong>--= Topics to Cover =--</strong> <br>
@@ -274,7 +262,7 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           input-handler for the keystates; this means that we can simply use an input-handler which uses prerecorded
           keystates (instead of the current keyboard data) in order to implement a replay system. <br>
           <br>
-          <font color="#990000">++TODO: refer to gamasutra replay article and any other articles</font> <br>
+          <span class="red">++TODO: refer to gamasutra replay article and any other articles</span> <br>
           <br>
           None of the game code other than the input-handler cares at all whether the current simulation is driven by
           real-time or prerecorded keyboard input. <br>
@@ -293,19 +281,17 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           needs, and certainly much cheaper to calculate than any other method we could find. If you really need
           reproducible randomness, you could implement a proper quasi-random number generator. <br>
           <br>
-          <font color="#990000">++TODO: refer to http://statistik.wu-wien.ac.at/prng/ and
-            http://flashexperiments.insh-allah.com/#Mersenne_Twister_ported_to_ActionScript </font> <br>
+          <span class="red">++TODO: refer to http://statistik.wu-wien.ac.at/prng/ and
+            http://flashexperiments.insh-allah.com/#Mersenne_Twister_ported_to_ActionScript </span> <br>
           <br>
           <a href="#toc">[ back to table of contents ]</a> <br>
           <br>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-          <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
             <a name="section4">SECTION 4</a>: Conclusion / Source Code<br>
             <br>
             That concludes the series of tutorials on various systems in N. Look for more tutorials as we release new
@@ -331,28 +317,28 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
             you can post questions. <br>
             <br>
             <a href="#toc">[ back to table of contents ]</a> <br> <br>
-          </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
+      <div style="font-size: 80%;text-align:left;">
           <a name="footnotes">FOOTNOTES</a> <br>
           <br>
           Jakobsen, Thomas. <a name="jakobsen"
             href="http://www.ioi.dk/Homepages/thomasj/publications/gdc2001.htm" target="_blank">Advanced Character
             Physics</a> <br> <br>
-        </font>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div align="left">
-        <font size="1"> <br>
-          <a name="appendixA">APPENDIX A</a>: Whatever <br> <br>
+      <div style="font-size: 80%;text-align:left;">
+        <a name="appendixA">APPENDIX A</a>: Whatever <br> <br>
+      </div>
     </td>
+  </tr>
+  <tr class="noBorder">
+    <td style="text-align:left;padding:0px;margin-bottom:0px;">(c) Metanet Software Inc. 2004</td>
   </tr>
 </table>
