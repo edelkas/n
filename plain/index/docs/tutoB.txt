@@ -1,12 +1,15 @@
-Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/2016/n-tutorial-b-broad-phase-collision">current</a> version,
-<a href="https://web.archive.org/web/20041112102646/http://www.harveycartel.org/metanet/tutorials/tutorialB.html">archived</a> version).
+Original by Metanet Software, 2004 (<a
+  href="https://www.metanetsoftware.com/2016/n-tutorial-b-broad-phase-collision">current</a> version,
+<a
+  href="https://web.archive.org/web/20041112102646/http://www.harveycartel.org/metanet/tutorials/tutorialB.html">archived</a>
+version).
 <br><br>
 <table width="1000" class="tuto center" style="font-size:80%;">
   <tr>
     <td style="display:flex;justify-content: center;width: 25%;">
       <div style="text-align:left;">
         N Tutorial B &#8211; Broad-Phase Collision
-        <p> <a name="toc"> table of contents</a> </p>
+        <p> <a id="toc"> table of contents</a> </p>
         <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br>
         <a href="#section1">SECTION &nbsp; 1</a>: Basic Tile Grid<br>
         <a href="#section2">SECTION &nbsp; 2</a>: Advanced Tile Grid<br>
@@ -20,7 +23,7 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section0">SECTION 0</a>: General Introduction </p>
+        <p> <a id="section0">SECTION 0</a>: General Introduction </p>
         <p> The previous tutorial examined how &#8220;narrow-phase&#8221; collision detection works in N; given two
           shapes (a dynamic AABB or circle, and a static tile), we learned how to project the dynamic object out of
           the tile. </p>
@@ -45,7 +48,7 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section1">SECTION 1</a>: Basic Tile Grid </p>
+        <p> <a id="section1">SECTION 1</a>: Basic Tile Grid </p>
         <p> The first use of the grid was to store the tilemap data which defines the &#8220;solid&#8221; parts of the
           world; since tile-based games use a grid of tiles, a grid seemed like a good fit ;)<br>
           <br>
@@ -60,10 +63,12 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
         </pre>
         <p> Now we can easily determine which cell contains our dynamic object&#8217;s center; we call this cell the
           <strong>current cell</strong> of the object. Since we&#8217;ve restricted the object&#8217;s size to less
-          than the size of a cell, we know that the object can only overlap at most 4 cells. </p>
+          than the size of a cell, we know that the object can only overlap at most 4 cells.
+        </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/B0_cells_touched.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/B0_cells_touched.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -123,7 +128,7 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section2">SECTION 2</a>: Advanced Tile Grid </p>
+        <p> <a id="section2">SECTION 2</a>: Advanced Tile Grid </p>
         <p> <strong>&#8211;= grid improvements =&#8211;</strong> </p>
         <p> Now that we have a simple grid in place for use with object-vs.-tilemap collision, there are certain
           things we could do to make it more efficient. </p>
@@ -158,7 +163,8 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
           neighboring tiles; any edge at which both tiles have <strong>solid</strong> edge states should be considered
           <strong>empty</strong>, as such a configuration only exists below the surface of the world. Such a change
           will have no impact on the correctness of the collision results, since objects should only collide with the
-          world&#8217;s surface.</p>
+          world&#8217;s surface.
+        </p>
         <p> <img decoding="async" class="center" src="/n/files/tut/B1_edgestates.gif"><br>
           Figure 1. The 9 Tile Shapes Used in N, and their Corresponding Edge States<br>
           <br>
@@ -199,7 +205,7 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section3">SECTION 3</a>: Object Grid </p>
+        <p> <a id="section3">SECTION 3</a>: Object Grid </p>
         <p> The grid structure described above can also double as a <a href="#simpson">spatial database</a> used to
           manage dynamic objects. </p>
         <p> Just as each cell contains information about the tile located in that cell, it can also contain
@@ -285,7 +291,7 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section4">SECTION 4</a>: Raycasting </p>
+        <p> <a id="section4">SECTION 4</a>: Raycasting </p>
         <p> Aside from projection/collision queries, games often also need other types of queries; objects can invoke
           these queries when they need to know something about the world. </p>
         <p> A good example of such a query is a <strong>raycast</strong>; a ray is simply a line with only one
@@ -350,41 +356,53 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="section5">SECTION 5</a>: Conclusion / Source Code</p>
+        <p> <a id="section5">SECTION 5</a>: Conclusion / Source Code</p>
         <div style="display: flex;">
-          <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420" height="500">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500" src="/n/files/tut/tutB_demo04.swf">
+          <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420"
+            height="500">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500"
+              src="/n/files/tut/tutB_demo04.swf">
           </object>
           <div style="text-align: left;">
             As we mentioned before, the one main limitation of our grid-based approach is that all objects must fit
             inside a grid cell (i.e. can be no larger than a grid cell). This isn&#8217;t really a limitation imposed by
-            the use of a grid; it&#8217;s a self-imposed limitation designed to increase the simplicity and speed of this
+            the use of a grid; it&#8217;s a self-imposed limitation designed to increase the simplicity and speed of
+            this
             approach.
-            <p> To use a grid-based approach with any size of object, all that&#8217;s necessary is to be able to (hopefully
-              quickly) determine which cell(s) an object touches, so that it can be inserted/deleted from those cells&#8217;
-              linked lists. With objects smaller than a cell, this is very fast; as the size of an object grows, the number
+            <p> To use a grid-based approach with any size of object, all that&#8217;s necessary is to be able to
+              (hopefully
+              quickly) determine which cell(s) an object touches, so that it can be inserted/deleted from those
+              cells&#8217;
+              linked lists. With objects smaller than a cell, this is very fast; as the size of an object grows, the
+              number
               of cells it touches increases, and the cost of the linkws-list insertions and deletions will become
               prohibitive.</p>
             <p> The <strong>best</strong> grid resolution to use is game-specific. </p>
             <p> Another thing to note is that you don&#8217;t need to have a tile-based world to use a grid; using the
               previous tutorial&#8217;s collision routines and a grid-based system, you could develop an engine which
-              supports a world composed of arbitrarily placed and sized shapes; this way your world wouldn&#8217;t have to
+              supports a world composed of arbitrarily placed and sized shapes; this way your world wouldn&#8217;t have
+              to
               be constrained to tile-sized blocks. All you need to be able to do is, given a shape, determine all of the
-              tiles it overlaps. If you insert each static object into the grid this way, you can then use the grid as you
+              tiles it overlaps. If you insert each static object into the grid this way, you can then use the grid as
+              you
               would with tiles &#8212; to find all the static objects to test a dynamic object against. </p>
-            <p> Anyway, hopefully you&#8217;ve learnt that a simple grid can often be an effective data structure to use as
+            <p> Anyway, hopefully you&#8217;ve learnt that a simple grid can often be an effective data structure to use
+              as
               a spatial database in your game, and also how to go about using it. </p>
             <p> <strong>&#8211;= source code =&#8211;</strong></p>
             <p> Here is a demo application containing the N source code relating to this tutorial:</p>
             <p> <a href="/n/files/tut/N_tutorialBsrc.zip">download</a> </p>
-            <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for commercial
+            <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for
+              commercial
               use; a link to our site would also be appreciated. </p>
             <p> <strong>&#8211;= contacting us =&#8211;</strong></p>
             <p> Please let us know if you have any corrections, comments, or suggestions about this tutorial. <br>
-              <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> &#8212; be sure to reference the
+              <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> &#8212; be sure to reference
+              the
               tutorial you&#8217;re writing about.
             </p>
-            <p> <strong>PLEASE</strong> don&#8217;t contact us with questions about the source, you&#8217;ll just have to
+            <p> <strong>PLEASE</strong> don&#8217;t contact us with questions about the source, you&#8217;ll just have
+              to
               figure it out on your own. </p>
             <p> <a href="#toc">[ back to table of contents ]</a> </p>
           </div>
@@ -395,21 +413,40 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
   <tr>
     <td>
       <div style="text-align: left;">
-        <p> <a name="cites">WORKS CITED</a> </p>
-        <p> Amanatides, John. <a name="amanatides" href="https://www.cs.yorku.ca/~amana/research/grid.pdf"
-            target="_blank">A Fast Voxel Traversal Algorithm for Ray Tracing</a></p>
-        <p> Bikker, Jacco. <a name="bikker" href="https://www.flipcode.com/articles/article_raytrace04.shtml"
-            target="_blank">Raytracing Topics &#038; Techniques &#8211; Part 4: Spatial Subdivision</a></p>
-        <p> Forsyth, Tom. <a name="forsyth" href="https://www.charlesriver.com/titles/gamegems3.html"
-            target="_blank">Cellular Automata for Physical Modelling</a></p>
-        <p> Gomez, Miguel. <a name="gomez" href="https://www.gamasutra.com/features/19991018/Gomez_1.htm"
-            target="_blank">Simple Intersection Tests for Games</a>.</p>
-        <p> O&#8217;Rourke, Joseph. <a name="orourke" href="https://cs.smith.edu/~orourke/books/compgeom.html"
-            target="_blank">Computational Geometry in C</a></p>
-        <p> Simpson, Zachary. <a name="simpson" href="https://www.mine-control.com/zack/patterns/gamepatterns.html"
+        <p> <a id="cites">WORKS CITED</a> </p>
+        <p> Amanatides, John. <a id="amanatides" href="/n/files/bib/amanatides.pdf" target="_blank">A Fast Voxel
+            Traversal Algorithm for Ray Tracing</a> ( <a href="https://www.cs.yorku.ca/~amana/research/grid.pdf"
+            target="_blank">mirror</a> ).</p>
+        <p> Bikker, Jacco. <a id="bikker"
+            href="https://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_4_Spatial_Subdivisions.shtml"
+            target="_blank">Raytracing Topics &#038; Techniques &#8211; Part 4: Spatial Subdivision</a> ( <a
+            href="https://web.archive.org/web/20041105075338/https://www.flipcode.com/articles/article_raytrace04.shtml"
+            target="_blank">archived</a> ).</p>
+        <p> Forsyth, Tom. <a id="forsyth" href="/n/files/bib/forsyth.pdf" target="_blank">Cellular Automata for Physical
+            Modelling</a> ( <a
+            href="https://tomforsyth1000.github.io/papers/cellular_automata_for_physical_modelling.html"
+            target="_blank">mirror</a>,&nbsp; <a
+            href="https://theswissbay.ch/pdf/Gentoomen%20Library/Game%20Development/Programming/Game%20Programming%20Gems%203.pdf"
+            target="_blank">full book</a> ).</p>
+        <p> Gomez, Miguel. <a id="gomez"
+            href="https://www.gamedeveloper.com/game-platforms/simple-intersection-tests-for-games"
+            target="_blank">Simple Intersection Tests for Games</a> ( <a
+            href="https://web.archive.org/web/20010203005100/https://www.gamasutra.com/features/19991018/Gomez_1.htm"
+            target="_blank"> archived</a> ).</p>
+        <p> O&#8217;Rourke, Joseph. <a id="orourke" href="https://cs.smith.edu/~orourke/books/compgeom.html"
+            target="_blank">Computational Geometry in C</a> ( <a
+            href="https://web.archive.org/web/20201027010152/http://www.science.smith.edu/~jorourke/books/compgeom.html"
+            target="_blank">archived</a>,&nbsp; <a
+            href="https://github.com/sarcilav/analisis-numerico/raw/e262648/doc/Computational%20Geometry%20In%20C%202nd%20ed.%20-%20J.%20O'Rourke%20(1997)%20WW.pdf"
+            target="_blank">full book</a> ).</p>
+        <p> Simpson, Zachary. <a id="simpson"
+            href="https://web.archive.org/web/20041015134104/http://www.mine-control.com/zack/patterns/gamepatterns.html"
             target="_blank">Design Patterns for Computer Games</a></p>
-        <p> Ulrich, Thatcher. <a name="ulrich" href="https://www.tulrich.com/geekstuff/partitioning.html"
-            target="_blank">Spatial Partitioning with Loose Octrees</a></p>
+        <p> Ulrich, Thatcher. <a id="ulrich" href="http://www.tulrich.com/geekstuff/partitioning.html"
+            target="_blank">Spatial Partitioning with Loose Octrees</a> ( <a href="/n/files/bib/ulrich.txt"
+            target="_blank">mirror</a>,&nbsp; <a
+            href="https://web.archive.org/web/20010121114000/http://www.tulrich.com/geekstuff/partitioning.html"
+            target="_blank">archived</a> ).</p>
         <p> <a href="#toc">[ back to table of contents ]</a> </p>
       </div>
     </td>
@@ -422,11 +459,11 @@ Original by Metanet Software, 2004 (<a href="https://www.metanetsoftware.com/201
 <script>
   window.RufflePlayer = window.RufflePlayer || {};
   window.RufflePlayer.config = {
-      "quality":         "high",
-      "backgroundColor": "#d4d9e9",
-      "wmode":           "transparent",
-      "autoplay":        "on",
-      "unmuteOverlay":   "hidden"
+    "quality": "high",
+    "backgroundColor": "#d4d9e9",
+    "wmode": "transparent",
+    "autoplay": "on",
+    "unmuteOverlay": "hidden"
   };
 </script>
 <script src="/n/ruffle/ruffle.js"></script>

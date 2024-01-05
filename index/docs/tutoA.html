@@ -28,7 +28,7 @@
 					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" width="24" height="24"></a></div>
 					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" width="24" height="24"></a></div>
 					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-03</span>
+					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-05</span>
 					<div class="spreader" style="width: 150px; min-width: 150px;"></div>
 				</div>
 			</td>
@@ -41,7 +41,8 @@
 
 Original by Metanet Software, 2004
 (<a href="https://www.metanetsoftware.com/2016/n-tutorial-a-collision-detection-and-response">current</a> version,
-<a href="https://web.archive.org/web/20040701104235/http://www.harveycartel.org/metanet/tutorials/tutorialA.html">archived</a>
+<a
+  href="https://web.archive.org/web/20040701104235/http://www.harveycartel.org/metanet/tutorials/tutorialA.html">archived</a>
 version).
 <br><br>
 <table width="1000" class="tuto center" style="font-size:80%;">
@@ -49,7 +50,7 @@ version).
     <td style="display:flex;justify-content:center;width:25%;">
       <div style="text-align:left;">
         N Tutorial A &#8211; Collision Detection and Response
-        <p><a name="toc"> table of contents</a></p>
+        <p><a id="toc"> table of contents</a></p>
         <a href="#section0">SECTION &nbsp; 0</a>: General Introduction<br>
         <a href="#section1">SECTION &nbsp; 1</a>: Separating Axis Theorem<br>
         <a href="#section2">SECTION &nbsp; 2</a>: Separating Axis Theorem for AABBs<br>
@@ -65,7 +66,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section0">SECTION 0</a>: General Introduction </p>
+        <p> <a id="section0">SECTION 0</a>: General Introduction </p>
         <p> <strong>&#8211;= Collision Detection in Games =&#8211; </strong> </p>
         <p> Typically, collision detection in games is carried out into two steps: </p>
         <ul>
@@ -126,7 +127,8 @@ version).
         </ul>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A-1_particle_collision.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A-1_particle_collision.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -154,7 +156,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section1">SECTION 1</a>: Separating Axis Theorem <strong>(SAT)</strong> </p>
+        <p> <a id="section1">SECTION 1</a>: Separating Axis Theorem <strong>(SAT)</strong> </p>
         <p> <strong>&#8211;= summary of SAT =&#8211;</strong> </p>
         <p> The separating axis theorem tells us that, given two convex shapes, if we can find an axis along which the
           projection of the two shapes does <strong>not</strong> overlap, then the shapes don&#8217;t overlap. See <a
@@ -176,7 +178,8 @@ version).
           nicely. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/Ax_aabb_projection.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/Ax_aabb_projection.swf">
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -213,7 +216,8 @@ version).
           to the <strong>size</strong> of the overlap along that axis. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A1_aabb-aabb_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A1_aabb-aabb_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -232,7 +236,7 @@ version).
           </div>
         </div>
         <p> <br clear="all"><br>
-          <a name="aabb-aabb">Figure 3.</a> Using the Separating Axis Theorem with Two Boxes
+          <a id="aabb-aabb">Figure 3.</a> Using the Separating Axis Theorem with Two Boxes
         </p>
         <p> So, we now have our general approach to collision detection: for a pair of objects, test each potential
           separating axis, stopping if we find separation. If none of the axes are separating, use the axis of
@@ -244,7 +248,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section2">SECTION 2</a>: Separating Axis Theorem for AABBs </p>
+        <p> <a id="section2">SECTION 2</a>: Separating Axis Theorem for AABBs </p>
         <p> A common shape used in 2D games to represent moving objects is an axis-aligned bounding box, or
           <strong>AABB</strong>. An AABB is defined by a position <strong>p</strong>, and a pair of half width vectors
           <strong>xw</strong> and <strong>yw</strong>, which define the box&#8217;s size along the world axes.
@@ -267,7 +271,8 @@ version).
         </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-tri_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A2_aabb-tri_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -301,7 +306,8 @@ version).
         </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-convex_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A2_aabb-convex_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -319,7 +325,8 @@ version).
           Figure 6. Using the Separating Axis Theorem with an AABB and a Convex Circular Shape </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A2_aabb-concave_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A2_aabb-concave_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -350,7 +357,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section3">SECTION 3</a>: Separating Axis Theorem for Circles </p>
+        <p> <a id="section3">SECTION 3</a>: Separating Axis Theorem for Circles </p>
         <p> Another common collision shape for moving 2D objects is the circle. </p>
         <p> In the previous section we saw that round shapes require special treatment in order to be compatible with
           our SAT-like method; in this section we&#8217;ll see how to extend those ideas in order to handle collision
@@ -362,7 +369,8 @@ version).
           the circle&#8211;>boxvertex vectors. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_circleAABB_naive_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A3_circleAABB_naive_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -393,7 +401,8 @@ version).
         <p> a <strong>feature</strong> of a polygon is an edge or vertex of the polygon. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_polygonVR.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A3_polygonVR.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong></p>
@@ -419,7 +428,8 @@ version).
           presented in <a href="#arvo">[Arvo]</a>. </p>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A3_circleAABB_VR_sepaxis.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A3_circleAABB_VR_sepaxis.swf">
           </object>
           <div style="text-align: right;">
             <p><strong>instructions:</strong></p>
@@ -450,7 +460,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section4">SECTION 4</a>: Separating Axis Theorem for Points </p>
+        <p> <a id="section4">SECTION 4</a>: Separating Axis Theorem for Points </p>
         <p> While we can apply the above ideas for testing a point vs. various tile shapes, the results will usually
           not be satisfactory. This is not due to our collision detection routines, but instead due to our decision to
           handle collisions via projection. </p>
@@ -480,7 +490,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section5">SECTION 5</a>: Fast-Moving Objects </p>
+        <p> <a id="section5">SECTION 5</a>: Fast-Moving Objects </p>
         <p> As mentioned above, small and/or fast-moving objects can produce problems when using a static collision
           test. There are several approaches that can be taken to handle such objects &#8212; the simplest is to
           <strong>constrain</strong> your <strong>game design</strong> so that such objects aren&#8217;t needed.
@@ -514,35 +524,45 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="section6">SECTION 6</a>: Conclusion / Source Code</p>
+        <p> <a id="section6">SECTION 6</a>: Conclusion / Source Code</p>
         <div style="display: flex;">
-          <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420" height="500">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500" src="/n/files/tut/tutA_demo05.swf">
+          <object style="min-width: 420px;text-align: left;" type="application/x-shockwave-flash" width="420"
+            height="500">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="400" height="500"
+              src="/n/files/tut/tutA_demo05.swf">
           </object>
           <div style="text-align: left;">
             Hopefully this has given you some ideas about how to implement collision detection and response in 2D.<br>
-              We&#8217;re sure that our method isn&#8217;t the fastest or most elegant solution, but it&#8217;s the one we
-              used and it ended up working fairly well.
-            <p> Certainly, the above approach to collision can be extended in various ways &#8212; for instance, different
-              shapes, such as arbitrary triangles, can be implemented as <strong>tile shapes</strong>, or as <strong>dynamic
-                shapes</strong>. Really, any of the tile shapes should be implementable as dynamic object shapes &#8212; if
+            We&#8217;re sure that our method isn&#8217;t the fastest or most elegant solution, but it&#8217;s the one we
+            used and it ended up working fairly well.
+            <p> Certainly, the above approach to collision can be extended in various ways &#8212; for instance,
+              different
+              shapes, such as arbitrary triangles, can be implemented as <strong>tile shapes</strong>, or as
+              <strong>dynamic
+                shapes</strong>. Really, any of the tile shapes should be implementable as dynamic object shapes &#8212;
+              if
               you want to use any given shape with the above approach, all you need to be able to do is determine the
               shape&#8217;s halfwidth when projected onto a given axis. If speed is really important (as it is in
-              actionscript), then the trick is to only use shapes for which these halfwidths can be either precomputed or
+              actionscript), then the trick is to only use shapes for which these halfwidths can be either precomputed
+              or
               easily computed. </p>
             <p> <strong>&#8211;= source code =&#8211;</strong></p>
             <p> Here is a demo application containing the N source code relating to this tutorial:</p>
             <p> <a href="/n/files/tut/N_tutorialAsrc.zip">download</a> </p>
-            <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for commercial
+            <p> You are free to use this code however you&#8217;d like, provided you notify us if it&#8217;s for
+              commercial
               use; a link to our site would also be appreciated. </p>
             <p> <strong>&#8211;= contacting us =&#8211;</strong></p>
             <p> Please let us know if you have any corrections, comments, or suggestions about this tutorial. <br>
-              <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> &#8212; be sure to reference the
+              <a href="mailto:tutorials@harveycartel.org">tutorials@harveycartel.org</a> &#8212; be sure to reference
+              the
               tutorial you&#8217;re writing about.
             </p>
-            <p> <strong>PLEASE</strong> don&#8217;t contact us with questions about the source, you&#8217;ll just have to
+            <p> <strong>PLEASE</strong> don&#8217;t contact us with questions about the source, you&#8217;ll just have
+              to
               figure it out on your own. </p>
-            <p> Our next tutorial will explain the broad-phase grid-based collision detection system, which uses the above
+            <p> Our next tutorial will explain the broad-phase grid-based collision detection system, which uses the
+              above
               collision routines to collide objects vs. a tilemap and vs. each other. It will also explain a method to
               optimize collision vs. tilemaps, and code for intersecting a ray with tiles and objects. </p>
             <p> <a href="#toc">[ back to table of contents ]</a></p>
@@ -554,22 +574,35 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="footnotes">FOOTNOTES</a> </p>
-        <p> Arvo, James. <a name="arvo" href="https://www.acm.org/pubs/tog/GraphicsGems/gems/BoxSphere.c"
-            target="_blank">A Simple Method for Box-Sphere Intersection Testing</a>.</p>
-        <p> Baltman, Rick. <a name="penalty" href="https://www.gdconf.com/archives/2004/baltman_rick.pdf"
-            target="_blank">Using Verlet Integration and Constraints in a Six Degree of Freedom Rigid Body Physics
+        <p> <a id="footnotes">FOOTNOTES</a> </p>
+        <p> Arvo, James. <a id="arvo" href="/n/files/bib/arvo.pdf" target="_blank">A Simple Method for Box-Sphere
+            Intersection Testing</a>
+          ( <a href="https://github.com/erich666/GraphicsGems/blob/master/gems/BoxSphere.c" target="_blank">source
+            code</a>, &nbsp; <a
+            href="https://theswissbay.ch/pdf/Gentoomen%20Library/Game%20Development/Programming/Graphics%20Gems%201.pdf"
+            target="_blank">full book</a> ).</p>
+        <p> Baltman, Rick. <a id="penalty" href="/n/files/bib/baltman.pdf" target="_blank">Using Verlet Integration
+            and Constraints in a Six Degree of Freedom Rigid Body Physics
             Simulation</a>.</p>
-        <p> Eberly, David. <a name="eberly"
-            href="https://www.magic-software.com/Documentation/MethodOfSeparatingAxes.pdf" target="_blank">Intersection
-            of Convex Objects: The Method of Separating Axes</a>.</p>
-        <p> Gomez, Miguel. <a name="gomez" href="https://www.gamasutra.com/features/19991018/Gomez_1.htm"
-            target="_blank">Simple Intersection Tests for Games</a>.</p>
-        <p> Jakobsen, Thomas. <a name="jakobsen" href="https://www.ioi.dk/Homepages/thomasj/publications/gdc2001.htm"
-            target="_blank">Advanced Character Physics</a></p>
-        <p> Mirtich, Brian and Kanny, John. <a name="impulse"
-            href="https://citeseer.ist.psu.edu/article/mirtich95impulsebased.html" target="_blank">Impulse-Based
-            Simulation of Rigid Bodies</a>.</p>
+        <p> Eberly, David. <a id="eberly" href="/n/files/bib/eberly.pdf" target="_blank">Intersection of Convex
+            Objects: The Method of Separating Axes</a> ( <a
+            href="https://www.geometrictools.com/Documentation/Documentation.html" target="_blank">
+            more articles</a> ).</p>
+        <p> Gomez, Miguel. <a id="gomez"
+            href="https://www.gamedeveloper.com/game-platforms/simple-intersection-tests-for-games"
+            target="_blank">Simple Intersection Tests for Games</a>
+          ( <a href="https://web.archive.org/web/20010203005100/https://www.gamasutra.com/features/19991018/Gomez_1.htm"
+            target="_blank">
+            archived</a> ).</p>
+        <p> Jakobsen, Thomas. <a id="jakobsen" href="/n/files/bib/jakobsen.pdf" target="_blank">Advanced Character
+            Physics</a>
+          ( <a href="http://www.gotoandplay.it/_articles/2005/08/advCharPhysics.php" target="_blank">mirror</a> ).</p>
+        <p> Mirtich, Brian and Kanny, John. <a id="impulse" href="/n/files/bib/mirtich.pdf"
+            target="_blank">Impulse-Based
+            Simulation of Rigid Bodies</a> ( <a
+            href="https://graphics.stanford.edu/courses/cs468-03-winter/Papers/ibsrb.pdf" target="_blank">
+            mirror</a>,&nbsp; <a href="https://dl.acm.org/doi/pdf/10.1145/199404.199436" target="_blank">mirror</a> ).
+        </p>
         <p> <a href="#toc">[ back to table of contents ]</a> </p>
       </div>
     </td>
@@ -577,7 +610,7 @@ version).
   <tr>
     <td>
       <div style="text-align:left;">
-        <p> <a name="appendixA">APPENDIX A</a>: Basic Geometry </p>
+        <p> <a id="appendixA">APPENDIX A</a>: Basic Geometry </p>
         <p>
           <strong>&#8211;= normalization =&#8211;</strong>
         </p>
@@ -627,7 +660,8 @@ version).
         </pre>
         <div style="display: flex;justify-content: space-between;">
           <object style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256">
-            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/A0_vector_projection.swf">
+            <embed style="text-align: left;" type="application/x-shockwave-flash" width="256" height="256"
+              src="/n/files/tut/A0_vector_projection.swf">
           </object>
           <div style="text-align: right;">
             <p> <strong>instructions:</strong> </p>
@@ -635,7 +669,8 @@ version).
             <p> <strong>comments:</strong> </p>
             <p>
               <span class="green">the green vector</span> is the result of the projection of <span class="blue">the
-                vector p1->p0</span> onto <span class="red">the line containing p1 and p2</span>.</p>
+                vector p1->p0</span> onto <span class="red">the line containing p1 and p2</span>.
+            </p>
           </div>
         </div>
         <p> <br clear="all"><br>
@@ -679,11 +714,11 @@ version).
 <script>
   window.RufflePlayer = window.RufflePlayer || {};
   window.RufflePlayer.config = {
-    "quality":         "high",
+    "quality": "high",
     "backgroundColor": "#d4d9e9",
-    "wmode":           "transparent",
-    "autoplay":        "on",
-    "unmuteOverlay":   "hidden"
+    "wmode": "transparent",
+    "autoplay": "on",
+    "unmuteOverlay": "hidden"
   };
 </script>
 <script src="/n/ruffle/ruffle.js"></script>

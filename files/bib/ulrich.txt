@@ -1,0 +1,177 @@
+
+Spatial partitioning with "Loose" octrees
+
+These are a few emails/postings about a spatial partitioning scheme using a variation on a octree or quadtree structure. I used this scheme in several commercial products, first in Rocky vs The Firebugs for the Tectrix VR Climber, and also in the subsequent titles Deep, Aztec 2000, and Tank for the VR Bike and VR Climber. Most people don't have ready access to those games (more info may appear in the future at http://tulrich.com/tectrixvr/), so I'll just say that it's a pretty versatile, forgiving, yet effective way to organize a spatial database for games/VE's which have an open layout (i.e. outdoors). It's most well suited to dynamic databases; you'll get more efficiency with ordinary quadtrees/octrees/kdtrees/what-have-you for static geometry.
+
+----------------
+From: ulrich@world.std.com (Thatcher Ulrich)
+Subject: Re: Something like octrees, but for moving objects?
+Date: 16 Mar 1999 00:00:00 GMT
+Newsgroups: comp.games.development.programming.algorithms
+
+Sam Stickland <sps196@ecs.soton.ac.uk> wrote...
+> Hi,
+>
+> Are there any basic clipping/visibility routines that I can apply to
+> objects that are moving (rebuilding an octree every frame is obviously
+> unacceptable speed wise).  I have been thinking of constructing very
+> crude octrees, that could hopefully be made very quickly (probably with
+> bounding spheres). Are there any other approaches?
+
+I've used a scheme which is like an octree, but tweaked to make it
+easy to move objects.  Basically, I used a fixed level of subdivision
+and pre-allocated (empty) nodes down to that level.  The main tweak
+was to make the nodes "loose" by overlapping them -- so a node which
+in a normal octree would be bounded by an N x N x N cube, I defined as
+being bounded by a 2N x 2N x 2N cube instead, overlapping with the
+neighboring nodes.  It's still a hierarchical partitioning scheme,
+it's just looser than a normal octree.
+
+I used bounding spheres on the objects.  An object's bounding radius
+completely determines its grid level, and then the particular node
+only depends on the object's position.  I did maintain an "empty" flag
+for each node, since if you do this in 3D, you usually end up with
+lots of empty nodes.
+
+So the advantage is that moving an object is fairly quick and doesn't
+involved any allocation/deallocation.  The main disadvantages are that
+the bounds are relatively loose, and you need N^3 nodes at the finest
+subdivision level.  Still, it worked pretty well for me.
+
+I wrote a longer description of this some time back, probably in
+rec.games.programmer.  Check DejaNews for more info.
+
+--
+Thatcher Ulrich
+http://world.std.com/~ulrich
+
+
+
+----------------------
+Re: Spheres vs. Bounding Boxes 
+Author: Thatcher Ulrich <ulrich@world.std.com>
+Date: 1998/06/17
+Forum: rec.games.programmer
+
+[snipped some stuff... -wtu 12/10/99]
+
+A culling method I've used that's worth mentioning is
+hierarchical grids.  Sort of like an octree/quadtree, but the
+boxes overlap.  Objects with a radius between N and 2N go into
+the grid with pitch 4N; larger objects go into a coarser grid,
+and smaller objects go into a finer grid.  You choose the
+particular grid element based on the coordinates of the center of
+the object.  This scheme handles dynamic objects easily, it's
+quick to process during rendering, and it's hierarchical,
+although the bounds are pretty loose.
+
+--
+Thatcher Ulrich
+http://world.std.com/~ulrich
+
+
+
+
+-----------------
+From: "Thatcher Ulrich" <ulrich@world.std.com>
+To: "Greg Hjelstrom" <ghjelstrom@lvcm.com>
+Subject: Re: Spheres vs. Bounding Boxes
+Date: Thu, 18 Jun 1998 12:15:52 -0400
+
+Hi Greg,
+
+
+>Would you mind expanding on the hierarchical grid idea for me?  How is it
+>different from an octree or quadtree?  If you can give me a pointer to a
+>paper which describes the idea that would be cool too.
+>
+>Basically, you caught my interest because I was thinking of the same sort of
+>idea.  I was using a grid for spatial subdivision where I just set the grid
+>size to be greater than the largest object;  then each object can be in up
+>to four grid squares.  Then I started thinking of a fully expanded quadtree
+>where you just recursed the tree and put the object in the deepest node it
+>could get to without overlapping into another node.  The problem with that
+>idea is that there are "hotspots" in the world where an object will end up
+>in the root node of the quadtree...  Your hierarchical grid sounds like it
+>avoids that problem but I'm just not quite getting the whole picture :-)
+
+
+It's funny, that's exactly the thought process I went through.  As far
+as I know, it's an original invention, although it's not that
+earth-shaking.  What I came up with is an octree-like scheme, with the
+main difference being that the cubes at any given level of the
+hierarchy overlap each other instead of just touching.
+
+I'll try some ASCII diagrams, but it's pretty confusing.
+
+Here's the second level of a normal quadtree:
+
+
++---+---+
+|   |   |
++---+---+
+|   |   |
++---+---+
+
+Normally, you would place objects that fit completely within one of
+those squares into that square (or in one of its sub-squares).  In my
+hierarchical grid, the difference is that if the object is the right
+size (more on that later), you pick one of the four squares based on
+where its *center point* lies.  You let the extent of the object hang
+over the edge of the square boundary, if it wants to.  That sounds kind
+of counter-intuitive, since what you're trying to do is put bounds on
+the object geometry.  BUT, if you limit the radius of the object, you
+still have a boundary for the grid square; it's just the original
+boundary plus a zone the width of the maximum object radius on all
+sides.  Here's a single square:
+
+*********
+* +---+ *
+* |   | *
+* +---+ *
+*********
+
+The inside square is the original boundary.  The *'s mark the absolute
+limit of the geometry within the square, and is what you use for
+culling.  If you draw more than one square with the outer boundaries,
+it gets really confusing, so I can't really do it with ASCII art.
+
+In my implementation, I set the maximum object radius to 1/2 the size
+of a grid square.
+
+What if the object is too big for the grid?  You put it in the next
+higher level of the tree.  If the object's radius is less than 1/4 of
+the grid square size, then you recurse to the sub-square which contains
+the object's center.
+
+It's pretty easy to determine where an object goes; you select the grid
+level based on its radius, and you select the particular grid square
+based on its center coordinates.  When you move an object or change its
+radius, you have to check to see if it needs to move to a new grid
+square, but in my experience the overhead is small.
+
+This structure maintains the property of a quadtree, that all
+sub-squares are completely contained within a parent square, so if you
+reject a square you also reject its sub-hierarchy.
+Also, in my implementation I subdivided in 3 dimensions (a la octree),
+so there were quite a few empty cubes in a typical database; I
+maintained empty-flags to avoid recursing into cubes that don't contain
+any objects.  I'll probably use this scheme again, but in a quadtree
+format.
+
+There are no hotspots, like with a normal quadtree/octree, where even
+tiny objects would get put in huge squares.
+
+The main drawback I see with this method is that the boundaries are
+kind of loose.  A parent square contains its child squares, and then
+some.  Due to the overlapping squares, you have to check more squares
+than with a typical quadtree.  On the other hand, it makes a flexible
+first level of hierarchical coarse culling; you could use tighter and
+more sophisticated culling methods on the individual component objects.
+
+You could also limit the hierarchy in various ways depending on your
+needs.
+
+-Thatcher
+
+tu@tulrich.com | Thatcher Ulrich
