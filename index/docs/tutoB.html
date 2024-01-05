@@ -22,12 +22,12 @@
 		<tr class="ps-row2">
 			<td class="ps-col1">
 				<div class="navigation">
-					<div><a href="/n/index.html"          class="menu">HOME      <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/docs.html"     class="menu">DOCUMENTS <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/images.html"   class="menu">IMAGES    <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" width="24" height="24"></a></div>
+					<div><a href="/n/index.html"          class="menu">HOME      <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/docs.html"     class="menu">DOCUMENTS <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/images.html"   class="menu">IMAGES    <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
 					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-05</span>
 					<div class="spreader" style="width: 150px; min-width: 150px;"></div>
 				</div>
@@ -45,7 +45,7 @@ Original by Metanet Software, 2004 (<a
   href="https://web.archive.org/web/20041112102646/http://www.harveycartel.org/metanet/tutorials/tutorialB.html">archived</a>
 version).
 <br><br>
-<table width="1000" class="tuto center" style="font-size:80%;">
+<table class="tuto center" style="font-size:80%;width:1000px;">
   <tr>
     <td style="display:flex;justify-content: center;width: 25%;">
       <div style="text-align:left;">
@@ -123,21 +123,20 @@ version).
               likewise for the up/down neighbors.
           </div>
         </div>
-        <p> <br clear="all"><br>
-          Figure 0. The Cells Touched by an Object</p>
+        <p> Figure 0. The Cells Touched by an Object</p>
         <p> We can safely assume that the object will, at most, be overlapping the current cell,</p>
         <p>a horizontal neighbor of the current cell, a vertical neighbor of the current cell,<br>
           and a diagonal neighbor of the current cell; the diagonal neighbor is also a neighbor of the horiz/vert.
           neighbors.</p>
         <p> Determining which cells an object overlaps can be done is various ways: </p>
-        <ul>
-          <p>. you can simply use 4 position-lookups (one for each of the object&#8217;s corners)</p>
-          <p>. you can use one position lookup (with the object&#8217;s center) to determine the current cell&#8217;s
+        <p class="indent">
+          . you can simply use 4 position-lookups (one for each of the object&#8217;s corners).<br>
+          . you can use one position lookup (with the object&#8217;s center) to determine the current cell&#8217;s
             index in the 2D grid, and then use offsets from this index based on the object&#8217;s position relative
             to the current cell&#8217;s position (i.e. if the object&#8217;s center is left and below the current
             cell&#8217;s center, and the current cell&#8217;s index is [i][j], we know we have to look at the left,
-            down, and left-down neighbors, or [i-1][j], [i][j+1], [i-1][j+1].
-        </ul>
+            down, and left-down neighbors, or [i-1][j], [i][j+1], [i-1][j+1]).
+          </p>
         <p>
           We can run into problems if part of the object is outside of the boundary of the grid; this results in the
           above methods generating cell indices which don&#8217;t exist. </p>
@@ -191,7 +190,7 @@ version).
           each of the cell&#8217;s 4 edges. This idea was borrowed from an article in Game Programming Gems 3 <a
             href="#forsyth">[Forsyth]</a> which mentioned that the game <i>X-Com</i> used a similar structure. </p>
         <p> The edge data we stored was very minimal; a single flag which indicates the state of the edge: </p>
-        <ul>
+        <p class="indent">
           <strong>. empty:</strong> neither of the cells which share this edge contains a solid tile shape<br>
           <strong>. solid:</strong> each tile shape has at least one edge which matches a grid edge perfectly; these
           edges were labeled solid.<br>
@@ -199,14 +198,14 @@ version).
           didn&#8217;t match the shape perfectly were labeled &#8220;interesting&#8221;, indicating that we needed to
           perform further collision tests. For instance, the two edges on the outside of a triangle&#8217;s hypotenuse
           are &#8220;interesting&#8221;.
-        </ul>
+        </p>
         <p> Once each tile has been assigned a set of edge states, we then need to compare the edge states of
           neighboring tiles; any edge at which both tiles have <strong>solid</strong> edge states should be considered
           <strong>empty</strong>, as such a configuration only exists below the surface of the world. Such a change
           will have no impact on the correctness of the collision results, since objects should only collide with the
           world&#8217;s surface.
         </p>
-        <p> <img decoding="async" class="center" src="/n/files/tut/B1_edgestates.gif"><br>
+        <p> <img decoding="async" class="center" src="/n/files/tut/B1_edgestates.gif" alt="N tiles"><br>
           Figure 1. The 9 Tile Shapes Used in N, and their Corresponding Edge States<br>
           <br>
           <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and
@@ -222,7 +221,7 @@ version).
           the tilemap; this is sometimes useful since a normal tilemap doesn&#8217;t contain any explicit surface
           information, and knowing the surface of the world is often useful &#8212; for instance to allow enemies to
           move along the world&#8217;s surface. </p>
-        <p> <img decoding="async" class="center" src="/n/files/tut/B2_edgesurface.gif"><br>
+        <p> <img decoding="async" class="center" src="/n/files/tut/B2_edgesurface.gif" alt="N map"><br>
           Figure 2. An Example Tile Map Containing Chunks of Contiguous Tiles and their Edge States<br>
           <br>
           <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and
@@ -258,25 +257,25 @@ version).
           our case, this would be from 1 to 4 cells. Every time the object moves, it&#8217;s removed from the cells
           which it used to touch, and inserted into the cells which it now touches. When we collide an object, we only
           need to test it against the contents of any cell it touches. </p>
-        <ul>
+        <p class="indent">
           . <strong>pros: </strong>each object needs to look in at most 4 cells to find other objects it might collide
           with<br>
           . <strong>cons:</strong> each object needs to be inserted/removed from up to 4 cells every time it moves;
           also, additional logic needs to be added to the collision code to deal with a case where, for instance, two
           objects touch the same two cells. Since we only want to test that pair of objects once, we&#8217;d have to
           add a &#8220;tested&#8221; flag or similar code to deal with this.
-        </ul>
+        </p>
         <p> <strong>&#8220;loose&#8221; grid:</strong> each object is placed in a single cell: that which contains its
           centre. When an object moves, it&#8217;s removed from that (single) cell and inserted into the cell which
           contains its new position. When testing for collision, we have to check not only the current cell, but the 8
           cells neighboring the current cell. The idea of a &#8220;loose&#8221; grid can be a bit confusing until it
           clicks, at which point everything will make perfect sense. You can find more details here: <a
             href="#ulrich">[Ulrich]</a></p>
-        <ul>
+        <p class="indent">
           . <strong>pros:</strong> each object needs to be inserted/removed from only 1 cell when it moves.<br>
           . <strong>cons: </strong>each object always needs to look in 9 cells to find other objects it might collide
           with
-        </ul>
+        </p>
         <p> We chose to use a loose grid in N because it simplified handling moving objects; however, most of the
           ideas mentioned in this tutorial apply to any kind of grid. </p>
         <p>
@@ -284,17 +283,17 @@ version).
           list are those whose centers are contained in the cell. (If you&#8217;re not familiar with linked-lists,
           googling &#8220;linked list&#8221; is probably a good way to learn about them.) </p>
         <p> In our implementation, each cell has: </p>
-        <ul>
+        <p class="indent">
           <strong>.next </strong>&nbsp;&nbsp;//the head of the linked list<br>
           <strong>.prev</strong> &nbsp;&nbsp;//always equal to null since .next is the first list entry
-        </ul>
+        </p>
         <p> and each object has: </p>
-        <ul>
+        <p class="indent">
           <strong>.cell </strong>&nbsp;&nbsp;&nbsp;//reference to the cell in which it&#8217;s contained<br>
           <strong>.prev </strong>&nbsp;&nbsp;//reference to the object before this object in .cell&#8217;s linked
           list<br>
           <strong>.next</strong> &nbsp;&nbsp;//reference to the object after this object in .cell&#8217;s linked list
-        </ul>
+        </p>
         <p> Whenever an object moves, its position in the grid is updated and changes to the linked lists are made as
           appropriate. </p>
         <p> <strong>&#8211;= more details =&#8211;</strong></p>
@@ -377,7 +376,7 @@ version).
         <p> One major problem with using a loose grid is that objects which aren&#8217;t contained in the cells
           touched by a ray might still touch the ray. </p>
         <p>
-          <img decoding="async" class="center" src="/n/files/tut/B3_raymiss.png"><br>
+          <img decoding="async" class="center" src="/n/files/tut/B3_raymiss.png" alt="Raycasting"><br>
           Figure 4. The Cells Touched by a Ray<br>
           <br>
           Note that even though an object isn&#8217;t contained in a cell touched by the ray, it may still intersect

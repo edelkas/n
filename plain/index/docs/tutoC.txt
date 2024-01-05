@@ -1,6 +1,6 @@
 Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/20090131075043/http://www.harveycartel.org/metanet/tutorials/tutorialC.html">archived</a> version).
 <br><br>
-<table width="1000" class="tuto center" style="font-size:80%;">
+<table class="tuto center" style="font-size:80%;width:1000px;">
   <tr>
     <td style="display:flex;justify-content: center;width: 25%;">
       <div style="text-align:left;">
@@ -64,10 +64,10 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
         There were four main tasks/event-types the object-manager took care of: <br>
         <br>
         <strong>(A) collision/spatial database</strong><br>
-        <ul>
+        <div class="indent"><br>
           As described in the previous tutorial, we used a loose grid as a spatial database. <br>
-          Any objects which wanted to be notified of collision:<br>
-          <ul>
+          Any objects which wanted to be notified of collision: <br>
+          <div class="indent">
             . must call objectmanager.AddToGrid() and .RemoveFromGrid(); this is equivalent to registering as a
             listener for a "collision" event<br>
             . must have a .pos<br>
@@ -75,10 +75,10 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
             loose grid if necessary<br>
             . must provide .TestVsPlayer(), which returns true if the player is colliding with the object, and false
             otherwise.
-          </ul>
-        </ul>
+          </div>
+        </div><br>
         <strong>(B) object updating/sleeping</strong><br>
-        <ul>
+        <div class="indent"><br>
           Some objects need to be updated each time we tick the simulation; examples are objects which are moving
           (they need to change their position each tick) or doing anything else constantly (such as targeting the
           player, or searching for the player). objects can call objectmanager.StartUpdate() and .EndUpdate() to alert
@@ -87,7 +87,8 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           This mechanism was the way in which object logic was implemented in the FSM; to change "states", the object
           simply plugged the appropriate state-specific update function into its generic ".Update" slot. for instance:
           <br> <br>
-            <ul><pre>
+          <div class="indent">
+            <pre>
               //----- constructor -----
               function Mover()
               {
@@ -117,7 +118,8 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
               {
               &nbsp;&nbsp;&nbsp;&nbsp;//move to the right
               }
-            </pre></ul>
+            </pre>
+          </div>
           <br>
           The article cited above provides many ideas about how to improve and extend this simple implementation;
           also, many of the "game programming gems" books contain articles on FSMs. <br>
@@ -127,17 +129,17 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           the time they're inert, and don't require updating. using the StartUpdate/EndUpdate mechanism, objects were
           able to "sleep" in between periods of activity by simply unplugging themselves from the update event when
           they were done "doing stuff".
-        </ul>
+        </div><br>
         <strong>(C) drawing</strong> <br>
-        <ul>
+        <p class="indent">
           Since the simulation is run at a constant 40Hz, but the rendering is done at a different rate (depending on
           the client's machine), by uncoupling Update() from Draw(), we can save some time -- objects only need to
           update their graphical information (i.e. the ._x and ._y position of their gfx MC, etc.) when the Draw event
           occurs. similar to Update, in this way objects which don't move don't need to keep touching their MCs, which
           saves time.
-        </ul>
+        </p>
         <strong>(D) visibility queries/AI updates</strong><br>
-        <ul>
+        <p class="indent">
           Casting rays through the world is a fairly costly process. in order to maintain a fast framerate, we
           implemented "staggered" AI updates; any object which requires costly updates (such as raycasts for
           visibility) can subscribe to the Think event. Each time the simulation is ticked, SOME of the objects are
@@ -146,7 +148,7 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
           becoming visible to an enemy) and the corresponding change in logic (the enemy being aware of the change in
           visibility). However, since the game is ticked at 40hz, a delay of even 10 ticks is short enough to not make
           a substantial difference.
-        </ul>
+        </p>
         <a href="#toc">[ back to table of contents ]</a> <br>
         <br>
       </div>
@@ -189,12 +191,12 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
         <br>
         The two main states of the player are "alive" and "dead". while alive, the player is controlled by an FSM
         which contains all of the player's behaviour states, such as: <br>
-        <ul>
+        <p class="indent">
           . standing<br>
           . falling<br>
           . jumping<br>
           . wallsliding
-        </ul>
+        </p>
         This FSM takes as input various events; user input (keypresses), collision input, etc. <br>
         <br>
         Instead of implementing such events explicitly, they're mostly implemented as a set of flags indicating
@@ -217,10 +219,10 @@ Original by Metanet Software, 2005 (<a href="https://web.archive.org/web/2009013
         provided source, it's fairly simple). However, the general idea (which can be applied in any rendering
         environment) is that the position of the "midpoints" of each limb (elbows, knees, etc.) are implicitly defined
         by: <br>
-        <ul>
+        <p class="indent">
           . the position of the limb endpoints <br>
           . the distance between the limb endpoints
-        </ul>
+        </p>
         <span class="red">++TODO: animated diagram of a single limb, with triangle-relationship depicted</span>
         <br>
         <br>

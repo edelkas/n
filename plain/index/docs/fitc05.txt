@@ -1,22 +1,28 @@
 Slides of Raigan Burn's talk at
-<a href="https://fitc.ca/presentation/beyond-hittest-proper-collision-detection-and-response-in-actionscript/">FITC '05</a>
+<a href="https://fitc.ca/presentation/beyond-hittest-proper-collision-detection-and-response-in-actionscript/">FITC
+	'05</a>
 (<a href="https://web.archive.org/web/20050211174944/http://www.fitc.ca:80/Program.cfm?p=58">archived</a>).
 <a href="/n/files/tut/fitc05.zip">Download</a> slides
 (backed up from <a href="https://www.metanetsoftware.com/technique/fitc05.zip">here</a>, archived
 <a href="https://web.archive.org/web/20060707001904/http://www.harveycartel.org/metanet/tutorials/fitc05.zip">here</a>).
 The additional Flash figures discussed in the talk are available <a href="fitc05/figs.html">here</a>.
 <br>
-The talk, entitled <strong>Beyond hitTest(): Proper collision detection in ActionScript</strong>, delves into the techniques used in N to
-code a robust and fast physics engine in ActionScript (used for Flash applications).
+The talk, entitled <strong>Beyond hitTest(): Proper collision detection in ActionScript</strong>, delves into the
+techniques used in N to
+code a robust and fast physics engine in ActionScript (used for Flash applications).<br><br>
 
-<p>
-  <object align="left" type="application/x-shockwave-flash" width="800" height="600">
-    <embed align="left" type="application/x-shockwave-flash" width="800" height="600" src="/n/files/tut/fitc05/FITC_beyondHittest07.swf">
-  </object>
-</p>
+<div style="display: flex;">
 
-<pre style="max-width:100%;max-height:594px;white-space:pre;">
-  <p> <strong>&#8211;= Script =&#8211; </strong> </p>
+	<div>
+		<object style="text-align: left;" type="application/x-shockwave-flash" width="800" height="600">
+			<embed style="text-align: left;" type="application/x-shockwave-flash" width="800" height="600"
+				src="/n/files/tut/fitc05/FITC_beyondHittest07.swf">
+		</object>
+	</div>
+
+	<pre style="max-height:594px;white-space:pre;flex-grow:1;">
+<strong>&#8211;= Script =&#8211; </strong>
+
   PART -1: intro/preamble
 
 [3]**
@@ -728,15 +734,16 @@ PART 3: misc/conclusion
 
 -QUESTIONS?
 </pre>
+</div>
 
 <script>
-  window.RufflePlayer = window.RufflePlayer || {};
-  window.RufflePlayer.config = {
-	  	"quality":         "high",
-      "backgroundColor": "#d4d9e9",
-      "wmode":           "transparent",
-      "autoplay":        "on",
-      "unmuteOverlay":   "hidden"
-  };
+	window.RufflePlayer = window.RufflePlayer || {};
+	window.RufflePlayer.config = {
+		"quality": "high",
+		"backgroundColor": "#d4d9e9",
+		"wmode": "transparent",
+		"autoplay": "on",
+		"unmuteOverlay": "hidden"
+	};
 </script>
 <script src="/n/ruffle/ruffle.js"></script>

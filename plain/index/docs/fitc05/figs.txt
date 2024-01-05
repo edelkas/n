@@ -4,51 +4,51 @@ Some of them are present in tutorials <a href="../tutoA.html">A</a> and <a href=
 
 <div style="display: flex;flex-wrap: wrap;">
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vector.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vector.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitvector.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitvector.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Unit vector</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectorprojection.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectorprojection.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector projection</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectornormals.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/vectornormals.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Vector normals</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/rawdotprod.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/rawdotprod.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Raw dot product</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitdotprod.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/unitdotprod.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Unit dot product</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/projdotprod.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/projdotprod.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Projection dot product</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/frictionbounce.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/frictionbounce.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Friction and bounce</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxcells.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxcells.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box cells</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxprojection.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxprojection.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box projection</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxbox_projection.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/boxbox_projection.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Box-box projection</div>
   </div>
   <div style="display: grid;">
-    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/circlebox.swf"></embed></object>
+    <object type="application/x-shockwave-flash" width="256" height="256"><embed type="application/x-shockwave-flash" width="256" height="256" src="/n/files/tut/fitc05/circlebox.swf"></object>
     <div style="max-width: 256px;font-size: 80%;font-weight: bold;text-align: center;">Circle-box</div>
   </div>
 </div>

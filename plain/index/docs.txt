@@ -2,7 +2,7 @@
 
 The following are restorations of Metanet's classic tutorials on N's physical collision system (as well as other related topics).
 The main purposes of this restoration were to re-add now missing material (see below), fix several aspects (notably, the Flash elements), improve
-the presentation (recovering the original formatting, transparent figure backgrounds...), update deprecated HTML, and of course, for preservation and archival.
+the presentation (recovering the original formatting, transparent figure backgrounds...), update deprecated HTML and references, and of course, for preservation and archival.
 
 The main additions are:
 <ul>
@@ -11,6 +11,7 @@ The main additions are:
 	<li>Added <a href="docs/fitc05.html">FITC05</a> talk slides and script (great stuff!)</li>
 	<li>Recovered original tutorial <a href="docs/tutoIntro.html">presentation page</a>.</li>
 	<li>Added supplementary <a href="docs/fitc05/figs.html">Flash animations</a> not previously present in the tutorials.</li>
+	<li>Updated all bibliography links, and locally mirrored many of them.</li>
 </ul>
 <table class="invisible">
 	<tr>

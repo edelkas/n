@@ -22,12 +22,12 @@
 		<tr class="ps-row2">
 			<td class="ps-col1">
 				<div class="navigation">
-					<div><a href="/n/index.html"          class="menu">HOME      <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/docs.html"     class="menu">DOCUMENTS <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/images.html"   class="menu">IMAGES    <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" width="24" height="24"></a></div>
-					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" width="24" height="24"></a></div>
+					<div><a href="/n/index.html"          class="menu">HOME      <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/docs.html"     class="menu">DOCUMENTS <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/images.html"   class="menu">IMAGES    <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
+					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
 					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-05</span>
 					<div class="spreader" style="width: 150px; min-width: 150px;"></div>
 				</div>
@@ -43,7 +43,7 @@ Original by Metanet Software, 2005 (<a
   href="https://web.archive.org/web/20050507103126/http://www.harveycartel.org:80/metanet/tutorials.html">archived</a>
 version).
 <br><br>
-<table width="1000" class="tuto center" style="font-size:80%;">
+<table class="tuto center" style="font-size:80%;width:1000px;">
   <tr>
     <td>
       <div style="text-align:left;">
@@ -56,83 +56,88 @@ version).
       </div>
     </td>
   </tr>
-  <td>
-    <div style="text-align:left;">
-      tutorial A - <a class="dark" href="tutoA.html">[ Basic Collision Detection and Response ]</a>
-    </div>
-  </td>
-  </tr>
-  <td>
-    <div style="text-align:left;">
-      tutorial B - <a class="dark" href="tutoB.html">[ Grid-Based Collision Detection and Raycasting ]</a>
-    </div>
-  </td>
+  <tr>
+    <td>
+      <div style="text-align:left;">
+        tutorial A - <a class="dark" href="tutoA.html">[ Basic Collision Detection and Response ]</a>
+      </div>
+    </td>
   </tr>
   <tr>
     <td>
       <div style="text-align:left;">
-        Beyond HitTest(): Collision Detection in Flash &nbsp;<a class="dark" href="/n/files/tut/fitc05.zip">[ download slides ]</a>
+        tutorial B - <a class="dark" href="tutoB.html">[ Grid-Based Collision Detection and Raycasting ]</a>
       </div>
     </td>
   </tr>
-  <td>
-    <div style="text-align:left;">
-      <br>
-      These tutorials are aimed at anyone interested in implementing 2D collision detection and response for games, or
-      anyone interested in how we implemented various parts of N. <br>
-      <br>
-      We'll try to explain everything from the bottom up, so there might be some sections you can skip; we'll also try
-      to include enough information so that even relatively experienced game programmers will hopefully find a few
-      ideas they haven't seen before. <br>
-      <br>
-      Some of the material covered in the tutorials isn't part of the released version in N, but was developed for N
-      and then not used. This material will probably pop up in games we release in the future. <br>
-      <br>
-      The purpose of these tutorials is to explain some of the things we learned while programming N; we had a lot of
-      help from various online resources and would like to help the community in return by contributing to it. <br>
-      <br>
-      Our ulterior motive is that we're sick of crappy flash "games", and want more people to realize that
-      actionscript is a viable platform for developing fun, exciting games which are not simply "flash games", but
-      video games in their own right. <br>
-      <br>
-      Flash is especially attractive for small developers since it allows extremely rapid development, albeit at the
-      cost of execution speed. Perhaps once everyone expects the quality of games made with Flash to equal that of
-      games written in other languages, we'll see more actual <i>games</i> made in flash, and fewer
-      ads-posing-as-video-games (which really suck when compared to proper video games, and which shouldn't be
-      considered video games at all). <br>
-      <br>
-      Each tutorial will be accompanied by polished source from our engine; we'll be releasing the full, unpolished
-      source (minus the online/networking code, for highscore-security reasons) whenever we finish our next game --
-      which should hopefully not be too long from now! <br>
-      <br>
-      The source code is written in <strong>actionscript</strong>, but should be easily understandable (and might seem
-      somewhat pseudocode-like) to c or java programmers. <br>
-      <br>
-      One warning about the source is that our coding approach is perhaps slightly too unstructured; in actionscript,
-      function calls incur a significant overhead cost, thus we decided that for often-used and "basic" properties
-      (which are unlikely to change in implementation) we would abandon the OOP approach of using an interface of
-      get/set routines: <br>
-      <br>
-      <pre>GetPos(),SetPos(p),GetRadius(),SetRadius(r), etc.</pre>
-      <br>
-      and instead would directly access the properties of the objects: <br>
-      <br>
-      <pre>.pos .r</pre>
-      <br>
-      <strong>However</strong>, this method wasn't used recklessly, and was always considered an "interface". For
-      example, if an object supported the interface "dynamic shape", it was required to have the following properties,
-      which should always contain up-to-date data: <br>
-      <br>
-      <pre>.pos .r .xw .yw</pre>
-      <br>
-      In retrospect, the renderer of the flashplayer is so slow that it's unlikely that any runtime calculation will
-      become the major bottleneck in a game -- unless you're doing something that shouldn't be done at runtime, such
-      as using an <code>O(n^2)</code> algorithm or performing a large number of calculations on a long list. At the very least, you
-      could implement <strong>Get/Set</strong> routines, and then replace them during optimisation with direct
-      property accessing if you need every bit of speed. <br>
-      <br>
-    </div>
-  </td>
+  <tr>
+    <td>
+      <div style="text-align:left;">
+        Beyond HitTest(): Collision Detection in Flash &nbsp;<a class="dark" href="/n/files/tut/fitc05.zip">[ download
+          slides ]</a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="text-align:left;">
+        <br>
+        These tutorials are aimed at anyone interested in implementing 2D collision detection and response for games, or
+        anyone interested in how we implemented various parts of N. <br>
+        <br>
+        We'll try to explain everything from the bottom up, so there might be some sections you can skip; we'll also try
+        to include enough information so that even relatively experienced game programmers will hopefully find a few
+        ideas they haven't seen before. <br>
+        <br>
+        Some of the material covered in the tutorials isn't part of the released version in N, but was developed for N
+        and then not used. This material will probably pop up in games we release in the future. <br>
+        <br>
+        The purpose of these tutorials is to explain some of the things we learned while programming N; we had a lot of
+        help from various online resources and would like to help the community in return by contributing to it. <br>
+        <br>
+        Our ulterior motive is that we're sick of crappy flash "games", and want more people to realize that
+        actionscript is a viable platform for developing fun, exciting games which are not simply "flash games", but
+        video games in their own right. <br>
+        <br>
+        Flash is especially attractive for small developers since it allows extremely rapid development, albeit at the
+        cost of execution speed. Perhaps once everyone expects the quality of games made with Flash to equal that of
+        games written in other languages, we'll see more actual <i>games</i> made in flash, and fewer
+        ads-posing-as-video-games (which really suck when compared to proper video games, and which shouldn't be
+        considered video games at all). <br>
+        <br>
+        Each tutorial will be accompanied by polished source from our engine; we'll be releasing the full, unpolished
+        source (minus the online/networking code, for highscore-security reasons) whenever we finish our next game --
+        which should hopefully not be too long from now! <br>
+        <br>
+        The source code is written in <strong>actionscript</strong>, but should be easily understandable (and might seem
+        somewhat pseudocode-like) to c or java programmers. <br>
+        <br>
+        One warning about the source is that our coding approach is perhaps slightly too unstructured; in actionscript,
+        function calls incur a significant overhead cost, thus we decided that for often-used and "basic" properties
+        (which are unlikely to change in implementation) we would abandon the OOP approach of using an interface of
+        get/set routines: <br>
+        <br>
+        <pre>GetPos(),SetPos(p),GetRadius(),SetRadius(r), etc.</pre>
+        <br>
+        and instead would directly access the properties of the objects: <br>
+        <br>
+        <pre>.pos .r</pre>
+        <br>
+        <strong>However</strong>, this method wasn't used recklessly, and was always considered an "interface". For
+        example, if an object supported the interface "dynamic shape", it was required to have the following properties,
+        which should always contain up-to-date data: <br>
+        <br>
+        <pre>.pos .r .xw .yw</pre>
+        <br>
+        In retrospect, the renderer of the flashplayer is so slow that it's unlikely that any runtime calculation will
+        become the major bottleneck in a game -- unless you're doing something that shouldn't be done at runtime, such
+        as using an <code>O(n^2)</code> algorithm or performing a large number of calculations on a long list. At the
+        very least, you
+        could implement <strong>Get/Set</strong> routines, and then replace them during optimisation with direct
+        property accessing if you need every bit of speed. <br>
+        <br>
+      </div>
+    </td>
   </tr>
 </table>
 

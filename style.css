@@ -246,9 +246,10 @@ code {
   margin: 0px;
   padding: 1px;
 }
-.red {
-  color: #882222;
+.indent {
+  padding-left: 4em;
 }
+.red    { color: #882222; }
 .green  { color: #228822; }
 .blue   { color: #222288; }
 .purple { color: #882288; }
