@@ -28,7 +28,7 @@
 					<div><a href="/n/index/tools.html"    class="menu">TOOLS     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
 					<div><a href="/n/index/websites.html" class="menu">WEBSITES  <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
 					<div><a href="/n/index/about.html"    class="menu">ABOUT     <img src="/n/images/drone.png" alt="Drone" width="24" height="24"></a></div>
-					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-05</span>
+					<span class="credits">Powered by <b>Eddy</b><br><b>Created</b>: 2019-04-30<br><b>Updated</b>: 2024-01-06</span>
 					<div class="spreader" style="width: 150px; min-width: 150px;"></div>
 				</div>
 			</td>
@@ -118,25 +118,23 @@ version).
               <strong>comments:</strong>
             </p>
             <p> the grid cells touched by the box are highlighted in <span class="red">red</span>.</p>
-            <p>note that if the object overlaps the current cell&#8217;s right neighbor,<br>
-              it can&#8217;t possibly overlap the left neighbor;<br>
-              likewise for the up/down neighbors.
+            <p>note that if the object overlaps the current cell&#8217;s right neighbor, it can&#8217;t possibly overlap
+              the left neighbor; likewise for the up/down neighbors.
           </div>
         </div>
         <p> Figure 0. The Cells Touched by an Object</p>
-        <p> We can safely assume that the object will, at most, be overlapping the current cell,</p>
-        <p>a horizontal neighbor of the current cell, a vertical neighbor of the current cell,<br>
-          and a diagonal neighbor of the current cell; the diagonal neighbor is also a neighbor of the horiz/vert.
-          neighbors.</p>
+        <p> We can safely assume that the object will, at most, be overlapping the current cell, a horizontal neighbor
+          of the current cell, a vertical neighbor of the current cell, and a diagonal neighbor of the current cell;
+          the diagonal neighbor is also a neighbor of the horiz/vert. neighbors.</p>
         <p> Determining which cells an object overlaps can be done is various ways: </p>
         <p class="indent">
           . you can simply use 4 position-lookups (one for each of the object&#8217;s corners).<br>
           . you can use one position lookup (with the object&#8217;s center) to determine the current cell&#8217;s
-            index in the 2D grid, and then use offsets from this index based on the object&#8217;s position relative
-            to the current cell&#8217;s position (i.e. if the object&#8217;s center is left and below the current
-            cell&#8217;s center, and the current cell&#8217;s index is [i][j], we know we have to look at the left,
-            down, and left-down neighbors, or [i-1][j], [i][j+1], [i-1][j+1]).
-          </p>
+          index in the 2D grid, and then use offsets from this index based on the object&#8217;s position relative
+          to the current cell&#8217;s position (i.e. if the object&#8217;s center is left and below the current
+          cell&#8217;s center, and the current cell&#8217;s index is [i][j], we know we have to look at the left,
+          down, and left-down neighbors, or [i-1][j], [i][j+1], [i-1][j+1]).
+        </p>
         <p>
           We can run into problems if part of the object is outside of the boundary of the grid; this results in the
           above methods generating cell indices which don&#8217;t exist. </p>
@@ -175,9 +173,8 @@ version).
         <p> The first thing is to store, in each cell, direct references to that cell&#8217;s 4 neighbors. This way,
           once we&#8217;ve determined an object&#8217;s current cell, we can access the neighboring cells using a
           single property lookup; this results in a smaller number of calculations when accessing neighboring cells
-          but causes each cell to occupy more memory. Since the<br>
-          cost of calculating cell indices is likely to be negligible in many programming environments, this trade-off
-          might not always be worthwhile. </p>
+          but causes each cell to occupy more memory. Since the cost of calculating cell indices is likely to be
+          negligible in many programming environments, this trade-off might not always be worthwhile. </p>
         <p> In N we implemented these neighbor &#8220;pointers&#8221; separately: </p>
         <pre>
           cell.nR //right, left, up, down neighbors
@@ -207,9 +204,8 @@ version).
         </p>
         <p> <img decoding="async" class="center" src="/n/files/tut/B1_edgestates.gif" alt="N tiles"><br>
           Figure 1. The 9 Tile Shapes Used in N, and their Corresponding Edge States<br>
-          <br>
-          <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and
-          <strong>interesting</strong> edges in <span class="gray">grey</span>.
+          <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and <strong>interesting</strong>
+          edges in <span class="gray">grey</span>.
         </p>
         <p> Having this edge info let us skip a lot of tile-specific collision routines; if an object overlaps a solid
           edge (which is very common in tile-based games), we simply project it out of that edge instead of having to
@@ -223,11 +219,9 @@ version).
           move along the world&#8217;s surface. </p>
         <p> <img decoding="async" class="center" src="/n/files/tut/B2_edgesurface.gif" alt="N map"><br>
           Figure 2. An Example Tile Map Containing Chunks of Contiguous Tiles and their Edge States<br>
-          <br>
-          <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and
-          <strong>interesting</strong> edges in <span class="gray">grey</span>. <br>
-          Note that the non-empty edges form a perimeter around each chunk which approximates the chunk&#8217;s
-          surface.
+          <strong>Solid</strong> edges are highlighted in <span class="red">red</span> and <strong>interesting</strong>
+          edges in <span class="gray">grey</span>. <br>
+          Note that the non-empty edges form a perimeter around each chunk which approximates the chunk&#8217;s surface.
         </p>
         <p> Having this extra edge info for each cell may or may not be useful in your game. </p>
         <p> In N, doors were easily implemented as objects which changed the value of a cell&#8217;s edge states. This
