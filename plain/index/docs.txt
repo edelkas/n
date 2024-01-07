@@ -26,9 +26,9 @@ The main additions are:
 		<td><a href="docs/tutoB.html"><img src="/n/images/tutoB.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
 		<td><a href="docs/tutoB.html" class="menuInverted">Tutorial B – Broad-Phase Collision</a><br>
 		Deals with the first phase of the collision algorithm, namely, the selection of the tiles/objects for which actual collision tests must be performed
-		(by the method explained in the first tutorial). This problem is solved by dividing the map into a grid of square cells, thus only requiring
-		to test against objects contained in neighbouring cells. Delves into the notion of raycasting. Accompanied by images, Flash simulations and a very
-		complete N collision demo.</td>
+		(by the method explained in the first tutorial). This problem is solved by dividing the map into a (loose) grid of square cells, thus only requiring
+		to test against objects contained in neighbouring cells. Several improvements to this approach, such as storing explicit edge information, are included.
+		Delves into the notion of raycasting. Accompanied by images, Flash simulations and a very complete N collision demo.</td>
 	</tr>
 	<tr>
 		<td><a href="docs/tutoC.html"><img src="/n/images/tutoC.png" width="96" height="96" alt="Thumbnail" class="sunkenBorder" /></a></td>
